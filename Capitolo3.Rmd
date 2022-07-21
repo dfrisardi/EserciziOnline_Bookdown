@@ -1,0 +1,1173 @@
+# Inferenza
+
+## Intervalli di confidenza e test per campioni estratti da una popolazione Normale
+
+### Esercizio 3.1{-}
+Per un certo prodotto, il prezzo di vendita al dettaglio si distribuisce secondo una Normale, con varianza pari a 144. Al fine di costruire una stima intervallare al livello $1-\alpha=0.90$ per il prezzo medio nella popolazione di riferimento,
+
+1.  determinare gli estremi dell'intervallo di confidenza, sulla base di un campione casuale di 36 unità con media pari a 15;
+
+2.  determinare gli estremi dell'intervallo di confidenza a livello $1 - \alpha=0.98$;
+
+3.  determinare la numerosità campionaria necessaria affinché l'ampiezza dell'intervallo al livello $1-\alpha=0.90$ sia al massimo pari a 4.
+
+#### Soluzione {- .sol}
+
+Indichiamo con $X$ la variabile \"prezzo di vendita al dettaglio\". Il testo ci dice che $X \sim N(\mu, \sigma^{2}=144)$.
+
+1.  L'intervallo di confidenza per la variabile $X$ si ottiene come: $$\begin{equation}\left[\bar{x}-z_{\alpha/2}\frac{\sigma}{\sqrt{n}},\bar{x}+z_{\alpha/2}\frac{\sigma}{\sqrt{n}}\right]\end{equation}   \tag{3.1} \label{IC-Z}$$
+
+  -   $\bar{x}$ è il prezzo medio del campione osservato: $\bar{x}=15$;
+
+  -   $\sigma$ è la deviazione standard della popolazione di riferimento: $\sigma=\sqrt{144}=12$;
+
+  -   $n$ è la numerosità del campione osservato: $n=36$
+
+  -   $z_{\alpha/{2}}$ è il quantile a livello $\alpha/2=1-0.90/2=0.05$ di una distribuzione Normale standardizzata: $z_{\alpha/{2}}=1.64$
+
+Sostituendo nell'equazione 3.1 si ottiene il seguente intervallo di confidenza: $$\left[15 - 1.64 \frac{12}{\sqrt{36}} , 15 + 1.64 \frac{12}{\sqrt{36}}\right]=[11.72,18.28]$$
+
+2.  Applichiamo la stessa formula del punto precedente modificando solo il livello di confidenza e quindi $z_{\alpha/2}=z_{0.01}=2.33$: $$\left[15 - 2.33 \frac{12}{\sqrt{36}} , 15 + 2.33 \frac{12}{\sqrt{36}}\right]=[10.34,19.66]$$
+
+3.  Poiché la varianza è nota, la numerosità minima per un'ampiezza $a=4$, il margine di errore è $m=a/2=2$, si ottiene mediante la seguente formula $$\begin{equation} n=\left(\frac{z_{\alpha/2}\sigma}{a/2}\right)^{2}.\tag{3.2}\end{equation}$$ In questo caso, $n=\left(\frac{1.64 \cdot \sqrt{144}}{2}\right)^2=96.83 \cong 97$, arrotondando per eccesso.
+
+### Esercizio 3.2{-}
+
+Da una sorgente di acque minerali è stato prelevato un campione casuale di 81 provette di acqua. Il contenuto medio di sali minerali disciolti in acqua è risultato pari a 600 mg/l. Supponendo che il contenuto di sali minerali sia distribuito come una variabile casuale Normale con deviazione standard uguale a 50 mg/l, verificare, al livello di significatività $\alpha$=0.001, l'ipotesi che l'acqua della sorgente contenga mediamente 500 mg/l di sali minerali, contro l'alternativa che ne contenga piú di 500.
+
+
+
+#### Soluzione {- .sol}
+
+Indichiamo con $X$ la variabile \"contenuto di sali minerali\". Il testo ci dice che $X \sim N(\mu,\sigma=50)$.\
+Dobbiamo verificare il seguente si sistema di ipotesi:\
+
+
+$$H_{0}:\mu=500\qquad \qquad H_{1}: \mu > 500$$
+
+Per effettuare la verifica di ipotesi sulla media di una popolazione Normale con varianza nota, la statistica test è $$Z=\frac{\bar{X}-\mu}{\sigma/\sqrt{n}}$$ che sotto l'ipotesi nulla ha distribuzione Normale standardizzata.\
+
+Calcoliamo quindi il valore $p$ come $p=P(Z>z)$ dove $z$ il valore della statistica test nel campione osservato. Pertanto si ha:$$\begin{aligned}
+p=P(Z>z) &= P\left(Z > \frac{\bar{x}-\mu}{\sigma/\sqrt{n}}\right)=\\
+&= P\left(Z>\frac{600-500}{50/ \sqrt{81}}\right)=P(Z>18)=0\end{aligned}$$ Poiché $p<\alpha=0.001$, si ha abbastanza evidenza sperimentale per rifiutare l'ipotesi nulla.\
+
+
+### Esercizio 3.3 {-}
+
+Dalla popolazione dei docenti universitari è stato estratto un campione casuale di 100 docenti di sesso femminile rilevandone l'età.
+
+1.  Determinare l'intervallo di confidenza a livello 95% per l'età media, sapendo che l'età media del campione delle 100 donne osservate è pari a 42.2 e che nella popolazione dei docenti di sesso femminile la variabile età presenta distribuzione Normale con varianza pari a 49;
+
+2.  Si vuole verificare l'ipotesi che l'età media sia pari a 44 anni contro l'ipotesi alternativa bilaterale. Cosa possiamo concludere a livello di significatività 0.05? E se il livello di significatività fosse 0.1?
+
+3.  Supponendo che per il complesso dei docenti la variabile età si distribuisca secondo una Normale con varianza pari a 100, determinare il numero minimo di docenti per i quali il margine di errore dell'intervallo di confidenza a livello 95% per la media sia pari al 10%.
+
+#### Soluzione {- .sol}
+
+1.  Definiamo $X$ la variabile \"età dei docenti universitari di sesso femminile\". Il testo ci dice che $X \sim N(\mu,\sigma^{2}=49)$.
+    Possiamo definire l'intervallo di confidenza per $X$ come segue $$\left[\bar{x}-z_{\alpha/2}\frac{\sigma}{\sqrt{n}},\bar{x}+z_{\alpha/2}\frac{\sigma}{\sqrt{n}}\right]
+    \label{IC-Z-1} \tag{3.3}$$ dove
+
+    -   $\bar{x}$ è l'età media delle donne del campione osservato: $\bar{x}=42.2$;
+
+    -   $\sigma$ è la deviazione standard della popolazione di riferimento: $\sigma=\sqrt{49}=7$;
+
+    -   $n$ è la numerosità del campione osservato: $n=100$
+
+    -   $z_{\alpha/{2}}$ è il quantile a livello $\alpha/2=1-0.95/2=0.025$ di una distribuzione Normale standardizzata: $z_{\alpha/{2}}=1.96$
+
+    Sostituendo si ottiene il seguente intervallo di confidenza: $$\left[42.2 - 1.96 \frac{7}{\sqrt{100}}   ,  42.2 + 1.96 \frac{7}{\sqrt{100}} \right]=[40.828,43.572]$$
+
+2.  Per concludere il test è sufficiente osservare che il livello di significatività $\alpha$ corrisponde al livello di confidenza $1-\alpha$ dell'intervallo che abbiamo determinato al punto precedente. Poiché il valore 44 non è contenuto nell'intervallo osservato $[40.828,43.572]$, possiamo concludere che c'è abbastanza evidenza sperimentale per rifiutare l'ipotesi nulla.\
+    Se il livello di significatività fosse 0.1, avremmo corrispondentemente un intervallo di confidenza a livello 90$\%$ che risulterebbe più stretto di quello precedente e quindi a maggior ragione non conterrebbe il valore 44, inducendoci a rifiutare l'ipotesi nulla.
+
+3.  Definiamo $Y$ la variabile \"et dei docenti universitari di sesso maschile\". Il testo ci dice che $Y \sim N(\mu,\sigma^{2})$. A differenza di quanto accade nel quesito precedente, la varianza di tale distribuzione incognita. Pertanto, l'intervallo di confidenza per la media definito come segue: $$\left[\bar{y}-t_{n-1, \alpha/2}\frac{s}{\sqrt{n}},\bar{y}+t_{n-1, \alpha/2}\frac{s}{\sqrt{n}}\right]
+    \label{IC-T-1} \tag{3.4}$$ dove
+
+    -   $\bar{y}$ il valore della media campionaria;
+
+    -   $s$ il valore della deviazione standard campionaria corretta;
+
+    -   $n$ la numerosit del campione osservato: n=80;
+
+    -   $t_{n-1, \alpha/2}$ il quantile a livello $\alpha/2$ della distribuzione $T$ di Student con $n-1$ gradi di libertà.\
+        Dalle tavole della distribuzione $T$ di Student si ha $t_{0.025,79}=1.990$ (avendo approssimato n=80).
+
+    A partire quindi dalla tabella di frequenze, definiamo le quantità necessarie per il calcolo dell'intervallo di confidenza:
+
+    -   $\bar{y}=\frac{1}{n}\sum_{j=1}^{k}\bar{x}_{j}n_{j}=\frac{1}{80}(30 \cdot 15 + 40 \cdot 10 + ...+ 60 \cdot 28)= 48.5$
+
+    -   
+        $$\begin{align}s^{2}&=\frac{1}{n-1}\sum_{j=1}^{k}\bar{x}^{2}_{j}n_{j} - \frac{n}{n-1}\bar{x}^{2} =\\ &=\frac{1}{79}(30^{2}\cdot 15 + 40^{2} \cdot 10 + ...+ 60^{2}\cdot 28) - \frac{80}{79} (48.5^2) =\\ &=2503.797-2382.025= 121.772\end{align}$$\
+        da cui si ottiene $s=\sqrt{121.772}=11.035$
+
+    Inserendo queste quantità, possiamo quindi calcolare l'intervallo di confidenza richiesto: $$\left[48.5 -1.990 \frac{11.035}{\sqrt{80}},48.5 +1.990 \frac{11.035}{\sqrt{80}} \right] =[46.045,50.955]$$
+
+4.  Poiché la varianza è nota, la numerosità minima per un margine di errore $m=0.1$ si ottiene mediante la seguente formula $$n=\left(\frac{z_{\alpha/2}\sigma}{m}\right)^{2}$$ dove $z_{\alpha/2}$ il quantile a livello $\alpha/2$ di una distribuzione Normale standard. In questo caso, $n=\left(\frac{1.96 \cdot 10}{0.1}\right)^2=38416$.
+
+
+### Esercizio 3.4 {-}
+
+Supponiamo che in questo momento 10 persone siano collegate ad un sito per l'acquisto di articoli su internet. Sapendo che la probabilità che ciascuno dei 10 soggetti acquisti effettivamente un articolo è pari a 0.2, calcolate:
+
+1.  la probabilità che nessun soggetto acquisti un articolo;
+
+2.  la probabilità che 2 soggetti acquistino un articolo;
+
+3.  la probabilità che al massimo 2 soggetti acquistino un articolo;
+
+4.  il numero medio di articoli acquistati;
+
+Un esperto in comunicazioni ritiene che più della metà della popolazione effettua acquisti su internet. Sapendo che dei 10 soggetti intervistati, 4 hanno effettuato un acquisto su internet, cosa si può concludere sull'affermazione dell'esperto (utilizzare un livello di significatività del 95%)?\
+
+#### Soluzione {- .sol}
+
+Definiamo $X$ la variabile X="numero di acquisti su internet\". Questa variabile ha distribuzione binomiale con parametri $n=10$ e $p=0.2$, ossia $$X \sim Binomiale(n=10,p=0.2)$$ Ricordando che $$Pr(X=k)={n \choose x} p^{k} (1-p)^{n-k}$$ possiamo calcolare le probabilità richieste come segue:
+
+1.  $Pr(X=0)={10 \choose 0}0.2^{0} (1-0.2)^{10-0}=0.1074$
+
+2.  $Pr(X=2)={10 \choose 2}0.2^{2} (1-0.2)^{10-2}=0.3020$
+
+3.  $$\begin{align}Pr(X\leq 1)&=Pr(X=0)+Pr(X=1)+Pr(X=0)=\\ &=0.1074 + {10 \choose 1}0.2^{1} (1-0.2)^{10-1}+0.3020=0.6778\end{align}$$
+
+4.  Poiché $X$ ha una distribuzione binomiale, allora il numero medio di articoli acquistati è $E[X]=np=10 \cdot 0.2=2$
+
+Per validare o smentire l'affermazione dell'esperto, dobbiamo valutare il seguente sistema di ipotesi: $$H_{0}: p=0.5 \      \ H_{1}: p>0.5$$
+Sotto l'ipotesi nulla, sappiamo $$T=\frac{\hat{p}-p_{0}}{\sqrt{\frac{p_{0}(1-p_{0})}{n}}}$$ dove $\hat{p}=\frac{40}{100}=0.4$; sappiamo inoltre che sotto $H_{0}$ T ha distribuzione T di Student con $n-1$ gradi di libertà. Possiamo quindi calcolare il p-value come segue: $$\begin{aligned}
+Pr(T>t)&=Pr\left(T> \frac{0.4-0.5}{\sqrt{\frac{0.5(1-0.5)}{10}}}\right)=\\
+&=Pr(T>-0.6324) =1-Pr(T\leq -0.6324)=0.7357\end{aligned}$$ Poiché $0.7357 >> 0.05$, allora non ho abbstanza evidenza sperimentale per rifiutare l'ipotesi nulla.
+
+## Intervalli di confidenza e test per campioni estratti da popolazioni Normali con media e varianza incognite
+
+### Esercizio 3.5 {-}
+Il numero medio di ore di sonno per notte ha una distribuzione normale. In un campione di 20 individui sottoposto ad un trattamento farmacologico ipotensivo, il numero medio di ore di sonno risulta pari a 6.5 con uno scarto quadratico medio di 2 ore. Sulla base dei dati disponibili:
+
+1.  Si costruisca un intervallo di confidenza al 95% per il numero medio di ore di sonno.
+
+2.  Si consideri l'ipotesi nulla $H_{0}: \mu = 7$ di un test bidirezionale al livello di significatività del 5%. Sulla base del risultato del punto precedente l'ipotesi nulla può essere respinta?
+
+#### Soluzione {- .sol}
+
+Sia $X$ la variabile aleatoria \"ore di sonno per notte\". Il testo dice che $X \sim N(\mu,\sigma^{2})$, con $\mu$ e $\sigma^{2}$ [entrambi]{.ul} incogniti.
+
+1.  L'intervallo di confidenza a livello $1-\alpha=0.95$ per la media $\mu$ della variabile $X$ è definito come $$\left[\bar{x}-t_{n-1, \alpha/2}\frac{s}{\sqrt{n}},\bar{x}+t_{n-1, \alpha/2}\frac{s}{\sqrt{n}}\right]\tag{3.5}
+    \label{IC-T}$$ dove
+
+    -   $\bar{x}$ è il valore della media campionaria: $\bar{x}=6.5$;
+
+    -   $s$ è il valore della deviazione standard campionaria corretta: $s=2$;
+
+    -   $n$ è la numerosità del campione osservato: $n=20$;
+
+    -   $t_{n-1, \alpha/2}$ è il quantile a livello $\alpha/2$ della distribuzione $T$ di Student con $n-1$ gradi di libertà.\
+        Dalle tavole della distribuzione $T$ di Student si ha $t_{0.025,19}=2.093$.
+
+    Pertanto, sostituendo queste quantità nella formula (3.5), si ha che l'intervallo di confidenza al 95% per la media $\mu$ è $$\left[6.5 -2.093\frac{2}{\sqrt{20}} ,6.5 +2.093\frac{2}{\sqrt{20}}\right]=[5.564,7.436]$$
+
+2.  Circa il test di ipotesi, è possibile fornire una risposta al quesito senza fare nessun calcolo. Infatti sfruttando le informazioni fornite dal precedente punto, si può osservare che il valore del numero medio di ore di sonno ipotizzato sotto $H_{0}$ appartiene all'intervallo di confidenza appena individuato. Tale informazione è sufficiente per decidere che l'ipotesi nulla non può essere respinta.
+
+### Esercizio 3.6 {-}
+
+Un professore è interessato a conoscere la spesa media annuale in libri di testo degli studenti universitari. La spesa ha una distribuzione normale. In un campione di 26 studenti, la spesa media è risultata 180 euro con uno scarto quadratico medio di 30 euro.
+
+1.  Costruire un intervallo di confidenza al 95% per la spesa media;
+
+2.  Come varia l'intervallo di confidenza quando aumenta la numerosità campionaria?
+
+3.  Un collega sostiene che la spesa media è 185 euro. Sulla base dei risultati del punto 1. è possibile sostenere questa affermazione al livello di significatività del 5%?
+
+#### Soluzione {- .sol}
+
+Indichiamo con $X=$Spesa dei libri di testo.\
+Sappiamo che $X \sim N(\mu,\sigma^2)$ con i parametri entrambi incogniti. Abbiamo anche: $n=26$, $\bar{x}=180$ e $s=30$.
+
+1.  Considerando che $1-\alpha = 0.95; \alpha =0.05; \alpha/2 =0.025$, l'intervallo di confidenza sarà: $$\left[ \bar{x}-t_{n-1;\frac{\alpha}{2}} \frac{s}{\sqrt{n}} ;
+                    \bar{x}+t_{n-1;\frac{\alpha}{2}} \frac{s}{\sqrt{n}} \right]$$ quindi $$\left[ 180-t_{25;0.025} \frac{30}{\sqrt{26}} ;
+                    180+t_{25;0.025} \frac{30}{\sqrt{26}} \right]$$ e $$\left[ 180-2.06 \frac{30}{\sqrt{26}} ;
+                    180+2.06 \frac{30}{\sqrt{26}} \right]$$ dove $2.06$ è il quantile a livello $0.025$ (dalla tavola C) di una distribuzione $t$ con 25 gradi di libertà. Otteniamo $$\left[ 167.88 ;
+                    192.12 \right]$$
+
+2.  All'aumentare di $n$ l'intervallo di confidenza si restringe. Per $n \rightarrow \infty$ collassa sulla media $\bar{x}=180$.
+
+3.  È possibile sostenerla in quanto 185 cade all'interno dell'intervallo appena calcolato. Questa considerazione può essere fatta in quanto intervallo di confidenza e test di ipotesi sono definiti allo stesso livello di significatività del 5%.
+
+### Esercizio 3.7 {-}
+
+In una clinica un gruppo di medici che si occupa della ricerca su un nuovo farmaco per il colesterolo ritiene che una variazione media del colesterolo pari a $1.2$ dopo la somministrazione di tale farmaco sia sufficiente per poter mettere il farmaco sul mercato. Si effettua un test di significatività al $5\%$ per la verifica di $$H_{0}:\mu=\mu_0=0 \hspace{2cm} H_{a}:\mu=\mu_a=1.2$$ basato su un campione di 41 volontari, a cui è stato somministrato il farmaco per 60 giorni, con deviazione standard pari a $2$. Qual è la potenza del test?
+
+#### Soluzione {- .sol}
+
+Riassumiamo i dati: $n=41$, $X=$Variazione di colesterolo, $s=2$. La statistica test sarà: $$T = \frac{\bar{X}-\mu_0}{s/\sqrt{n}} \sim t_{n-1}$$ La potenza del test rispetto all'alternativa puntuale $\mu=\mu_a=1.2$ è definita come la probabilità con cui il test rifiuta $H_0$ quando $\mu=1.2$ è vera.
+
+**Passo 1**:
+
+:   Scriviamo la formula per rifiutare $H_0$ in termini di $\bar{x}$. Il
+    test rifiuta $H_0$ ad un livello $\alpha=0.05$ quando
+    $$t = \frac{\bar{x}-0}{2/\sqrt{41}}\geq1.684$$ ovvero quando
+    $$\bar{x}\geq 0+1.684\frac{2}{\sqrt{41}}$$ per cui si rifiuta $H_0$
+    quando $\bar{x}\geq 0.526$. In questo modo abbiamo riformulato il
+    test in termini di $\bar{x}$. Osserviamo che la regola che ci dice
+    quando rifiutare $H_0$ non dipende dal valore specifico
+    dell'alternativa.
+
+**Passo 2**:
+
+:   La *potenza* è la probabilità che si verifichi l'evento
+    $\bar{X}\geq 0.526$ quando l'alternativa $\mu=1.2$ è vera. Per
+    calcolare questa probabilità, occorre standardizzare $\bar{x}$
+    utilizzando $\mu=1.2$: $$\begin{aligned}
+            potenza &= P(\bar{X}\geq 0.526\quad quando \quad \mu=1.2)\\
+            &=P\left(\frac{\bar{X}-1.2}{2/\sqrt{41}}\geq\frac{0.526-1.2}{2/\sqrt{41}}\right)\\
+            &=P\left(T\geq-2.1579\right)\approx0.98\\
+        \end{aligned}$$
+
+Il test dichiarerà che i pazienti presentano una variazione
+significativa del colesterolo dopo la somministrazione del farmaco
+soltanto il $5\%$ delle volte, quando tale variazione non si verifica
+(quando $H_0$ è vera) e circa il $98\%$ delle volte quando la variazione
+effettiva è pari a $\mu=1.2$ (quando $H_a$ è vera).
+
+
+### Esercizio 3.8 {-}
+
+I dati storici indicano che l'acidità media della pioggia in una certa
+zona del West Virginia è 5.2. Per vedere se recentemente ci sono state
+delle variazioni, viene misurata l'acidità dell'acqua durante 12 rovesci
+nell'ultimo anno, con media e deviazione standard pari rispettivamente a
+5.667 e 0.921.\
+Ritieni che, con un livello di significatività del 5%, si possa
+concludere che l'acidità della pioggia sia cambiata rispetto al valore
+storico?
+
+#### Soluzione {- .sol}
+
+Riassumiamo i dati: $x=$acidità della pioggia, $\bar{x}=5.667$,
+$s=0.921$. Il sistema di ipotesi sarà:
+$$H_0:\: \mu=5.2; \qquad H_a:\: \mu \neq 5.2$$ I parametri sono
+incogniti quindi dovremo utilizzare un test di tipo t. Calcoliamo il
+p-value: $$p = P(T > t) + P(T<-t)$$ dove
+$$T = \frac{\bar{X}-\mu_0}{s/\sqrt{n}} \sim t_{n-1}$$ è la statistica
+test che si distribuisce come una $t_{n-1}=t_{11}$ e $t$ è il valore
+della statistica test calcolato sul campione in esame, cioè
+$t=(5.667-5.2)/(0.921/\sqrt{12})=1.76$. Otteniamo:
+$$%p = P(T>1.76)+P(T<-1.76)= 2P(T>1.76) = 2 \times 0.05 =0.1
+        p = P(T>1.76)+P(T<-1.76)= 2P(T>1.76)$$ Dalle tavole della
+distribuzione $T$, si ha che $$0.05<P(T>1.76)<0.1$$ da cui
+$$0.1<p=2P(T>1.76) < 0.2$$ Il p-value è maggiore di 0.05 (il livello di
+significatività), quindi non c'è abbastanza evidenza sperimentale per
+poter rifiutare l'ipotesi nulla.
+
+## Test t per campioni appaiati
+
+### Esercizio 3.9 {-}
+
+In uno studio è stato chiesto a 25 persone "destre" di girare
+completamente due manopole (con la loro mano destra). La prima
+(progettata per destri) andava girata in senso orario. La seconda
+(progettata per mancini) andava girata in senso antiorario. Si vuole
+mostrare che persone destre hanno piú facilità ad usare oggetti per
+destri. La seguente tabella riporta i tempi medi per girare
+completamente una manopola.
+
+| **Soggetto** | **Manopola DX** | **Manopola SX** |
+|:------------:|:---------------:|:---------------:|
+| 1            | 113             | 137             |
+| 2            | 105             | 105             |
+| 3            | 130             | 133             |
+| 4            | 101             | 108             |
+| 5            | 138             | 115             |
+| 6            | 118             | 170             |
+| 7            | 87              | 103             |
+| 8            | 116             | 145             |
+| 9            | 75              | 78              |
+| 10           | 96              | 107             |
+| 11           | 122             | 84              |
+| 12           | 103             | 148             |
+| 13           | 116             | 147             |
+| 14           | 107             | 87              |
+| 15           | 118             | 166             |
+| 16           | 103             | 146             |
+| 17           | 111             | 123             |
+| 18           | 104             | 135             |
+| 19           | 111             | 112             |
+| 20           | 89              | 93              |
+| 21           | 78              | 76              |
+| 22           | 100             | 116             |
+| 23           | 89              | 78              |
+| 24           | 85              | 101             |
+| 25           | 88              | 123             |
+
+
+#### Soluzione {- .sol}
+
+Va subito notato come a ciascun soggetto siano state fatte girare le
+manopole in un ordine casuale per evitare una sorta di "apprendimento".
+
+Il parametro che si vuole sottoporre a verifica è la media $\mu$ delle
+differenze tra il tempo impiegato a girare la manopola per destri e
+quella per mancini. Vogliamo quindi effettuare il seguente test di
+ipotesi: $$H_0: \, \mu = 0 \qquad \qquad H_a: \, \mu < 0$$
+
+La prima cosa da fare è calcolare le differenze tra i tempi impiegati da
+ciascun soggetto (cioè riga per riga nella tabella precedente):
+
+| **Soggetto** | **Manopola DX** | **Manopola SX** | **Differenze** |
+|:------------:|:---------------:|:---------------:|:--------------:|
+| 1            | 113             | 137             | -24            |
+| 2            | 105             | 105             | 0              |
+| 3            | 130             | 133             | -3             |
+| 4            | 101             | 108             | -7             |
+| 5            | 138             | 115             | 23             |
+| 6            | 118             | 170             | -52            |
+| 7            | 87              | 103             | -16            |
+| 8            | 116             | 145             | -29            |
+| 9            | 75              | 78              | -3             |
+| 10           | 96              | 107             | -11            |
+| 11           | 122             | 84              | 38             |
+| 12           | 103             | 148             | -45            |
+| 13           | 116             | 147             | -31            |
+| 14           | 107             | 87              | 20             |
+| 15           | 118             | 166             | -48            |
+| 16           | 103             | 146             | -43            |
+| 17           | 111             | 123             | -12            |
+| 18           | 104             | 135             | -31            |
+| 19           | 111             | 112             | -1             |
+| 20           | 89              | 93              | -4             |
+| 21           | 78              | 76              | 2              |
+| 22           | 100             | 116             | -16            |
+| 23           | 89              | 78              | 11             |
+| 24           | 85              | 101             | -16            |
+| 25           | 88              | 123             | -35            |
+
+
+Dopo aver calcolato le differenze possiamo determinare la media
+campionaria $\bar{x} = -13.32$ e la deviazione standard campionaria
+$s = 22.94$
+
+La statistica t ha $n-1 = 24$ gradi di libertà ed il valore osservato è
+$$t = \frac{\bar{x}-\mu_0}{s/\sqrt{n}} = \frac{-13.32-0}{22.94/\sqrt{25}}=-2.90$$
+Dalla riga corrispondente a 24 gradi di libertà delle tavole ricaviamo
+che il valore -2.90 della statistica è compreso tra i valori critici
+-3.091 e -2.797, corrispondenti ai livelli 0.0025 e 0.005. Quindi il
+valore P è 0.0025 \< P \< 0.005
+
+Concludiamo che il test risulta significativo ad un livello inferiore al
+5 per mille, ovvero i dati forniscono forte evidenza contro l'ipotesi
+nulla che il tempo necessario a compiere le due operazioni sia
+mediamente lo stesso.
+
+::: {.att}
+Attenzione: non è corretto analizzare dati appaiati come se avessimo due
+campioni, uno riferito alla prima "circostanza" ed uno alla seconda. Le
+procedure inferenziali per confrontare due campioni presuppongono che i
+campioni selezionati siano indipendenti. Questa assunzione non è vera
+quando gli stessi soggetti sono misurati due volte o le misurazioni sono
+effettuate su soggetti diversi, ma scelti a coppie. La procedura di
+analisi da applicare dipende sempre dal modo in cui sono stati ricavati
+i dati.
+:::
+
+### Esercizio 3.10 {-}
+
+<center>*Emicrania e agopuntura*</center>
+
+L'emicrania è un tipo di
+mal di testa particolarmente doloroso. A volte i pazienti provano a
+curarsi con l'agopuntura. Per stabilire se l'agopuntura allevia il mal
+di testa, alcuni ricercatori hanno effettuato iuno studio controllato
+randomizzato in cui 89 donne con emicrania sono state assegnate
+casualmente ad uno dei due gruppi: trattamento (agopuntura) o controllo
+(ovvero nulla o cura tradizionale). I 43 pazienti nel gruppo di
+trattamento hanno ricevuto l'agopuntura specifica per l'emicrania. I 46
+pazienti nel gruppo di controllo hanno invece ricevuto un'agopuntura
+placebo, ovvero punture in punti non sensibili. Dopo 24 ore, ai pazienti
+è stato chiesto se avevano ancora dolore oppure no. I risultati sono
+riassunti nella tabella di contingenza di seguito.
+
+|             | Miglioramento |    |        |
+|------------:|--------------:|---:|-------:|
+|             | SI            | NO | Totale |
+| Controllo   | 10            | 33 | 43     |
+| Trattamento | 2             | 44 | 46     |
+| Totale      | 12            | 77 | 89     |
+
+- Quale percentuale di pazienti a cui è stato somministrato il trattamento
+ha avuto un miglioramento? Quale percentuale nel gruppo di controllo?
+
+- A colpo d'occhio, quale trattamento appare migliore per la cura
+dell'emicrania?
+
+- I dati forniscono evidenza statistica convincente che i due trattamenti
+differiscono oppure pensi che le differenze possano essere dovute
+soltanto al caso?
+
+### Esercizio 3.11 {-}
+
+<center>*Gocce di cioccolato*</center>
+
+Ad un gruppo di studenti viene
+chiesto di contare il numero di gocce di cioccolato contenute in 22
+biscotti. Gli studenti hanno trovato che i biscotti contengono in media
+14.77 gocce di cioccolato con una deviazione standard di 4.37 gocce di
+cioccolato.
+
+a. Utilizzando queste informazioni, quanta variabilità si dovrebbero
+attendere di vedere nel numero medio di gocce di cioccolato in un
+campione casuale di 22 biscotti?
+
+b. Sulla confezione è dichiarato che ogni biscotto contiene almeno 20 gocce
+di cioccolato. Uno studente trova che questo numero sia
+irragionevolmente alto in quanto il numero medio di gocce di cioccolato
+che hanno contato è molto più basso. Un altro studente sostiene che la
+differenza puó essere solo effetto del caso. Cosa ne pensi?
+
+### Esercizio 3.12 {-}
+
+<center>*Una indagine statistica*</center>
+
+La General Social Survey (GSS) è una indagine sociologica utilizzata negli
+Stati Uniti per collezionare dati circa le caratteristiche demografiche
+e le attitudini dei residenti. Nel 2012, i residenti intervistati sono
+stati 1154. Gli intervistati vengono estratti casualmente da un campione
+di adulti e sono intervistati personalmente. Una delle domande
+dell'indagine è: "Dopo un normale giorno di lavoro, quante ore circa hai
+a disposizione per rilassarti o dedicarti ai tuoi hobby?\". Dalla GSS
+del 2010 è risultato un intervallo di confidenza al 95% pari a $[3.53;3.83]$.
+
+a. Come si puó interpretare questo intervallo?
+
+b. Cosa rappresenta un intervallo di confidenza al 95% in questo specifico
+contesto?
+
+c. Supponiamo che alcuni ricercatori sostengono che un intervallo al 90%
+sia più appropriato per questo tipo di dati. Assumendo che la deviazione
+standard rimanga costante dal 2010, questo intervallo sarà più ampio o
+meno ampio dell'intervallo al 95%?
+
+### Esercizio 3.13 {-}
+
+<center>*Salute mentale*</center>
+
+Un'altra domanda dell'indagine GSS (vedi esercizio 3.12) è la seguente: "*Definendo \"salute mentale\" lo stato di stress, depressione, problemi personali, per quanti giorni nel mese precedente (30 giorni) la tua salute mentale non è stata in buone condizioni?*\" Utilizzando le risposte di 1151 residenti, si è ottenuto
+il seguente intervallo di confidenza $[3.40; 4.24]$ (livello 95%).
+
+a. Interpreta questo intervallo.
+
+b. Cosa rappresenta un intervallo di confidenza al 95% in questo specifico
+contesto?
+
+c. Supponiamo che alcuni ricercatori sostengono che un intervallo al 99%
+sia più appropriato per questo tipo di dati. Assumendo che la deviazione
+standard rimanga costante dal 2010, questo intervallo sarà più ampio o
+meno ampio dell'intervallo al 95%?
+
+d. Se si conducesse una nuova intervista e se la stessa domanda fosse
+sottoposta a 500 residenti, l'errore standard della stima sarebbe più
+alto, più basso o rimarrebbe uguale? Assumiamo anche in questo caso che
+la deviazione standard rimanga costante dal 2010.
+
+
+### Esercizio 3.14 {-}
+
+<center>*Intervalli di confidenza*</center>
+
+**Ampiezza di un intervallo di confidenza**. Con riferimento al capitolo 4, calcolammo
+l'intervallo di confidenza a livello 99% per il numero medio di
+corridori della corsa Cherry Blossom: utilizzando un campione di 100
+corridori, l'intervallo di confidenza risulta pari a $[32.7; 37.4]$.
+Come possiamo diminuire l'ampiezza di questo intervallo senza diminuire
+il livello di confidenza?
+
+### Esercizio 3.15 {-}
+
+<center>*Livelli di confidenza*</center>
+
+Se un livello di confidenza
+più elevato significa che noi siamo più fiduciosi circa i numeri che
+stiamo riportando, perchè non utilizziamo sempre intervalli di
+confidenza con il più elevato livello di confidenza?
+
+### Esercizio 3.16 {-}
+
+<center>*Pronto soccorso*</center>
+
+Il dirigente di un ospedale al
+fine di migliorare il tempo di attesa, decide di stimare il tempo medio
+di attesa al pronto soccorso del suo ospedale. Il dirigente collezione
+un campione semplice casuale di 64 pazienti e calcola il tempo (in
+minuti) trascorso dall'ingresso al pronto soccorso alla prima visita con
+un dottore. Un intervallo di confidenza a livello 95% è pari a
+$[126, 146]$ minuti. Tale intervallo è stato costruito assumendo un
+modello Normale per la media.\
+Stabilire se le seguenti affermazioni sono vere o false e giustificare
+la propria risposta:
+
+a. Questo intervallo di confidenza non è valido in quanto non sappiamo se
+la distribuzione del tempo di attesa al pronto soccorso sia veramente
+Normale;
+
+b. Siamo confidenti al 95% che il tempo medio di attesa al pronto soccorso
+di questi 64 pazienti sia tra 128 e 147 minuti;
+
+c. Siamo confidenti al 95% che il tempo medio di attesa al pronto soccorso
+di tutti i pazienti dell'ospedale sia tra 128 e 147 minuti;
+
+d. Supponendo di poter estrarre altri campioni casuali, il 95% di questi
+campioni casuali potrebbe avere la media campionaria tra 128 e 147
+minuti.
+
+e. Poiché vogliamo essere più sicuri delle nostre stime, è meglio
+utilizzare un intervallo di confidenza a livello 99% che è più stretto
+rispetto all'intervallo al 95%
+
+f. Il margine di errore è 9.5 e la media campionaria è 137.5
+
+g. Al fine di ridurre il margine di errore dell'intervallo di confidenza al
+95% della metà, dobbiamo aumentare la numerosità campionaria.
+
+### Esercizio 3.17 {-}
+
+Per determinare l'età media dei suoi acquirenti,
+un negozio di abbigliamento intervista un campione di 50 acquirenti e
+determina che $\bar{X} = 36$. Sapendo che l'età degli acquirenti si
+distribuisce normalmente e che $\sigma=12$:
+
+1.  si determini l'intervallo di confidenza al 95% per l'età media $\mu$
+    di tutti gli acquirenti;
+
+2.  si supponga di voler ridurre l'ampiezza dell'intervallo di
+    confidenza al 95%, in modo tale che gli estremi distino dal valore
+    centrale dell'intervallo $\pm$ 2 anni. Quanto deve essere grande il
+    campione?
+
+
+#### Soluzione {- .sol}
+Si tratta di determinare l'intervallo di confidenza per un campione
+estratto da una popolazione Normale con media $\mu$ incognita e
+deviazione standard nota ($\sigma=12$).
+
+1.  L'intervallo di confidenza è definito come
+    $$\bar{x} \pm z^{*} \frac{\sigma}{\sqrt{n}}$$ dove
+
+    -   $\bar{x}=36$
+
+    -   $z^{*}=1.96$
+
+    Pertanto, l'intervallo di confidenza è pari a:
+    $$\left[36 - 1.96 \frac{12}{\sqrt{50}}; 36 + 1.96 \frac{12}{\sqrt{50}}\right]=[32.673; 39.326]$$
+
+2.  L'esercizio richiede la numerosità campionaria tale che l'ampiezza
+    dell'intervallo $A=4$, o equivalentemente, il margine di errore
+    $m=2$. Tale numerosità campionaria si ottiene come
+    $$n^{*}=\left(\frac{z^{*}\sigma}{m}\right)^{2}=\left(\frac{1.96 \cdot 12}{36}\right)^{2}=138.2976$$
+    Quindi si può concludere che la numerosità minima per avere
+    un'ampiezza dell'intervallo pari a 4 è 139.
+    
+    
+### Esercizio 3.18 {-}
+
+Una agenzia immobiliare vuole stimare il prezzo medio di vendita degli
+appartamenti di una zona di Roma. Considera un campione di 25 vendite e
+calcola il prezzo medio $\bar{X} = 148000$ Euro, con deviazione standard
+campionaria $s=62000$ Euro. Si calcoli l'intervallo di confidenza al 95%
+per il prezzo medio delle vendite.\
+
+
+#### Soluzione {- .sol}
+Si tratta di determinare l'intervallo di confidenza per un campione
+estratto da una popolazione Normale con media $\mu$ incognita e
+deviazione standard incognita. L'intervallo di confidenza è definito
+come $$\bar{x} \pm t^{*} \frac{s}{\sqrt{n}}$$ dove
+
+-   $\bar{x}=148000$
+
+-   $s=62000$
+
+-   $t^{*}=2.064$ (quantile a livello 0.025 di una distribuzione T con
+    $n-1=24$ gradi di libertà).
+
+Quindi l'intervallo di confidenza richiesto è
+$$\left[148000-2.064 \frac{62000}{\sqrt{25}}; 148000+2.064 \frac{62000}{\sqrt{25}}\right]=[122406.4; 173593.5]$$
+
+
+### Esercizio 3.19 {-}
+
+Il direttore del personale di una grande società
+intende stimare le assenze del personale dipendente dell'ufficio
+centrale della società nel corso di 1 anno. Si estrae un campione
+casuale di 25 dipendenti e si osservano i seguenti risultati:
+
+-   $\bar{X}=9.7$ giorni, $S=4$ giorni;
+
+-   12 dipendenti sono stati assenti più di 10 giorni.
+
+1.  Costruire un intervallo di confidenza al 95% per il numero medio di
+    giorni di assenza dei dipendenti nello scorso anno;
+
+2.  Costruire un intervallo di confidenza al 95% per stimare la
+    proporzione di dipendenti che lo scorso anno sono stati assenti più
+    di 10 giorni.
+
+
+#### Soluzione {-. sol}
+La variabile $X$="giorni di assenza\" ha distribuzione Normale con media
+$\mu$ e varianza $\sigma^{2}$ entrambe incognite. Dovendo fare inferenza
+sulla media $\mu$ ed essendo la varianza incognita, la statistica test
+da utilizzare è $$T=\frac{\bar{X}-\mu}{S/\sqrt{n}} \sim T_{n-1}$$ che ha
+distribuzione T con $n-1$ gradi di libertà.
+
+1.  L'intervallo di confidenza per $\mu$ è definito come
+    $$\left[\bar{X}-t^{*}\frac{S}{\sqrt{n}},\bar{X}+t^{*}\frac{S}{\sqrt{n}}\right]$$
+    dove $t^{*}=2.064$. Sostituendo i valori, si ottiene il seguente
+    intervallo di confidenza:
+    $$[9.7-2.064\frac{4}{\sqrt{25}},9.7+2.064\frac{4}{\sqrt{25}}]=[8.0488,11.3512]$$
+
+2.  Circa la proporzione, l'intervallo di confidenza è definito come
+    $$\left[\hat{p}-z^{*}\sqrt{\frac{\hat{p}(1-\hat{p})}{n}};\hat{p}+z^{*}\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}\right]=[0.284 ; 0.676]$$
+    dove $\hat{p}=\frac{12}{25}=0.48$ e $z^{*}=1.96$
+    
+## Esercitazione 3.1 {-}
+
+### Esercizio 3.1.1 {-}
+
+Per confrontare le statistiche a livello nazionale con quelle del proprio comune, un assessore alla sanità di un comune di media grandezza ha indetto un sondaggio tra gli abitanti del comune. Dopo aver scelto casualmente 200 cittadini, è stato chiesto loro se avevano mai contratto la varicella. I risultati mostrano che 130 di essi hanno già contratto la varicella. 
+
+<ol type='a'>
+  <li>	Si determini l’intervallo di confidenza a livello del 95% per l’ignota proporzione $p$ di abitanti del comune che hanno contratto la varicella.</li>
+  <li>	Utilizzando l’informazione campionaria, quanti cittadini si dovrebbero intervistare affinché l’intervallo di confidenza per $p$ al 95% abbia ampiezza inferiore a 0.01?</li>
+</ol>
+
+### Esercizio 3.1.2 {-}
+
+In un’indagine sull’ascolto televisivo, è stato selezionato un campione casuale di 300 adulti ed è stato rilevato il tempo giornaliero (espresso in ore) trascorso a guardare la televisione; i dati ottenuti sono stati riportati nella seguente tabella:
+
+```{r echo=FALSE}
+freq = c(25,72,158,45)
+data.frame(rbind(c("Tempo","$(0,0.5]$","$(0.5,1]$", "$(1,2]$", "$(2,5]$", "Totale"),c("Frequenze",freq, sum(freq))))%>%
+  kbl(align = 'lccccl', col.names = NULL)%>%
+  kable_classic(html_font = 'Computer Modern', full_width=T)%>%
+  column_spec(1, bold=T, border_left = T, border_right = T)%>%
+  column_spec(6, bold=T, border_left = T, border_right = T)%>%
+  row_spec(1, bold = T)%>%
+  row_spec(c(1,2),
+           extra_css = 'border-top: thin solid;border-bottom: thin solid')
+```
+<ol type='a'>
+  <li>	Si fornisca, attraverso uno stimatore corretto, la stima puntuale della varianza $\sigma^2$ del tempo giornaliero trascorso a guardare la televisione.</li>
+  <li>Si costruisca l’intervallo di confidenza per l’ignoto tempo $\mu$ trascorso a guardare la televisione al livello di confidenza del 95%.</li>
+  <li>Si indichi come varierebbe l’ampiezza dell’intervallo di confidenza se il livello di confidenza venisse alzato al 98% (motivare la risposta senza effettuare calcoli). </li>
+  <li>Si costruisca l’intervallo di confidenza per la varianza $\sigma^2$ del tempo trascorso a guardare la televisione al livello di confidenza del 95%.</li>
+  <li>Sulla base di precedenti indagini, si può ritenere che la varianza $\sigma^2$ del tempo giornaliero trascorso a guardare la televisione si pari a 0.9. Si determini la numerosità del campione necessaria affinché la varianza della media campionaria sia inferiore o uguale a 0.0015.</li>
+</ol>
+
+### Esercizio 3.1.3 {-}
+
+Sia $X$ la statura (in cm) degli allievi iscritti ad una polisportiva e si indichi con $\mu$ il suo valore medio. Dall’esperienza passata, si può ritenere che la deviazione standard $\sigma$ di $X$ sia pari a 5cm.
+	
+<ol type='a'>
+  <li>Sapendo che l’altezza media campionaria di un campione di 134 iscritti è risultata pari a 174, si determini l’intervallo di confidenza al livello del 93% per l’altezza media $\mu$ degli iscritti.</li>
+  <li>Si determini la numerosità campionaria necessaria affinché risulti $P(|\overline{X}-\mu|\leq0.25)=0.95$.</li>
+</ol>
+	
+	
+### Esercizio 3.1.4 {-}
+
+Un giornalaio ha rilevato che, in un campione di 30 giorni, ha venduto complessivamente 3142 quotidiani. In base all’esperienza passata gli è noto che la deviazione standard del numero di quotidiani venduti in un giorno è pari a 12.
+
+<ol type='a'>
+  <li>Si calcoli l’intervallo di confidenza al 96% per il numero medio di $\mu$ di quotidiani venduti giornalmente.</li>
+  <li>Come varierebbe l’ampiezza dell’intervallo di confidenza determinato al punto precedente se aumentasse il numero di giorni di rilevazione?</li>
+  <li>Per quanti giorni il giornalaio dovrebbe continuare la rilevazione se vuole che la deviazione standard della media campionaria del numero di quotidiani venduti in un giorno si dimezzi?</li>
+</ol>
+	
+	
+### Esercizio 3.1.5 {-}
+
+Sia $X$ la quantità (in quintali) di uva prodotta da un ettaro di vigna in un grande vigneto. Scegliendo casualmente 135 ettari di vigna si sono ottenute le seguenti sintesi campionarie: $$\sum_{i=1}^{135}x_i =2345;\quad \sum_{i=1}^{135}x_i^2 =47425$$
+<ol type='a'>
+  <li>Si determini l’intervallo di confidenza per l’ignota quantità media $\mu$ di uva prodotta ad un livello di confidenza del 95%.</li>
+  <li>Come cambierebbe l’ampiezza dell’intervallo di confidenza per $\mu$ determinato al punto precedente se il livello di confidenza fosse del 90%?</li>
+  <li>Ulteriori indagini suggeriscono che la varianza $\sigma^2$ di $X$ sia pari a 25. Considerando questa informazione, si determini la numerosità $n$ del campione che garantisce $P(|\overline{X}-\mu|\leq0.9)=0.9$.</li>
+</ol>
+
+### Esercizio 3.1.6 {-}
+
+Una grande società è interessata a determinare la proporzione $p$ dei propri impiegati che sarebbero disponibili a svolgere un orario settimanale di 36 ore in 5 giorni. A tal fine, la società promuove un’indagine al proprio interno e rileva che, in un campione casuale (con ripetizione) di 160 impiegati, 95 accetterebbero l’orario proposto.
+
+<ol type='a'>
+  <li>Si determini l’intervallo di confidenza per l’ignota proporzione $p$ al libello del 97%.</li>
+  <li>Si determini il numero di impiegati ancora da intervistare affinché l’ampiezza dell’intervallo di confidenza calcolato al punto precedente sia inferiore a 0.16 sia tenendo conto dell’informazione campionaria sia non tenendo conto di tale informazione.</li>
+</ol>
+	
+### Esercizio 3.1.7 {-}
+
+Vengono intervistati 20 individui chiedendo qual è il loro consumo annuale di bevande alcoliche (espresso in litri). Si sono ricavate quindi le seguenti statistiche $$\sum_{i=1}^{20}x_i =2600;\quad\sum_{i=1}^{20}x_i^2=419244$$
+Supponendo che il carattere si distribuisca come una normale:
+
+<ol type='a'>
+  <li>Si determini l’intervallo di confidenza al 95% per la media incognita $\mu$.</li>
+  <li>Si determini l’intervallo di confidenza al 95% per la varianza incognita $\sigma^2$.</li>
+</ol>
+	
+### Soluzioni esercitazione 3.1 {-.sol}
+
+#### Esercizio 3.1.1 {-}
+
+```{r}
+# E1 
+n <- 200
+p <-130 / 200; p
+```
+
+
+<ol  type='a'>
+
+Popolazione Bernoulliana, $n=200$ ampia numerosità campionaria, $\hat{p}=\frac{130}{200}=0.65$.
+  <li> $$(L_1,L_2 )=\left(\hat{P}\pm z_{1-\frac{\alpha}{2}} \sqrt{\frac{\hat{P}(1-\hat{P})}{n}}\right)$$ $$1-\alpha=0.95;\quad \alpha=0.05;\quad z_{1-\frac{\alpha}{2}}=z_{0.975}=1.96$$ $$l_1=\hat{p}-z_{0.975}\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}=0.65-1.96\sqrt{\frac{0.65 (1-0.65)}{200}}=0.65-0.0661=0.5839$$ $$l_2=\hat{p}+z_{0.975}\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}=0.65+0.0661=0.7161$$
+```{r}
+# a)
+a <- 0.05
+z <- round(qnorm(1-a/2), 4); z
+d <- round(z * sqrt(p*(1-p)/n), 4); d
+p-d; p+d
+```
+  
+  </li>
+  <li> $$ A=2\cdot z_{0.975}\cdot\frac{\sqrt{\hat{p}(1-\hat{p})}}{\sqrt{n}}<0.01$$ $$ 2\cdot z_{0.975}\cdot\frac{\sqrt{\hat{p}(1-\hat{p})}}{\sqrt{n}}<0.01$$ $$ A=2\cdot z_{0.975}\cdot\frac{\sqrt{\hat{p}(1-\hat{p})}}{0.001}<\sqrt{n}$$ $$n>4\cdot z_{0.975}^2\cdot\frac{\hat{p}(1-\hat{p})}{0.01^2} =34958.56$$
+```{r}
+# b)
+A <- 0.01
+4*z^2*p*(1-p)/A^2
+```
+  
+</li>
+</ol>	
+
+
+
+#### Esercizio 3.1.2 {-}	
+
+
+```{r}
+# E2 
+
+rm(list = ls())
+
+x <- c(0.25, 0.75, 1.5, 3.5)
+nn <- c(25, 72, 158, 45)
+n <- sum(nn)
+x2 <- x^2
+xn <- x*nn
+x2n <- x^2*nn
+d <- data.frame(x, nn, xn, x2, x2n); d
+colSums(d)
+```
+
+```{r echo=FALSE}
+data.frame(cbind(c(1:4, "Tot."),rbind(d, colSums(d))))%>%
+  kbl(align = 'c', col.names = c("$j$", "$x_j$", "$n_j$", "$x_jn_j$", "$x_j^2$","$x_j^2n_j$"))%>%
+  kable_classic(html_font = 'Computer Modern', full_width=T)%>%
+  column_spec(1, bold=T)%>%
+  row_spec(c(0,5), bold = T, extra_css = 'border-top: thin solid;border-bottom: thin solid')%>%
+  row_spec(4, extra_css = 'border-bottom: thin solid')
+```
+
+<ol  type='a'>
+  <li>$$\overline{x}=\frac{454.75}{300}=1.515833;$$ $$\quad  \hat{\sigma}^2=\frac{948.8125}{300}-1.515833^2=0.8649576;\quad s^2=\frac{300}{299} 0.8649576=0.8678505$$
+```{r}
+# a
+m <- sum(xn) / n; m
+sd <- sum(x2n)/n - m^2; sd
+s2 <- sd*n/(n-1);s2
+```
+  
+  </li>
+  <li>	Numerosità campionaria ampia $$z_{1-\frac{\alpha}{2}}=z_{0.975}=1.96$$ $$l_1=\overline{x}-z_{0.975}\sqrt{\frac{s^2}{n}}=1.5158-1.96\sqrt{\frac{0.8679}{300}}=1.5158-0.1054=1.4104$$ $$l_2=1.5158+0.1054=1.6213 $$
+```{r}
+# b
+a <- 0.05
+z <- qnorm(1-a/2); z
+
+d <- z*sqrt(s2/n); d
+m - d; m + d
+```
+</li>
+  <li>	L’ampiezza dell’intervallo di confidenza è $$A=2\cdot z_{1-\frac{\alpha}{2}}\sqrt{\frac{s^2}{n}}$$ se il livello di confidenza aumenta, $\alpha$ diminuisce, $1-\frac{\alpha}{2}$ aumenta, la funzione quantile è una funzione monotona crescente, pertanto $z_{1-\frac{\alpha}{2}}$ aumenta, e a parità di altre condizioni $A$ aumenta.
+</li>
+  <li>	$r=n-1=299$ gdl, approssimiamo con la normale $$\chi_{1-\frac{\alpha}{2}}^2\approx r+\sqrt{2r}  z_{1-\frac{\alpha}{2}}=346.929 \,\,(348.7943)$$ $$L_1=\frac{(n-1) S^2}{\chi_{1-\frac{\alpha}{2}}^2}\approx \frac{299\cdot0.8649576}{346.929}=0.747955$$ $$\chi_{\frac{\alpha}{2}}^2\approx r+\sqrt{2r}  z_{\frac{\alpha}{2}}=r-\sqrt{2r}  z_{1-\frac{\alpha}{2}}=251.071\,\, (252.9924)$$ $$L_2=\frac{(n-1) S^2}{\chi_{\frac{\alpha}{2}}^2}\approx \frac{299\cdot0.8649576}{251.071}=1.033522$$
+```{r}
+# d
+r <- n - 1
+chi1 <- r + sqrt(2*r)*z; chi1
+qchisq(1-a/2, r)
+L1 <- s2*r/chi1; L1
+
+chi2 <- r - sqrt(2*r)*z; chi2
+qchisq(a/2, r)
+L2 <- s2*r/chi2; L2
+
+r <- 1000000; r + sqrt(2*r)*qnorm(a/2); qchisq(a/2, r)
+```
+  
+</li>
+  <li>	$$\sigma_{\overline{X}}^2=\frac{\sigma^2}{n}\leq 0.0015$$ $$\frac{0.9}{n}\leq 0.0015$$ $$n\geq\frac{0.9}{0.0015}=600$$
+
+```{r}
+# e
+0.9 / 0.0015
+```
+
+  </li>
+</ol>
+
+#### Esercizio 3.1.3 {-}
+
+```{r}
+# E3 
+
+rm(list = ls())
+
+s <- 5
+```
+
+
+<ol  type='a'>
+  <li>	$\sigma=5;\,\,n=134;\,\, \overline{x}=174;$ numerosità campionaria elevata $$1-\alpha=0.93; \quad \alpha=0.07;\quad 1-\frac{\alpha}{2}=0.965;\quad z_{0.965}\simeq1.81$$ $$l_1=\overline{x}-z_{0.965}\frac{\sigma}{\sqrt{n}}=174-1.81 \frac{5}{\sqrt{134}}=174-0.7818=173.2182$$ $$l_2=\overline{x}+z_{0.965}  \frac{\sigma}{\sqrt{n}}=174.7818$$
+```{r}
+# a)
+n <- 134
+m <- 174
+a <- 0.07
+1 - a/2
+z <- 1.81
+d <- z*s/sqrt(n); d
+m - d; m + d
+```
+  
+</li>
+  <li>
+  $$P(|\overline{X}-\mu|\leq0.25)=0.95=1-α$$ $$d=z_{1-\frac{\alpha}{2}}  \frac{\sigma}{\sqrt{n}}$$ $$0.25=z_{0.975}  \frac{5}{\sqrt{n}}$$ $$n=\left(z_{0.975}  \frac{5}{0.25}\right)^2=\left(1.96\frac{5}{0.25}\right)^2=1521$$
+
+```{r}
+# b)
+(1.95*5/0.25)^2
+```
+  
+  </li>
+</ol>
+
+#### Esercizio 3.1.4 {-}
+$$n=30;\quad \overline{x}=\frac{3142}{30}=104.7333;\quad \sigma=12$$
+```{r}
+# E4 
+
+rm(list = ls())
+
+n <- 30
+m <- 3142 / n; m
+s <- 12
+```
+
+<ol  type='a'>
+  <li>	Numerosità campionaria ampia... quasi $1-\alpha=0.96;\,\, \alpha=0.04;\,\,1-\frac{\alpha}{2}=0.98;\,\,z_{0.98}=2.05 $ $$l_1=\overline{x}-z_{0.98}\frac{\sigma}{\sqrt{n}}=104.7333-4.491325=100.242$$ $$l_2=104.7333+4.491325=109.2247$$
+```{r}
+# a)
+z <- 2.05
+d <- z*s/sqrt(n); d
+m - d; m + d
+```
+  
+</li>
+  <li>	$$A=2\cdot z_{0.98}  \frac{\sigma}{\sqrt{n}}$$ l’ampiezza diminuirebbe.
+</li>
+  <li>	$$\sigma_{\overline{X}} =\frac{\sigma}{\sqrt{n}}$$ $$\sigma_{\overline{X}}^*=\frac{\sigma}{\sqrt{n^*}}=\frac{\sigma_{\overline{X}}}{2}=\frac{\sigma}{2\sqrt{n}}$$ $$\frac{\sigma}{\sqrt{n^*}}=\frac{1}{2\sqrt{n}}$$ $$\frac{1}{\sqrt{n^*}}=\frac{1}{2\sqrt{n}}$$ $$\sqrt{n^*}=2\sqrt{n}$$ $$n^*=4n$$ la numerosità campionaria deve quadruplicare, quindi oltre ai 30 giorni iniziali deve continuare per altri 90 giorni.
+</li>
+</ol>
+
+#### Esercizio 3.1.5 {-}
+
+$$\overline{x}=17.37037;\quad \hat{\sigma}^2=\frac{47425}{135}-\overline{x}^2=49.56653;\quad s^2=49.93643$$
+```{r}
+# E5 
+
+rm(list = ls())
+
+n <- 135
+sx <- 2345
+sx2 <- 47425
+
+m <- sx / n; m
+sd <-sx2 / n - m^2; sd 
+s2 <- sd * n / (n - 1); s2
+```
+
+<ol  type='a'>
+  <li>	$n=135$ numerosità campionaria elevata; $z_{1-\frac{\alpha}{2}}=1.96$ $$l_1=\overline{x}-z_{0.975} \sqrt{\frac{s^2}{n}}  =17.37037-1.96\sqrt{\frac{49.93643}{135}}=17.37037-1.192059=16.17831$$ $$l_2=17.37037+1.192059=18.56243$$
+```{r}
+# a)
+z <- 1.96
+d <- z*sqrt(s2 / n); d
+
+m - d; m + d
+```
+
+</li>
+  <li>	Per un livello di confidenza inferiore l’ampiezza diminuisce $(2.384119\longrightarrow2.000779)$
+```{r}
+# b)
+2 * qnorm(0.95)*sqrt(s2 / n)
+```
+  </li>
+  <li>	$\sigma^2=25$ $$P(|\overline{X}-\mu|\leq0.9)=0.9=1-\alpha$$ $$d=z_{1-\frac{\alpha}{2}}  \frac{\sigma}{\sqrt{n}}$$ $$0.09=z_{0.995}  \frac{5}{\sqrt{n}}$$ $$n=\left(z_{0.995}  \frac{5}{0.09}\right)^2=\left(3.291 \frac{5}{0.09}\right)^2=33428.03$$
+```{r}
+# c)
+(3.291*5/0.09)^2
+```
+</li>
+</ol>
+
+
+#### Esercizio 3.1.6 {-}
+Numerosità campionaria elevata $$n=160;\quad \hat{p}=\frac{95}{160}=0.59375$$
+```{r}
+# E6
+
+rm(list = ls())
+
+n <- 160
+p <- 95 / n; p
+```
+
+
+<ol  type='a'>
+  <li>	$1-\alpha=0.97;\quad 1-\frac{\alpha}{2}=0.985;\quad z_{0.985}=2.17$ $$\begin{align*}l_1&=\hat{p}-z_{0.985}\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}=0.59375-2.17\sqrt{\frac{0.59375(1-0.59375)}{160}}=\\ &=0.59375-0.0842555=0.509495\end{align*}$$ $$l_2=0.59375+0.0842555=0.6780055$$
+```{r}
+# a)
+z <- 2.17
+d <- z*sqrt(p*(1-p)/n); d
+
+p - d; p + d
+```
+  
+</li>
+  <li>	Tenendo conto dell’informazione campionaria $$2\cdot2.17\sqrt{\frac{0.59375(1-0.59375)}{n}}<0.16$$ $$\sqrt{n}>\frac{2\cdot2.17\sqrt{0.59375(1-0.59375)}}{0.16}$$ $$n>\frac{4\cdot2.17^2\cdot0.59375(1-0.59375)}{0.16^2} =177.4747$$ Ancora 18
+
+Senza tenere conto dell’informazione campionaria $$n>\frac{4\cdot2.17^2\cdot0.5(1-0.5)}{0.16^2} =183.9414$$ Ancora 24
+
+```{r}
+# b)
+(2*z*sqrt(p*(1-p))/0.16)^2
+(2*z*sqrt(0.5*(1-0.5))/0.16)^2
+```
+
+</li>
+</ol>
+
+
+#### Esercizio 3.1.7 {-}
+$$\overline{x}=130;\quad \hat{\sigma}^2=\frac{419244}{20}-130^2=4062.2;\quad s^2=4276;\quad r=n-1=19$$
+```{r}
+# E7 
+
+sx <- 2600
+sx2 <- 419244
+n <- 20
+m <- sx / n; m
+s2d <- sx2 / n - m^2; s2d
+s2 <- s2d * n / (n - 1); s2
+```
+
+<ol  type='a'>
+  <li>	$$l_1=\overline{x}-t_{0.975}\sqrt{\frac{s^2}{n}}=130-2.093\sqrt{\frac{4276}{20}}=130-30.60364=99.39636$$ $$l_2=120+30.60364=160.6036$$
+```{r}
+# a)
+t <- 2.093
+d <- t*sqrt(s2/n); d
+m - d; m + d
+```
+  
+</li>
+  <li>$$l_1=\frac{(n-1) s^2}{\chi_{1-\frac{\alpha}{2}}^2}=\frac{(n-1) s^2}{\chi_{0.975}^2}=\frac{19\cdot4276}{32.85}=2473.181$$ $$l_2=\frac{(n-1) s^2}{\chi_{\frac{\alpha}{2}}^2}=\frac{(n-1) s^2}{\chi_{0.025}^2}=\frac{19\cdot4276}{8.91}=9118.294$$
+  
+```{r}
+# b)
+(n - 1)*s2 / 32.85
+(n - 1)*s2 / 8.91
+```
+  
+</li>
+</ol>
+
+
+## Esercitazione 3.2 {-}
+
+<h2> (continua gli esercizi della esercitazione 3.1) </h2>
+
+### Esercizio 3.2.1 {-}
+Per confrontare le statistiche a livello nazionale con quelle del proprio comune, un assessore alla sanità di un comune di media grandezza ha indetto un sondaggio tra gli abitanti del comune. Dopo aver scelto casualmente 200 cittadini, è stato chiesto loro se avevano mai contratto la varicella. I risultati mostrano che 130 di essi hanno già contratto la varicella.
+
+<ol type='a' start=3>
+  <li> Si verifichi l’ipotesi, con un livello di significatività del 5%, che almeno il 67% dei cittadini abbia già contratto la varicella.</li>
+</ol>
+
+### Esercizio 3.2.3 {-}
+
+Sia $X$ la statura (in cm) degli allievi iscritti ad una polisportiva e si indichi con $\mu$ il suo valore medio. Dall’esperienza passata, si può ritenere che la deviazione standard $\sigma$ di $X$ sia pari a 5 cm.
+
+<ol type='a' start=3>
+  <li>Si verifichi l’ipotesi, con un livello di significatività del 7%, che l’altezza media sia pari a 175 cm.</li>
+</ol>
+
+### Esercizio 3.2.4 {-}
+
+Un giornalaio ha rilevato che, in un campione di 30 giorni, ha venduto complessivamente 3142 quotidiani. In base all’esperienza passata gli è noto che la deviazione standard del numero di quotidiani venduti in un giorno è pari a 12.
+
+<ol type='a' start=4>
+  <li>Si valuti l’ipotesi, con un livello di significatività del 4%, che il giornalaio venda al più 100 quotidiani al mese.</li>
+</ol>
+
+### Esercizio 3.2.6 {-}
+
+Una grande società è interessata a determinare la proporzione $p$ dei propri impiegati che sarebbero disponibili a svolgere un orario settimanale di 36 ore in 5 giorni. A tal fine, la società promuove un’indagine al proprio interno e rileva che, in un campione casuale (con ripetizione) di 160 impiegati, 95 accetterebbero l’orario proposto.
+
+<ol type='a' start=3>
+  <li>Si valuti l’ipotesi, con un livello di significatività del 3%, se almeno la metà degli impiegati accetterebbe l’orario proposto.</li>
+</ol>
+
+### Esercizio 3.2.7 {-}
+
+Vengono intervistati 20 individui chiedendo qual è il loro consumo annuale di bevande alcoliche (espresso in litri). Si sono ricavate quindi le seguenti statistiche $$\sum_{i=1}^{20}x_i =2600;\quad \sum_{i=1}^{20}x_i^2=419244$$
+Supponendo che il carattere si distribuisca come una normale:
+
+<ol type='a' start=3>
+  <li>Si verifichi l’ipotesi, con un livello di significatività dell’5%, che il consumo annuale di bevande alcoliche sia almeno pari a 140 litri.</li>
+  <li>	Si verifichi l'ipotesi, con un livello di significatività del 5%, che la varianza del consumo annuale di bevande alcoliche sia pari a 4300. </li>
+</ol>
+
+### Soluzioni esercitazione 3.2 {-.sol}
+
+#### Esercizio 3.2.1 {-}
+
+```{r}
+# E1 
+
+n <- 200
+p <-130 / 200; p
+```
+
+
+c.	$$H_0:\,\,p\geq0.67$$ $$H_1:\,\,p<0.67$$ $$R=\{z_{\hat{P}}:\,\,z_{\hat{P}} <-z_{1-α} \}$$ $$R=\{z_{\hat{P}}:\,\,z_{\hat{P}} <-z_{1-α} \}$$ $$z_{\hat{P}} =\frac{\hat{p}-p_0}{\sqrt{\frac{p_0 (1-p_0 )}{n}}}=\frac{0.65-0.67}{0.0337}=-0.59$$ $$-z_{1-\alpha}=-z_{0.95}=-1.645$$ **non** rifiuto $H_0$ (i dati non mostrano evidenze contro $H_0$) 
+  
+Livello di confidenza osservato $$\Phi\left(z_{\hat{P}}  \right)=\Phi(-0.59)=1-\Phi(0.59)=1-0.7224=0.2776>0.05$$
+
+```{r}
+# c)
+sqrt(p*(1-p)/n)
+(p-0.67)/sqrt(p*(1-p)/n)
+-0.59 < -1.645
+1-0.7224
+```
+
+
+
+
+#### Esercizio 3.2.3 {-}
+
+```{r}
+# E3 
+
+rm(list = ls())
+
+s <- 5
+n <- 134
+m <- 174
+a <- 0.07
+z <- 1.81
+d <- z*s/sqrt(n)
+```
+
+c. 	$$H_0:\,\,\mu=175$$ $$H_1:\,\,\mu\neq 175$$ $$R=\left\{z_{\overline{X}}:\left|z_{\overline{X}} \right|>z_{1-\frac{\alpha}{2}} \right\}$$ $$z_{\overline{X}}=\frac{\overline{x}-\mu_0}{\sigma\sqrt{n}}=\frac{174-175}{\frac{5}{\sqrt{134}}}=-2.315$$ $$z_{1-\frac{\alpha}{2}}=z_{0.965}\approx 1.81$$ rifiuto $H_0$ (i dati portano evidenze contro $H_0$)
+
+
+Livello di confidenza osservato $$2\left[1-\Phi\left(\left|z_\overline{X}\right|\right)\right]=2\left[1-\Phi\left(2.315\right)\right]=2[1-0.98975]=0.0205<0.07$$ 
+
+```{r}
+# c)
+(m - 175) / (5/sqrt(n))
+2*(1-0.98975)
+```
+
+
+
+#### Esercizio 3.2.4 {-}
+
+```{r}
+# E4 
+
+rm(list = ls())
+
+n <- 30
+m <- 3142 / n; m
+s <- 12
+```
+
+
+d. 	$$H_0: \,\,\mu\leq100$$ $$H_1:\,\,\mu>100$$ $$R=\left\{z_{\overline{X}}:z_{\overline{X}} >z_{1-α} \right\}$$ $$z_{\overline{X}} =\frac{\overline{x}-\mu_0}{\frac{\sigma}{n}}=\frac{104.7333-100}{\frac{12}{\sqrt{30}}}=2.160$$ $$z_{1-\alpha}=z_{0.96}\approx1.75$$ rifiuto $H_0$
+
+
+Livello di confidenza osservato $$1-Φ\left(z_{\overline{X}}\right)=1-\Phi(2.16)=1-0.9846=0.0154<0.04$$
+
+```{r}
+# d)
+(m - 100) / (12 / sqrt(30))
+1-0.9846
+```
+
+
+#### Esercizio 3.2.6 {-}
+
+
+d. 		
+$$H_0:\,\, p\geq0.5$$ $$H_1:\,\,p<0.5$$ $$R=\left\{z_{\hat{P}}:\,\,z_{\hat{P}} <-z_{1-\alpha} \right\}$$ $$z_{\hat{P}}=\frac{\hat{p}-p_0}{\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}}=\frac{0.59375-0.5}{\sqrt{\frac{0.59375(1-0.59375)}{160}}}=2.41$$ $$-z_{1-\alpha}=-z_{0.97}\approx-1.88$$ **non** rifiuto $H_0$
+
+Livello di confidenza osservato $$\Phi\left(z_{\overline{X}}\right)=\Phi(2.41)= 0.992 >0.03$$
+
+
+
+#### Esercizio 3.2.7 {-}
+
+```{r}
+# E7 
+
+sx <- 2600
+sx2 <- 419244
+n <- 20
+m <- sx / n; m
+s2d <- sx2 / n - m^2; s2d
+s2 <- s2d * n / (n - 1); s2
+```
+
+c. 	$$H_0:\,\,\mu\geq 140$$ $$H_1:\,\,\mu<140$$ $$R=\left\{t_{\overline{X}}:t_{\overline{X}}<-t_{1-\alpha} \right\}$$ $$t_{\overline{X}}=\frac{\overline{x}-\mu_0}{\sqrt{\frac{s^2}{n}}}=\frac{130-140}{\sqrt{\frac{4276}{20}}}=-0.6839$$ $$r=n-1=19$$ $$-t_{1-\alpha}=-t_{0.95}=-1.729 $$ **non** rifiuto $H_0$
+
+Livello di confidenza osservato $$F\left(t_{\overline{X}}\right)=F(-0.6839)=1-F(0.6839)>0.2>0.05$$
+
+nota: $F(0,861)=0.8\Rightarrow F(0.6839)<0.8$ quindi il livello di confidenza osservato è maggiore del 20%.
+
+```{r}
+# c)
+(m - 140) / sqrt(s2 / n)
+-0.6839 < -1.729
+```
+
+d. 	$$H_0:\,\,\sigma^2=4300$$ $$H_1:\,\,\sigma^2\neq4300$$ $$R=\left\{v:\left(v<\chi_{\frac{\alpha}{2}}^2\right)\cup\left(v>\chi_{1-\frac{\alpha}{2}}^2 \right)\right\}$$ $$v=\frac{(n-1) s^2}{(σ_0^2 )}=\frac{19\cdot4276}{4300}=18.89$$ $$r=n-1=19$$ quantili già osservati $$\chi_{\frac{\alpha}{2}}^2=8.91;\quad \chi_{1-\frac{\alpha}{2}}^2=32.85$$ **non** rifiuto l’ipotesi nulla
+
+Livello di confidenza osservato $$2\min\left[P\left(V<v|\sigma^2=\sigma_0^2 \right),\quad P\left(V>v│\sigma^2=\sigma_0^2 \right)\right]$$ $$P\left(V<v│\sigma^2=\sigma_0^2 \right)=P(V<18.89)>0.5$$ $$P\left(V>v│\sigma^2=\sigma_0^2\right)=1-P(V<18.89)>1-0.75=0.25$$ quindi il livello di confidenza osservato è maggiore di $$2 \min(0.5,\,\,0.25)=2\cdot0.25=0.5$$
+```{r}
+# d)
+v <- (n - 1)*s2 / 4300; v
+```
+
+
+
+
+

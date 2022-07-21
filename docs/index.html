@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Esercizi Statistica di Base</title>
+  <meta name="description" content="In questo libro sono presenti gli esercizi di Statistica di Base" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Esercizi Statistica di Base" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="In questo libro sono presenti gli esercizi di Statistica di Base" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Esercizi Statistica di Base" />
+  
+  <meta name="twitter:description" content="In questo libro sono presenti gli esercizi di Statistica di Base" />
+  
+
+<meta name="author" content="Brunero Liseo" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="statistica-descrittiva.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Esercitazioni di Statistica di Base</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduzione</a></li>
+<li class="chapter" data-level="1" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html"><i class="fa fa-check"></i><b>1</b> Statistica descrittiva</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#popolazione-campione-e-variabili"><i class="fa fa-check"></i><b>1.1</b> Popolazione, campione e variabili</a>
+<ul>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.1"><i class="fa fa-check"></i>Esercizio 1.1</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.2"><i class="fa fa-check"></i>Esercizio 1.2</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.3"><i class="fa fa-check"></i>Esercizio 1.3</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.4"><i class="fa fa-check"></i>Esercizio 1.4</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.5"><i class="fa fa-check"></i>Esercizio 1.5</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#distribuzioni-di-frequenza"><i class="fa fa-check"></i><b>1.2</b> Distribuzioni di frequenza</a>
+<ul>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.6"><i class="fa fa-check"></i>Esercizio 1.6</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.7"><i class="fa fa-check"></i>Esercizio 1.7</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.8"><i class="fa fa-check"></i>Esercizio 1.8</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#rappresentazioni-grafiche-per-caratteri-qualitativi"><i class="fa fa-check"></i><b>1.3</b> Rappresentazioni grafiche per caratteri qualitativi</a>
+<ul>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.9"><i class="fa fa-check"></i>Esercizio 1.9</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.10"><i class="fa fa-check"></i>Esercizio 1.10</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.11"><i class="fa fa-check"></i>Esercizio 1.11</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#rappresentazioni-grafiche-e-numeriche-per-caratteri-quantitativi"><i class="fa fa-check"></i><b>1.4</b> Rappresentazioni grafiche e numeriche per caratteri quantitativi</a>
+<ul>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.12"><i class="fa fa-check"></i>Esercizio 1.12</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.13"><i class="fa fa-check"></i>Esercizio 1.13</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.14"><i class="fa fa-check"></i>Esercizio 1.14</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.15"><i class="fa fa-check"></i>Esercizio 1.15</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.16"><i class="fa fa-check"></i>Esercizio 1.16</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.17"><i class="fa fa-check"></i>Esercizio 1.17</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.18"><i class="fa fa-check"></i>Esercizio 1.18</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.19"><i class="fa fa-check"></i>Esercizio 1.19</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.20"><i class="fa fa-check"></i>Esercizio 1.20</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.21"><i class="fa fa-check"></i>Esercizio 1.21</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#moda-media-mediana-e-quantili"><i class="fa fa-check"></i><b>1.5</b> Moda, media, mediana e quantili</a>
+<ul>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.22"><i class="fa fa-check"></i>Esercizio 1.22</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.23"><i class="fa fa-check"></i>Esercizio 1.23</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.24"><i class="fa fa-check"></i>Esercizio 1.24</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.25"><i class="fa fa-check"></i>Esercizio 1.25</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.26"><i class="fa fa-check"></i>Esercizio 1.26</a></li>
+</ul></li>
+<li class="chapter" data-level="1.6" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#gli-indici-di-variabilità"><i class="fa fa-check"></i><b>1.6</b> Gli indici di variabilità</a>
+<ul>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.27"><i class="fa fa-check"></i>Esercizio 1.27</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.28"><i class="fa fa-check"></i>Esercizio 1.28</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.29"><i class="fa fa-check"></i>Esercizio 1.29</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.30"><i class="fa fa-check"></i>Esercizio 1.30</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.31"><i class="fa fa-check"></i>Esercizio 1.31</a></li>
+</ul></li>
+<li class="chapter" data-level="1.7" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#proprietà-delle-medie"><i class="fa fa-check"></i><b>1.7</b> Proprietà delle medie</a>
+<ul>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.32"><i class="fa fa-check"></i>Esercizio 1.32</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.33"><i class="fa fa-check"></i>Esercizio 1.33</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.34"><i class="fa fa-check"></i>Esercizio 1.34</a></li>
+</ul></li>
+<li class="chapter" data-level="1.8" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#i-numeri-indice"><i class="fa fa-check"></i><b>1.8</b> I numeri indice</a>
+<ul>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.35"><i class="fa fa-check"></i>Esercizio 1.35</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.36"><i class="fa fa-check"></i>Esercizio 1.36</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.37"><i class="fa fa-check"></i>Esercizio 1.37</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.38"><i class="fa fa-check"></i>Esercizio 1.38</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercitazione-1.1"><i class="fa fa-check"></i>Esercitazione 1.1</a>
+<ul>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.1.1"><i class="fa fa-check"></i>Esercizio 1.1.1</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.1.2"><i class="fa fa-check"></i>Esercizio 1.1.2</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#soluzioni-esercitazione-1.1"><i class="fa fa-check"></i>Soluzioni esercitazione 1.1</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercitazione-1.2"><i class="fa fa-check"></i>Esercitazione 1.2</a>
+<ul>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.2.1"><i class="fa fa-check"></i>Esercizio 1.2.1</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.2.2"><i class="fa fa-check"></i>Esercizio 1.2.2</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.2.3"><i class="fa fa-check"></i>Esercizio 1.2.3</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#soluzioni-esercitazione-1.2"><i class="fa fa-check"></i>Soluzioni esercitazione 1.2</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercitazione-1.3"><i class="fa fa-check"></i>Esercitazione 1.3</a>
+<ul>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.3.1"><i class="fa fa-check"></i>Esercizio 1.3.1</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.3.2"><i class="fa fa-check"></i>Esercizio 1.3.2</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.3.3"><i class="fa fa-check"></i>Esercizio 1.3.3</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.3.4"><i class="fa fa-check"></i>Esercizio 1.3.4</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.3.5"><i class="fa fa-check"></i>Esercizio 1.3.5</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.3.6"><i class="fa fa-check"></i>Esercizio 1.3.6</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.3.7"><i class="fa fa-check"></i>Esercizio 1.3.7</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#soluzioni-esercitazione-1.3"><i class="fa fa-check"></i>Soluzioni esercitazione 1.3</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercitazione-1.4"><i class="fa fa-check"></i>Esercitazione 1.4</a>
+<ul>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.4.1"><i class="fa fa-check"></i>Esercizio 1.4.1</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.4.2"><i class="fa fa-check"></i>Esercizio 1.4.2</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.4.3"><i class="fa fa-check"></i>Esercizio 1.4.3</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.4.4"><i class="fa fa-check"></i>Esercizio 1.4.4</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#soluzioni-esercitazione-1.4"><i class="fa fa-check"></i>Soluzioni esercitazione 1.4</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercitazione-1.5"><i class="fa fa-check"></i>Esercitazione 1.5</a>
+<ul>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.5.1"><i class="fa fa-check"></i>Esercizio 1.5.1</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.5.2"><i class="fa fa-check"></i>Esercizio 1.5.2</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.5.3"><i class="fa fa-check"></i>Esercizio 1.5.3</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.5.4"><i class="fa fa-check"></i>Esercizio 1.5.4</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#soluzioni-esercitazione-1.5"><i class="fa fa-check"></i>Soluzioni esercitazione 1.5</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercitazione-1.6"><i class="fa fa-check"></i>Esercitazione 1.6</a>
+<ul>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.6.1"><i class="fa fa-check"></i>Esercizio 1.6.1</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.6.2"><i class="fa fa-check"></i>Esercizio 1.6.2</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.6.3"><i class="fa fa-check"></i>Esercizio 1.6.3</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#soluzioni-esercitazione-1.6"><i class="fa fa-check"></i>Soluzioni esercitazione 1.6</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="probabilita.html"><a href="probabilita.html"><i class="fa fa-check"></i><b>2</b> Probabilità</a>
+<ul>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizi-di-base-di-probabilità"><i class="fa fa-check"></i>Esercizi di base di probabilità</a>
+<ul>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.1"><i class="fa fa-check"></i>Esercizio 2.1</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.2"><i class="fa fa-check"></i>Esercizio 2.2</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.3"><i class="fa fa-check"></i>Esercizio 2.3</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.4"><i class="fa fa-check"></i>Esercizio 2.4</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.5"><i class="fa fa-check"></i>Esercizio 2.5</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.6"><i class="fa fa-check"></i>Esercizio 2.6</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.7"><i class="fa fa-check"></i>Esercizio 2.7</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.8"><i class="fa fa-check"></i>Esercizio 2.8</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.9"><i class="fa fa-check"></i>Esercizio 2.9</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.10"><i class="fa fa-check"></i>Esercizio 2.10</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.11"><i class="fa fa-check"></i>Esercizio 2.11</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.12"><i class="fa fa-check"></i>Esercizio 2.12</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.13"><i class="fa fa-check"></i>Esercizio 2.13</a></li>
+</ul></li>
+<li class="chapter" data-level="2.1" data-path="probabilita.html"><a href="probabilita.html#probabilità-condizionata"><i class="fa fa-check"></i><b>2.1</b> Probabilità condizionata</a>
+<ul>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.14"><i class="fa fa-check"></i>Esercizio 2.14</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.15"><i class="fa fa-check"></i>Esercizio 2.15</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.16"><i class="fa fa-check"></i>Esercizio 2.16</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.17"><i class="fa fa-check"></i>Esercizio 2.17</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.18"><i class="fa fa-check"></i>Esercizio 2.18</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.19"><i class="fa fa-check"></i>Esercizio 2.19</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.20"><i class="fa fa-check"></i>Esercizio 2.20</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.21"><i class="fa fa-check"></i>Esercizio 2.21</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.22"><i class="fa fa-check"></i>Esercizio 2.22</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.23"><i class="fa fa-check"></i>Esercizio 2.23</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.24"><i class="fa fa-check"></i>Esercizio 2.24</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.25"><i class="fa fa-check"></i>Esercizio 2.25</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="probabilita.html"><a href="probabilita.html#estrazioni-da-popolazioni-a-bassa-numerosità"><i class="fa fa-check"></i><b>2.2</b> Estrazioni da popolazioni a bassa numerosità</a>
+<ul>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.26"><i class="fa fa-check"></i>Esercizio 2.26</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.27"><i class="fa fa-check"></i>Esercizio 2.27</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.28"><i class="fa fa-check"></i>Esercizio 2.28</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.29"><i class="fa fa-check"></i>Esercizio 2.29</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.30"><i class="fa fa-check"></i>Esercizio 2.30</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.31"><i class="fa fa-check"></i>Esercizio 2.31</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="probabilita.html"><a href="probabilita.html#variabili-casuali"><i class="fa fa-check"></i><b>2.3</b> Variabili casuali</a>
+<ul>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.32"><i class="fa fa-check"></i>Esercizio 2.32</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.33"><i class="fa fa-check"></i>Esercizio 2.33</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.34"><i class="fa fa-check"></i>Esercizio 2.34</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.35"><i class="fa fa-check"></i>Esercizio 2.35</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.36"><i class="fa fa-check"></i>Esercizio 2.36</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.37"><i class="fa fa-check"></i>Esercizio 2.37</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.38"><i class="fa fa-check"></i>Esercizio 2.38</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.39"><i class="fa fa-check"></i>Esercizio 2.39</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.40"><i class="fa fa-check"></i>Esercizio 2.40</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.41"><i class="fa fa-check"></i>Esercizio 2.41</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.42"><i class="fa fa-check"></i>Esercizio 2.42</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.43"><i class="fa fa-check"></i>Esercizio 2.43</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="probabilita.html"><a href="probabilita.html#distribuzioni-continue"><i class="fa fa-check"></i><b>2.4</b> Distribuzioni continue</a>
+<ul>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.44"><i class="fa fa-check"></i>Esercizio 2.44</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.45"><i class="fa fa-check"></i>Esercizio 2.45</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.46"><i class="fa fa-check"></i>Esercizio 2.46</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.47"><i class="fa fa-check"></i>Esercizio 2.47</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.48"><i class="fa fa-check"></i>Esercizio 2.48</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.49"><i class="fa fa-check"></i>Esercizio 2.49</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.50"><i class="fa fa-check"></i>Esercizio 2.50</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.51"><i class="fa fa-check"></i>Esercizio 2.51</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.52"><i class="fa fa-check"></i>Esercizio 2.52</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.53"><i class="fa fa-check"></i>Esercizio 2.53</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.54"><i class="fa fa-check"></i>Esercizio 2.54</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.55"><i class="fa fa-check"></i>Esercizio 2.55</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.56"><i class="fa fa-check"></i>Esercizio 2.56</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="probabilita.html"><a href="probabilita.html#distribuzione-della-media-campionaria"><i class="fa fa-check"></i><b>2.5</b> Distribuzione della media campionaria</a>
+<ul>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.57"><i class="fa fa-check"></i>Esercizio 2.57</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.58"><i class="fa fa-check"></i>Esercizio 2.58</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.59"><i class="fa fa-check"></i>Esercizio 2.59</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.60"><i class="fa fa-check"></i>Esercizio 2.60</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.61"><i class="fa fa-check"></i>Esercizio 2.61</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.62"><i class="fa fa-check"></i>Esercizio 2.62</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.63"><i class="fa fa-check"></i>Esercizio 2.63</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.64"><i class="fa fa-check"></i>Esercizio 2.64</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.65"><i class="fa fa-check"></i>Esercizio 2.65</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.66"><i class="fa fa-check"></i>Esercizio 2.66</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.67"><i class="fa fa-check"></i>Esercizio 2.67</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.68"><i class="fa fa-check"></i>Esercizio 2.68</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.69"><i class="fa fa-check"></i>Esercizio 2.69</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.70"><i class="fa fa-check"></i>Esercizio 2.70</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.71"><i class="fa fa-check"></i>Esercizio 2.71</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.72"><i class="fa fa-check"></i>Esercizio 2.72</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="probabilita.html"><a href="probabilita.html#distribuzioni-di-variabili-casuali"><i class="fa fa-check"></i><b>2.6</b> Distribuzioni di variabili casuali</a>
+<ul>
+<li class="chapter" data-level="2.6.1" data-path="probabilita.html"><a href="probabilita.html#distribuzione-normale"><i class="fa fa-check"></i><b>2.6.1</b> Distribuzione Normale</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.73"><i class="fa fa-check"></i>Esercizio 2.73</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.74"><i class="fa fa-check"></i>Esercizio 2.74</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.75"><i class="fa fa-check"></i>Esercizio 2.75</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.76"><i class="fa fa-check"></i>Esercizio 2.76</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.77"><i class="fa fa-check"></i>Esercizio 2.77</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.78"><i class="fa fa-check"></i>Esercizio 2.78</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.79"><i class="fa fa-check"></i>Esercizio 2.79</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.80"><i class="fa fa-check"></i>Esercizio 2.80</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.81"><i class="fa fa-check"></i>Esercizio 2.81</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.82"><i class="fa fa-check"></i>Esercizio 2.82</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.83"><i class="fa fa-check"></i>Esercizio 2.83</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.84"><i class="fa fa-check"></i>Esercizio 2.84</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.85"><i class="fa fa-check"></i>Esercizio 2.85</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.86"><i class="fa fa-check"></i>Esercizio 2.86</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.87"><i class="fa fa-check"></i>Esercizio 2.87</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.88"><i class="fa fa-check"></i>Esercizio 2.88</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.89"><i class="fa fa-check"></i>Esercizio 2.89</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.90"><i class="fa fa-check"></i>Esercizio 2.90</a></li>
+<li class="chapter" data-level="2.6.2" data-path="probabilita.html"><a href="probabilita.html#la-distribuzione-geometrica"><i class="fa fa-check"></i><b>2.6.2</b> La distribuzione geometrica</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.91"><i class="fa fa-check"></i>Esercizio 2.91</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.92"><i class="fa fa-check"></i>Esercizio 2.92</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.93"><i class="fa fa-check"></i>Esercizio 2.93</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.94"><i class="fa fa-check"></i>Esercizio 2.94</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.95"><i class="fa fa-check"></i>Esercizio 2.95</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.96"><i class="fa fa-check"></i>Esercizio 2.96</a></li>
+<li class="chapter" data-level="2.6.3" data-path="probabilita.html"><a href="probabilita.html#distribuzione-binomiale"><i class="fa fa-check"></i><b>2.6.3</b> Distribuzione Binomiale</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.97"><i class="fa fa-check"></i>Esercizio 2.97</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.98"><i class="fa fa-check"></i>Esercizio 2.98</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.99"><i class="fa fa-check"></i>Esercizio 2.99</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.100"><i class="fa fa-check"></i>Esercizio 2.100</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.101"><i class="fa fa-check"></i>Esercizio 2.101</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.102"><i class="fa fa-check"></i>Esercizio 2.102</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.103"><i class="fa fa-check"></i>Esercizio 2.103</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.104"><i class="fa fa-check"></i>Esercizio 2.104</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.105"><i class="fa fa-check"></i>Esercizio 2.105</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.106"><i class="fa fa-check"></i>Esercizio 2.106</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.107"><i class="fa fa-check"></i>Esercizio 2.107</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.108"><i class="fa fa-check"></i>Esercizio 2.108</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.109"><i class="fa fa-check"></i>Esercizio 2.109</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.110"><i class="fa fa-check"></i>Esercizio 2.110</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.111"><i class="fa fa-check"></i>Esercizio 2.111</a></li>
+<li class="chapter" data-level="2.6.4" data-path="probabilita.html"><a href="probabilita.html#altre-distribuzioni"><i class="fa fa-check"></i><b>2.6.4</b> Altre distribuzioni</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.112"><i class="fa fa-check"></i>Esercizio 2.112</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.113"><i class="fa fa-check"></i>Esercizio 2.113</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.114"><i class="fa fa-check"></i>Esercizio 2.114</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.115"><i class="fa fa-check"></i>Esercizio 2.115</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.116"><i class="fa fa-check"></i>Esercizio 2.116</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.117"><i class="fa fa-check"></i>Esercizio 2.117</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.118"><i class="fa fa-check"></i>Esercizio 2.118</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.119"><i class="fa fa-check"></i>Esercizio 2.119</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.120"><i class="fa fa-check"></i>Esercizio 2.120</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.121"><i class="fa fa-check"></i>Esercizio 2.121</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercitazione-2.1"><i class="fa fa-check"></i>Esercitazione 2.1</a>
+<ul>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.1.1"><i class="fa fa-check"></i>Esercizio 2.1.1</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.1.2"><i class="fa fa-check"></i>Esercizio 2.1.2</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.1.3"><i class="fa fa-check"></i>Esercizio 2.1.3</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.1.4"><i class="fa fa-check"></i>Esercizio 2.1.4</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.1.5"><i class="fa fa-check"></i>Esercizio 2.1.5</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.1.6"><i class="fa fa-check"></i>Esercizio 2.1.6</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#soluzioni-esercitazione-2.1"><i class="fa fa-check"></i>Soluzioni esercitazione 2.1</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercitazione-2.2"><i class="fa fa-check"></i>Esercitazione 2.2</a>
+<ul>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.2.1"><i class="fa fa-check"></i>Esercizio 2.2.1</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.2.2"><i class="fa fa-check"></i>Esercizio 2.2.2</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.2.3"><i class="fa fa-check"></i>Esercizio 2.2.3</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.2.4"><i class="fa fa-check"></i>Esercizio 2.2.4</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#soluzioni-esercitazione-2.2"><i class="fa fa-check"></i>Soluzioni esercitazione 2.2</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercitazione-2.3"><i class="fa fa-check"></i>Esercitazione 2.3</a>
+<ul>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.3.1"><i class="fa fa-check"></i>Esercizio 2.3.1</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.3.2"><i class="fa fa-check"></i>Esercizio 2.3.2</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.3.3"><i class="fa fa-check"></i>Esercizio 2.3.3</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.3.4"><i class="fa fa-check"></i>Esercizio 2.3.4</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#soluzioni-esercitazione-2.3"><i class="fa fa-check"></i>Soluzioni esercitazione 2.3</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercitazione-2.4"><i class="fa fa-check"></i>Esercitazione 2.4</a>
+<ul>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.4.1"><i class="fa fa-check"></i>Esercizio 2.4.1</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.4.2"><i class="fa fa-check"></i>Esercizio 2.4.2</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.4.3"><i class="fa fa-check"></i>Esercizio 2.4.3</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.4.4"><i class="fa fa-check"></i>Esercizio 2.4.4</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#soluzioni-esercitazione-2.4"><i class="fa fa-check"></i>Soluzioni esercitazione 2.4</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="inferenza.html"><a href="inferenza.html"><i class="fa fa-check"></i><b>3</b> Inferenza</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="inferenza.html"><a href="inferenza.html#intervalli-di-confidenza-e-test-per-campioni-estratti-da-una-popolazione-normale"><i class="fa fa-check"></i><b>3.1</b> Intervalli di confidenza e test per campioni estratti da una popolazione Normale</a>
+<ul>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.1"><i class="fa fa-check"></i>Esercizio 3.1</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.2"><i class="fa fa-check"></i>Esercizio 3.2</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.3"><i class="fa fa-check"></i>Esercizio 3.3</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.4"><i class="fa fa-check"></i>Esercizio 3.4</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="inferenza.html"><a href="inferenza.html#intervalli-di-confidenza-e-test-per-campioni-estratti-da-popolazioni-normali-con-media-e-varianza-incognite"><i class="fa fa-check"></i><b>3.2</b> Intervalli di confidenza e test per campioni estratti da popolazioni Normali con media e varianza incognite</a>
+<ul>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.5"><i class="fa fa-check"></i>Esercizio 3.5</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.6"><i class="fa fa-check"></i>Esercizio 3.6</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.7"><i class="fa fa-check"></i>Esercizio 3.7</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.8"><i class="fa fa-check"></i>Esercizio 3.8</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="inferenza.html"><a href="inferenza.html#test-t-per-campioni-appaiati"><i class="fa fa-check"></i><b>3.3</b> Test t per campioni appaiati</a>
+<ul>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.9"><i class="fa fa-check"></i>Esercizio 3.9</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.10"><i class="fa fa-check"></i>Esercizio 3.10</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.11"><i class="fa fa-check"></i>Esercizio 3.11</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.12"><i class="fa fa-check"></i>Esercizio 3.12</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.13"><i class="fa fa-check"></i>Esercizio 3.13</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.14"><i class="fa fa-check"></i>Esercizio 3.14</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.15"><i class="fa fa-check"></i>Esercizio 3.15</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.16"><i class="fa fa-check"></i>Esercizio 3.16</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.17"><i class="fa fa-check"></i>Esercizio 3.17</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.18"><i class="fa fa-check"></i>Esercizio 3.18</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.19"><i class="fa fa-check"></i>Esercizio 3.19</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercitazione-3.1"><i class="fa fa-check"></i>Esercitazione 3.1</a>
+<ul>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.1.1"><i class="fa fa-check"></i>Esercizio 3.1.1</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.1.2"><i class="fa fa-check"></i>Esercizio 3.1.2</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.1.3"><i class="fa fa-check"></i>Esercizio 3.1.3</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.1.4"><i class="fa fa-check"></i>Esercizio 3.1.4</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.1.5"><i class="fa fa-check"></i>Esercizio 3.1.5</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.1.6"><i class="fa fa-check"></i>Esercizio 3.1.6</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.1.7"><i class="fa fa-check"></i>Esercizio 3.1.7</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#soluzioni-esercitazione-3.1"><i class="fa fa-check"></i>Soluzioni esercitazione 3.1</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercitazione-3.2"><i class="fa fa-check"></i>Esercitazione 3.2</a>
+<ul>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.2.1"><i class="fa fa-check"></i>Esercizio 3.2.1</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.2.3"><i class="fa fa-check"></i>Esercizio 3.2.3</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.2.4"><i class="fa fa-check"></i>Esercizio 3.2.4</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.2.6"><i class="fa fa-check"></i>Esercizio 3.2.6</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.2.7"><i class="fa fa-check"></i>Esercizio 3.2.7</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#soluzioni-esercitazione-3.2"><i class="fa fa-check"></i>Soluzioni esercitazione 3.2</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="dati-categorici.html"><a href="dati-categorici.html"><i class="fa fa-check"></i><b>4</b> Dati categorici</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="dati-categorici.html"><a href="dati-categorici.html#tabelle-di-contingenza"><i class="fa fa-check"></i><b>4.1</b> Tabelle di contingenza</a>
+<ul>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.1"><i class="fa fa-check"></i>Esercizio 4.1</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.2"><i class="fa fa-check"></i>Esercizio 4.2</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="dati-categorici.html"><a href="dati-categorici.html#inferenza-su-una-singola-proporzione"><i class="fa fa-check"></i><b>4.2</b> Inferenza su una singola proporzione</a>
+<ul>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.3"><i class="fa fa-check"></i>Esercizio 4.3</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.4"><i class="fa fa-check"></i>Esercizio 4.4</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.5"><i class="fa fa-check"></i>Esercizio 4.5</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.6"><i class="fa fa-check"></i>Esercizio 4.6</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.7"><i class="fa fa-check"></i>Esercizio 4.7</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.8"><i class="fa fa-check"></i>Esercizio 4.8</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.9"><i class="fa fa-check"></i>Esercizio 4.9</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.10"><i class="fa fa-check"></i>Esercizio 4.10</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.11"><i class="fa fa-check"></i>Esercizio 4.11</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.12"><i class="fa fa-check"></i>Esercizio 4.12</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.13"><i class="fa fa-check"></i>Esercizio 4.13</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.14"><i class="fa fa-check"></i>Esercizio 4.14</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.15"><i class="fa fa-check"></i>Esercizio 4.15</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.16"><i class="fa fa-check"></i>Esercizio 4.16</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.17"><i class="fa fa-check"></i>Esercizio 4.17</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.18"><i class="fa fa-check"></i>Esercizio 4.18</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.19"><i class="fa fa-check"></i>Esercizio 4.19</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.20"><i class="fa fa-check"></i>Esercizio 4.20</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="dati-categorici.html"><a href="dati-categorici.html#inferenza-sulla-differenza-tra-due-proporzioni"><i class="fa fa-check"></i><b>4.3</b> Inferenza sulla differenza tra due proporzioni</a>
+<ul>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.21"><i class="fa fa-check"></i>Esercizio 4.21</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.22"><i class="fa fa-check"></i>Esercizio 4.22</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.23"><i class="fa fa-check"></i>Esercizio 4.23</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.24"><i class="fa fa-check"></i>Esercizio 4.24</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.25"><i class="fa fa-check"></i>Esercizio 4.25</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.26"><i class="fa fa-check"></i>Esercizio 4.26</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.27"><i class="fa fa-check"></i>Esercizio 4.27</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.28"><i class="fa fa-check"></i>Esercizio 4.28</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="dati-categorici.html"><a href="dati-categorici.html#verifica-della-bontà-di-adattamento"><i class="fa fa-check"></i><b>4.4</b> Verifica della bontà di adattamento</a>
+<ul>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.29"><i class="fa fa-check"></i>Esercizio 4.29</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.30"><i class="fa fa-check"></i>Esercizio 4.30</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="dati-categorici.html"><a href="dati-categorici.html#test-di-indipendenza"><i class="fa fa-check"></i><b>4.5</b> Test di indipendenza</a>
+<ul>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.31"><i class="fa fa-check"></i>Esercizio 4.31</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.32"><i class="fa fa-check"></i>Esercizio 4.32</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.33"><i class="fa fa-check"></i>Esercizio 4.33</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.34"><i class="fa fa-check"></i>Esercizio 4.34</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="regressione-lineare.html"><a href="regressione-lineare.html"><i class="fa fa-check"></i><b>5</b> Regressione lineare</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="regressione-lineare.html"><a href="regressione-lineare.html#regressione-lineare-semplice"><i class="fa fa-check"></i><b>5.1</b> Regressione lineare semplice</a>
+<ul>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.1"><i class="fa fa-check"></i>Esercizio 5.1</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.2"><i class="fa fa-check"></i>Esercizio 5.2</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.3"><i class="fa fa-check"></i>Esercizio 5.3</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.4"><i class="fa fa-check"></i>Esercizio 5.4</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="regressione-lineare.html"><a href="regressione-lineare.html#inferenza-nel-modello-di-regressione-lineare"><i class="fa fa-check"></i><b>5.2</b> Inferenza nel modello di regressione lineare</a>
+<ul>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.5"><i class="fa fa-check"></i>Esercizio 5.5</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="regressione-lineare.html"><a href="regressione-lineare.html#correlazione-e-regressione"><i class="fa fa-check"></i><b>5.3</b> Correlazione e Regressione</a>
+<ul>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.6"><i class="fa fa-check"></i>Esercizio 5.6</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.7"><i class="fa fa-check"></i>Esercizio 5.7</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.8"><i class="fa fa-check"></i>Esercizio 5.8</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.9"><i class="fa fa-check"></i>Esercizio 5.9</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.10"><i class="fa fa-check"></i>Esercizio 5.10</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.11"><i class="fa fa-check"></i>Esercizio 5.11</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="regressione-lineare.html"><a href="regressione-lineare.html#analisi-dei-residui"><i class="fa fa-check"></i><b>5.4</b> Analisi dei residui</a>
+<ul>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.12"><i class="fa fa-check"></i>Esercizio 5.12</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.13"><i class="fa fa-check"></i>Esercizio 5.13</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.14"><i class="fa fa-check"></i>Esercizio 5.14</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.15"><i class="fa fa-check"></i>Esercizio 5.15</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.16"><i class="fa fa-check"></i>Esercizio 5.16</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.17"><i class="fa fa-check"></i>Esercizio 5.17</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.18"><i class="fa fa-check"></i>Esercizio 5.18</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.19"><i class="fa fa-check"></i>Esercizio 5.19</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.20"><i class="fa fa-check"></i>Esercizio 5.20</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.21"><i class="fa fa-check"></i>Esercizio 5.21</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.22"><i class="fa fa-check"></i>Esercizio 5.22</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.23"><i class="fa fa-check"></i>Esercizio 5.23</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.24"><i class="fa fa-check"></i>Esercizio 5.24</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.25"><i class="fa fa-check"></i>Esercizio 5.25</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.26"><i class="fa fa-check"></i>Esercizio 5.26</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.27"><i class="fa fa-check"></i>Esercizio 5.27</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.28"><i class="fa fa-check"></i>Esercizio 5.28</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.29"><i class="fa fa-check"></i>Esercizio 5.29</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.30"><i class="fa fa-check"></i>Esercizio 5.30</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.31"><i class="fa fa-check"></i>Esercizio 5.31</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.32"><i class="fa fa-check"></i>Esercizio 5.32</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.33"><i class="fa fa-check"></i>Esercizio 5.33</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.34"><i class="fa fa-check"></i>Esercizio 5.34</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.35"><i class="fa fa-check"></i>Esercizio 5.35</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.36"><i class="fa fa-check"></i>Esercizio 5.36</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.37"><i class="fa fa-check"></i>Esercizio 5.37</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.38"><i class="fa fa-check"></i>Esercizio 5.38</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.39"><i class="fa fa-check"></i>Esercizio 5.39</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.40"><i class="fa fa-check"></i>Esercizio 5.40</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.41"><i class="fa fa-check"></i>Esercizio 5.41</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.42"><i class="fa fa-check"></i>Esercizio 5.42</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.43"><i class="fa fa-check"></i>Esercizio 5.43</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.44"><i class="fa fa-check"></i>Esercizio 5.44</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.45"><i class="fa fa-check"></i>Esercizio 5.45</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.46"><i class="fa fa-check"></i>Esercizio 5.46</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercitazione-5.1"><i class="fa fa-check"></i>Esercitazione 5.1</a>
+<ul>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.1.1"><i class="fa fa-check"></i>Esercizio 5.1.1</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.1.2"><i class="fa fa-check"></i>Esercizio 5.1.2</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#soluzioni-esercitazione-5.1"><i class="fa fa-check"></i>Soluzioni esercitazione 5.1</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="autovalutazione.html"><a href="autovalutazione.html"><i class="fa fa-check"></i><b>6</b> Autovalutazione</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-di-ripasso-e-autovalutazione"><i class="fa fa-check"></i><b>6.1</b> Quiz di ripasso e autovalutazione</a>
+<ul>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.1"><i class="fa fa-check"></i>Quiz 6.1</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.2"><i class="fa fa-check"></i>Quiz 6.2</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.3"><i class="fa fa-check"></i>Quiz 6.3</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.4"><i class="fa fa-check"></i>Quiz 6.4</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.5"><i class="fa fa-check"></i>Quiz 6.5</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.6"><i class="fa fa-check"></i>Quiz 6.6</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.7"><i class="fa fa-check"></i>Quiz 6.7</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.8"><i class="fa fa-check"></i>Quiz 6.8</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.9"><i class="fa fa-check"></i>Quiz 6.9</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.10"><i class="fa fa-check"></i>Quiz 6.10</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.11"><i class="fa fa-check"></i>Quiz 6.11</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.12"><i class="fa fa-check"></i>Quiz 6.12</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.13"><i class="fa fa-check"></i>Quiz 6.13</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.14"><i class="fa fa-check"></i>Quiz 6.14</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.15"><i class="fa fa-check"></i>Quiz 6.15</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.16"><i class="fa fa-check"></i>Quiz 6.16</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.17"><i class="fa fa-check"></i>Quiz 6.17</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.18"><i class="fa fa-check"></i>Quiz 6.18</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.19"><i class="fa fa-check"></i>Quiz 6.19</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.20"><i class="fa fa-check"></i>Quiz 6.20</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.21"><i class="fa fa-check"></i>Quiz 6.21</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.22"><i class="fa fa-check"></i>Quiz 6.22</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.23"><i class="fa fa-check"></i>Quiz 6.23</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.24"><i class="fa fa-check"></i>Quiz 6.24</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.25"><i class="fa fa-check"></i>Quiz 6.25</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.26"><i class="fa fa-check"></i>Quiz 6.26</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.27"><i class="fa fa-check"></i>Quiz 6.27</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.28"><i class="fa fa-check"></i>Quiz 6.28</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.29"><i class="fa fa-check"></i>Quiz 6.29</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.30"><i class="fa fa-check"></i>Quiz 6.30</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.31"><i class="fa fa-check"></i>Quiz 6.31</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.32"><i class="fa fa-check"></i>Quiz 6.32</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.33"><i class="fa fa-check"></i>Quiz 6.33</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.34"><i class="fa fa-check"></i>Quiz 6.34</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.35"><i class="fa fa-check"></i>Quiz 6.35</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.36"><i class="fa fa-check"></i>Quiz 6.36</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.37"><i class="fa fa-check"></i>Quiz 6.37</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.38"><i class="fa fa-check"></i>Quiz 6.38</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.39"><i class="fa fa-check"></i>Quiz 6.39</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.40"><i class="fa fa-check"></i>Quiz 6.40</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.41"><i class="fa fa-check"></i>Quiz 6.41</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.42"><i class="fa fa-check"></i>Quiz 6.42</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.43"><i class="fa fa-check"></i>Quiz 6.43</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.44"><i class="fa fa-check"></i>Quiz 6.44</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.45"><i class="fa fa-check"></i>Quiz 6.45</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.46"><i class="fa fa-check"></i>Quiz 6.46</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.47"><i class="fa fa-check"></i>Quiz 6.47</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.48"><i class="fa fa-check"></i>Quiz 6.48</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.49"><i class="fa fa-check"></i>Quiz 6.49</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.50"><i class="fa fa-check"></i>Quiz 6.50</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.51"><i class="fa fa-check"></i>Quiz 6.51</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.52"><i class="fa fa-check"></i>Quiz 6.52</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.53"><i class="fa fa-check"></i>Quiz 6.53</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.54"><i class="fa fa-check"></i>Quiz 6.54</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.55"><i class="fa fa-check"></i>Quiz 6.55</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.56"><i class="fa fa-check"></i>Quiz 6.56</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.57"><i class="fa fa-check"></i>Quiz 6.57</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.58"><i class="fa fa-check"></i>Quiz 6.58</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.59"><i class="fa fa-check"></i>Quiz 6.59</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.60"><i class="fa fa-check"></i>Quiz 6.60</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.61"><i class="fa fa-check"></i>Quiz 6.61</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.62"><i class="fa fa-check"></i>Quiz 6.62</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.63"><i class="fa fa-check"></i>Quiz 6.63</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.64"><i class="fa fa-check"></i>Quiz 6.64</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.65"><i class="fa fa-check"></i>Quiz 6.65</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.66"><i class="fa fa-check"></i>Quiz 6.66</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.67"><i class="fa fa-check"></i>Quiz 6.67</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.68"><i class="fa fa-check"></i>Quiz 6.68</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.69"><i class="fa fa-check"></i>Quiz 6.69</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.70"><i class="fa fa-check"></i>Quiz 6.70</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.71"><i class="fa fa-check"></i>Quiz 6.71</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.72"><i class="fa fa-check"></i>Quiz 6.72</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.73"><i class="fa fa-check"></i>Quiz 6.73</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.74"><i class="fa fa-check"></i>Quiz 6.74</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.75"><i class="fa fa-check"></i>Quiz 6.75</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.76"><i class="fa fa-check"></i>Quiz 6.76</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.77"><i class="fa fa-check"></i>Quiz 6.77</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.78"><i class="fa fa-check"></i>Quiz 6.78</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.79"><i class="fa fa-check"></i>Quiz 6.79</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.80"><i class="fa fa-check"></i>Quiz 6.80</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.81"><i class="fa fa-check"></i>Quiz 6.81</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.82"><i class="fa fa-check"></i>Quiz 6.82</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.83"><i class="fa fa-check"></i>Quiz 6.83</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.84"><i class="fa fa-check"></i>Quiz 6.84</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.85"><i class="fa fa-check"></i>Quiz 6.85</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.86"><i class="fa fa-check"></i>Quiz 6.86</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.87"><i class="fa fa-check"></i>Quiz 6.87</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.88"><i class="fa fa-check"></i>Quiz 6.88</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.89"><i class="fa fa-check"></i>Quiz 6.89</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.90"><i class="fa fa-check"></i>Quiz 6.90</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.91"><i class="fa fa-check"></i>Quiz 6.91</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.92"><i class="fa fa-check"></i>Quiz 6.92</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.93"><i class="fa fa-check"></i>Quiz 6.93</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.94"><i class="fa fa-check"></i>Quiz 6.94</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.95"><i class="fa fa-check"></i>Quiz 6.95</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.96"><i class="fa fa-check"></i>Quiz 6.96</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.97"><i class="fa fa-check"></i>Quiz 6.97</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.98"><i class="fa fa-check"></i>Quiz 6.98</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.99"><i class="fa fa-check"></i>Quiz 6.99</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.100"><i class="fa fa-check"></i>Quiz 6.100</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="./" target="blank"></a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Esercizi Statistica di Base</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Esercizi Statistica di Base</h1>
+<p class="author"><em>Brunero Liseo</em></p>
+</div>
+<div id="introduzione" class="section level1 unnumbered hasAnchor">
+<h1>Introduzione<a href="index.html#introduzione" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>In questo libro sono presenti le Esercitazioni di Statistica di Base</p>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="statistica-descrittiva.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section",
+"smooth_scroll": true
+},
+"toc_float": true
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

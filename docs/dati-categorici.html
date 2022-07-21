@@ -1,0 +1,2832 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>4 Dati categorici | Esercizi Statistica di Base</title>
+  <meta name="description" content="In questo libro sono presenti gli esercizi di Statistica di Base" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="4 Dati categorici | Esercizi Statistica di Base" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="In questo libro sono presenti gli esercizi di Statistica di Base" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="4 Dati categorici | Esercizi Statistica di Base" />
+  
+  <meta name="twitter:description" content="In questo libro sono presenti gli esercizi di Statistica di Base" />
+  
+
+<meta name="author" content="Brunero Liseo" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="inferenza.html"/>
+<link rel="next" href="regressione-lineare.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Esercitazioni di Statistica di Base</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduzione</a></li>
+<li class="chapter" data-level="1" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html"><i class="fa fa-check"></i><b>1</b> Statistica descrittiva</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#popolazione-campione-e-variabili"><i class="fa fa-check"></i><b>1.1</b> Popolazione, campione e variabili</a>
+<ul>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.1"><i class="fa fa-check"></i>Esercizio 1.1</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.2"><i class="fa fa-check"></i>Esercizio 1.2</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.3"><i class="fa fa-check"></i>Esercizio 1.3</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.4"><i class="fa fa-check"></i>Esercizio 1.4</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.5"><i class="fa fa-check"></i>Esercizio 1.5</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#distribuzioni-di-frequenza"><i class="fa fa-check"></i><b>1.2</b> Distribuzioni di frequenza</a>
+<ul>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.6"><i class="fa fa-check"></i>Esercizio 1.6</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.7"><i class="fa fa-check"></i>Esercizio 1.7</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.8"><i class="fa fa-check"></i>Esercizio 1.8</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#rappresentazioni-grafiche-per-caratteri-qualitativi"><i class="fa fa-check"></i><b>1.3</b> Rappresentazioni grafiche per caratteri qualitativi</a>
+<ul>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.9"><i class="fa fa-check"></i>Esercizio 1.9</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.10"><i class="fa fa-check"></i>Esercizio 1.10</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.11"><i class="fa fa-check"></i>Esercizio 1.11</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#rappresentazioni-grafiche-e-numeriche-per-caratteri-quantitativi"><i class="fa fa-check"></i><b>1.4</b> Rappresentazioni grafiche e numeriche per caratteri quantitativi</a>
+<ul>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.12"><i class="fa fa-check"></i>Esercizio 1.12</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.13"><i class="fa fa-check"></i>Esercizio 1.13</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.14"><i class="fa fa-check"></i>Esercizio 1.14</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.15"><i class="fa fa-check"></i>Esercizio 1.15</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.16"><i class="fa fa-check"></i>Esercizio 1.16</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.17"><i class="fa fa-check"></i>Esercizio 1.17</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.18"><i class="fa fa-check"></i>Esercizio 1.18</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.19"><i class="fa fa-check"></i>Esercizio 1.19</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.20"><i class="fa fa-check"></i>Esercizio 1.20</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.21"><i class="fa fa-check"></i>Esercizio 1.21</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#moda-media-mediana-e-quantili"><i class="fa fa-check"></i><b>1.5</b> Moda, media, mediana e quantili</a>
+<ul>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.22"><i class="fa fa-check"></i>Esercizio 1.22</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.23"><i class="fa fa-check"></i>Esercizio 1.23</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.24"><i class="fa fa-check"></i>Esercizio 1.24</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.25"><i class="fa fa-check"></i>Esercizio 1.25</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.26"><i class="fa fa-check"></i>Esercizio 1.26</a></li>
+</ul></li>
+<li class="chapter" data-level="1.6" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#gli-indici-di-variabilità"><i class="fa fa-check"></i><b>1.6</b> Gli indici di variabilità</a>
+<ul>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.27"><i class="fa fa-check"></i>Esercizio 1.27</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.28"><i class="fa fa-check"></i>Esercizio 1.28</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.29"><i class="fa fa-check"></i>Esercizio 1.29</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.30"><i class="fa fa-check"></i>Esercizio 1.30</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.31"><i class="fa fa-check"></i>Esercizio 1.31</a></li>
+</ul></li>
+<li class="chapter" data-level="1.7" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#proprietà-delle-medie"><i class="fa fa-check"></i><b>1.7</b> Proprietà delle medie</a>
+<ul>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.32"><i class="fa fa-check"></i>Esercizio 1.32</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.33"><i class="fa fa-check"></i>Esercizio 1.33</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.34"><i class="fa fa-check"></i>Esercizio 1.34</a></li>
+</ul></li>
+<li class="chapter" data-level="1.8" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#i-numeri-indice"><i class="fa fa-check"></i><b>1.8</b> I numeri indice</a>
+<ul>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.35"><i class="fa fa-check"></i>Esercizio 1.35</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.36"><i class="fa fa-check"></i>Esercizio 1.36</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.37"><i class="fa fa-check"></i>Esercizio 1.37</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.38"><i class="fa fa-check"></i>Esercizio 1.38</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercitazione-1.1"><i class="fa fa-check"></i>Esercitazione 1.1</a>
+<ul>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.1.1"><i class="fa fa-check"></i>Esercizio 1.1.1</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.1.2"><i class="fa fa-check"></i>Esercizio 1.1.2</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#soluzioni-esercitazione-1.1"><i class="fa fa-check"></i>Soluzioni esercitazione 1.1</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercitazione-1.2"><i class="fa fa-check"></i>Esercitazione 1.2</a>
+<ul>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.2.1"><i class="fa fa-check"></i>Esercizio 1.2.1</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.2.2"><i class="fa fa-check"></i>Esercizio 1.2.2</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.2.3"><i class="fa fa-check"></i>Esercizio 1.2.3</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#soluzioni-esercitazione-1.2"><i class="fa fa-check"></i>Soluzioni esercitazione 1.2</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercitazione-1.3"><i class="fa fa-check"></i>Esercitazione 1.3</a>
+<ul>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.3.1"><i class="fa fa-check"></i>Esercizio 1.3.1</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.3.2"><i class="fa fa-check"></i>Esercizio 1.3.2</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.3.3"><i class="fa fa-check"></i>Esercizio 1.3.3</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.3.4"><i class="fa fa-check"></i>Esercizio 1.3.4</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.3.5"><i class="fa fa-check"></i>Esercizio 1.3.5</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.3.6"><i class="fa fa-check"></i>Esercizio 1.3.6</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.3.7"><i class="fa fa-check"></i>Esercizio 1.3.7</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#soluzioni-esercitazione-1.3"><i class="fa fa-check"></i>Soluzioni esercitazione 1.3</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercitazione-1.4"><i class="fa fa-check"></i>Esercitazione 1.4</a>
+<ul>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.4.1"><i class="fa fa-check"></i>Esercizio 1.4.1</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.4.2"><i class="fa fa-check"></i>Esercizio 1.4.2</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.4.3"><i class="fa fa-check"></i>Esercizio 1.4.3</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.4.4"><i class="fa fa-check"></i>Esercizio 1.4.4</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#soluzioni-esercitazione-1.4"><i class="fa fa-check"></i>Soluzioni esercitazione 1.4</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercitazione-1.5"><i class="fa fa-check"></i>Esercitazione 1.5</a>
+<ul>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.5.1"><i class="fa fa-check"></i>Esercizio 1.5.1</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.5.2"><i class="fa fa-check"></i>Esercizio 1.5.2</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.5.3"><i class="fa fa-check"></i>Esercizio 1.5.3</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.5.4"><i class="fa fa-check"></i>Esercizio 1.5.4</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#soluzioni-esercitazione-1.5"><i class="fa fa-check"></i>Soluzioni esercitazione 1.5</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercitazione-1.6"><i class="fa fa-check"></i>Esercitazione 1.6</a>
+<ul>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.6.1"><i class="fa fa-check"></i>Esercizio 1.6.1</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.6.2"><i class="fa fa-check"></i>Esercizio 1.6.2</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.6.3"><i class="fa fa-check"></i>Esercizio 1.6.3</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#soluzioni-esercitazione-1.6"><i class="fa fa-check"></i>Soluzioni esercitazione 1.6</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="probabilita.html"><a href="probabilita.html"><i class="fa fa-check"></i><b>2</b> Probabilità</a>
+<ul>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizi-di-base-di-probabilità"><i class="fa fa-check"></i>Esercizi di base di probabilità</a>
+<ul>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.1"><i class="fa fa-check"></i>Esercizio 2.1</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.2"><i class="fa fa-check"></i>Esercizio 2.2</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.3"><i class="fa fa-check"></i>Esercizio 2.3</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.4"><i class="fa fa-check"></i>Esercizio 2.4</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.5"><i class="fa fa-check"></i>Esercizio 2.5</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.6"><i class="fa fa-check"></i>Esercizio 2.6</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.7"><i class="fa fa-check"></i>Esercizio 2.7</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.8"><i class="fa fa-check"></i>Esercizio 2.8</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.9"><i class="fa fa-check"></i>Esercizio 2.9</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.10"><i class="fa fa-check"></i>Esercizio 2.10</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.11"><i class="fa fa-check"></i>Esercizio 2.11</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.12"><i class="fa fa-check"></i>Esercizio 2.12</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.13"><i class="fa fa-check"></i>Esercizio 2.13</a></li>
+</ul></li>
+<li class="chapter" data-level="2.1" data-path="probabilita.html"><a href="probabilita.html#probabilità-condizionata"><i class="fa fa-check"></i><b>2.1</b> Probabilità condizionata</a>
+<ul>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.14"><i class="fa fa-check"></i>Esercizio 2.14</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.15"><i class="fa fa-check"></i>Esercizio 2.15</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.16"><i class="fa fa-check"></i>Esercizio 2.16</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.17"><i class="fa fa-check"></i>Esercizio 2.17</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.18"><i class="fa fa-check"></i>Esercizio 2.18</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.19"><i class="fa fa-check"></i>Esercizio 2.19</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.20"><i class="fa fa-check"></i>Esercizio 2.20</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.21"><i class="fa fa-check"></i>Esercizio 2.21</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.22"><i class="fa fa-check"></i>Esercizio 2.22</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.23"><i class="fa fa-check"></i>Esercizio 2.23</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.24"><i class="fa fa-check"></i>Esercizio 2.24</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.25"><i class="fa fa-check"></i>Esercizio 2.25</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="probabilita.html"><a href="probabilita.html#estrazioni-da-popolazioni-a-bassa-numerosità"><i class="fa fa-check"></i><b>2.2</b> Estrazioni da popolazioni a bassa numerosità</a>
+<ul>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.26"><i class="fa fa-check"></i>Esercizio 2.26</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.27"><i class="fa fa-check"></i>Esercizio 2.27</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.28"><i class="fa fa-check"></i>Esercizio 2.28</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.29"><i class="fa fa-check"></i>Esercizio 2.29</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.30"><i class="fa fa-check"></i>Esercizio 2.30</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.31"><i class="fa fa-check"></i>Esercizio 2.31</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="probabilita.html"><a href="probabilita.html#variabili-casuali"><i class="fa fa-check"></i><b>2.3</b> Variabili casuali</a>
+<ul>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.32"><i class="fa fa-check"></i>Esercizio 2.32</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.33"><i class="fa fa-check"></i>Esercizio 2.33</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.34"><i class="fa fa-check"></i>Esercizio 2.34</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.35"><i class="fa fa-check"></i>Esercizio 2.35</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.36"><i class="fa fa-check"></i>Esercizio 2.36</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.37"><i class="fa fa-check"></i>Esercizio 2.37</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.38"><i class="fa fa-check"></i>Esercizio 2.38</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.39"><i class="fa fa-check"></i>Esercizio 2.39</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.40"><i class="fa fa-check"></i>Esercizio 2.40</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.41"><i class="fa fa-check"></i>Esercizio 2.41</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.42"><i class="fa fa-check"></i>Esercizio 2.42</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.43"><i class="fa fa-check"></i>Esercizio 2.43</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="probabilita.html"><a href="probabilita.html#distribuzioni-continue"><i class="fa fa-check"></i><b>2.4</b> Distribuzioni continue</a>
+<ul>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.44"><i class="fa fa-check"></i>Esercizio 2.44</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.45"><i class="fa fa-check"></i>Esercizio 2.45</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.46"><i class="fa fa-check"></i>Esercizio 2.46</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.47"><i class="fa fa-check"></i>Esercizio 2.47</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.48"><i class="fa fa-check"></i>Esercizio 2.48</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.49"><i class="fa fa-check"></i>Esercizio 2.49</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.50"><i class="fa fa-check"></i>Esercizio 2.50</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.51"><i class="fa fa-check"></i>Esercizio 2.51</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.52"><i class="fa fa-check"></i>Esercizio 2.52</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.53"><i class="fa fa-check"></i>Esercizio 2.53</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.54"><i class="fa fa-check"></i>Esercizio 2.54</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.55"><i class="fa fa-check"></i>Esercizio 2.55</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.56"><i class="fa fa-check"></i>Esercizio 2.56</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="probabilita.html"><a href="probabilita.html#distribuzione-della-media-campionaria"><i class="fa fa-check"></i><b>2.5</b> Distribuzione della media campionaria</a>
+<ul>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.57"><i class="fa fa-check"></i>Esercizio 2.57</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.58"><i class="fa fa-check"></i>Esercizio 2.58</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.59"><i class="fa fa-check"></i>Esercizio 2.59</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.60"><i class="fa fa-check"></i>Esercizio 2.60</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.61"><i class="fa fa-check"></i>Esercizio 2.61</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.62"><i class="fa fa-check"></i>Esercizio 2.62</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.63"><i class="fa fa-check"></i>Esercizio 2.63</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.64"><i class="fa fa-check"></i>Esercizio 2.64</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.65"><i class="fa fa-check"></i>Esercizio 2.65</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.66"><i class="fa fa-check"></i>Esercizio 2.66</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.67"><i class="fa fa-check"></i>Esercizio 2.67</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.68"><i class="fa fa-check"></i>Esercizio 2.68</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.69"><i class="fa fa-check"></i>Esercizio 2.69</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.70"><i class="fa fa-check"></i>Esercizio 2.70</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.71"><i class="fa fa-check"></i>Esercizio 2.71</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.72"><i class="fa fa-check"></i>Esercizio 2.72</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="probabilita.html"><a href="probabilita.html#distribuzioni-di-variabili-casuali"><i class="fa fa-check"></i><b>2.6</b> Distribuzioni di variabili casuali</a>
+<ul>
+<li class="chapter" data-level="2.6.1" data-path="probabilita.html"><a href="probabilita.html#distribuzione-normale"><i class="fa fa-check"></i><b>2.6.1</b> Distribuzione Normale</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.73"><i class="fa fa-check"></i>Esercizio 2.73</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.74"><i class="fa fa-check"></i>Esercizio 2.74</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.75"><i class="fa fa-check"></i>Esercizio 2.75</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.76"><i class="fa fa-check"></i>Esercizio 2.76</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.77"><i class="fa fa-check"></i>Esercizio 2.77</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.78"><i class="fa fa-check"></i>Esercizio 2.78</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.79"><i class="fa fa-check"></i>Esercizio 2.79</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.80"><i class="fa fa-check"></i>Esercizio 2.80</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.81"><i class="fa fa-check"></i>Esercizio 2.81</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.82"><i class="fa fa-check"></i>Esercizio 2.82</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.83"><i class="fa fa-check"></i>Esercizio 2.83</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.84"><i class="fa fa-check"></i>Esercizio 2.84</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.85"><i class="fa fa-check"></i>Esercizio 2.85</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.86"><i class="fa fa-check"></i>Esercizio 2.86</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.87"><i class="fa fa-check"></i>Esercizio 2.87</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.88"><i class="fa fa-check"></i>Esercizio 2.88</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.89"><i class="fa fa-check"></i>Esercizio 2.89</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.90"><i class="fa fa-check"></i>Esercizio 2.90</a></li>
+<li class="chapter" data-level="2.6.2" data-path="probabilita.html"><a href="probabilita.html#la-distribuzione-geometrica"><i class="fa fa-check"></i><b>2.6.2</b> La distribuzione geometrica</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.91"><i class="fa fa-check"></i>Esercizio 2.91</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.92"><i class="fa fa-check"></i>Esercizio 2.92</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.93"><i class="fa fa-check"></i>Esercizio 2.93</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.94"><i class="fa fa-check"></i>Esercizio 2.94</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.95"><i class="fa fa-check"></i>Esercizio 2.95</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.96"><i class="fa fa-check"></i>Esercizio 2.96</a></li>
+<li class="chapter" data-level="2.6.3" data-path="probabilita.html"><a href="probabilita.html#distribuzione-binomiale"><i class="fa fa-check"></i><b>2.6.3</b> Distribuzione Binomiale</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.97"><i class="fa fa-check"></i>Esercizio 2.97</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.98"><i class="fa fa-check"></i>Esercizio 2.98</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.99"><i class="fa fa-check"></i>Esercizio 2.99</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.100"><i class="fa fa-check"></i>Esercizio 2.100</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.101"><i class="fa fa-check"></i>Esercizio 2.101</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.102"><i class="fa fa-check"></i>Esercizio 2.102</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.103"><i class="fa fa-check"></i>Esercizio 2.103</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.104"><i class="fa fa-check"></i>Esercizio 2.104</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.105"><i class="fa fa-check"></i>Esercizio 2.105</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.106"><i class="fa fa-check"></i>Esercizio 2.106</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.107"><i class="fa fa-check"></i>Esercizio 2.107</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.108"><i class="fa fa-check"></i>Esercizio 2.108</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.109"><i class="fa fa-check"></i>Esercizio 2.109</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.110"><i class="fa fa-check"></i>Esercizio 2.110</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.111"><i class="fa fa-check"></i>Esercizio 2.111</a></li>
+<li class="chapter" data-level="2.6.4" data-path="probabilita.html"><a href="probabilita.html#altre-distribuzioni"><i class="fa fa-check"></i><b>2.6.4</b> Altre distribuzioni</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.112"><i class="fa fa-check"></i>Esercizio 2.112</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.113"><i class="fa fa-check"></i>Esercizio 2.113</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.114"><i class="fa fa-check"></i>Esercizio 2.114</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.115"><i class="fa fa-check"></i>Esercizio 2.115</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.116"><i class="fa fa-check"></i>Esercizio 2.116</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.117"><i class="fa fa-check"></i>Esercizio 2.117</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.118"><i class="fa fa-check"></i>Esercizio 2.118</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.119"><i class="fa fa-check"></i>Esercizio 2.119</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.120"><i class="fa fa-check"></i>Esercizio 2.120</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.121"><i class="fa fa-check"></i>Esercizio 2.121</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercitazione-2.1"><i class="fa fa-check"></i>Esercitazione 2.1</a>
+<ul>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.1.1"><i class="fa fa-check"></i>Esercizio 2.1.1</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.1.2"><i class="fa fa-check"></i>Esercizio 2.1.2</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.1.3"><i class="fa fa-check"></i>Esercizio 2.1.3</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.1.4"><i class="fa fa-check"></i>Esercizio 2.1.4</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.1.5"><i class="fa fa-check"></i>Esercizio 2.1.5</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.1.6"><i class="fa fa-check"></i>Esercizio 2.1.6</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#soluzioni-esercitazione-2.1"><i class="fa fa-check"></i>Soluzioni esercitazione 2.1</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercitazione-2.2"><i class="fa fa-check"></i>Esercitazione 2.2</a>
+<ul>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.2.1"><i class="fa fa-check"></i>Esercizio 2.2.1</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.2.2"><i class="fa fa-check"></i>Esercizio 2.2.2</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.2.3"><i class="fa fa-check"></i>Esercizio 2.2.3</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.2.4"><i class="fa fa-check"></i>Esercizio 2.2.4</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#soluzioni-esercitazione-2.2"><i class="fa fa-check"></i>Soluzioni esercitazione 2.2</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercitazione-2.3"><i class="fa fa-check"></i>Esercitazione 2.3</a>
+<ul>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.3.1"><i class="fa fa-check"></i>Esercizio 2.3.1</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.3.2"><i class="fa fa-check"></i>Esercizio 2.3.2</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.3.3"><i class="fa fa-check"></i>Esercizio 2.3.3</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.3.4"><i class="fa fa-check"></i>Esercizio 2.3.4</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#soluzioni-esercitazione-2.3"><i class="fa fa-check"></i>Soluzioni esercitazione 2.3</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercitazione-2.4"><i class="fa fa-check"></i>Esercitazione 2.4</a>
+<ul>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.4.1"><i class="fa fa-check"></i>Esercizio 2.4.1</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.4.2"><i class="fa fa-check"></i>Esercizio 2.4.2</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.4.3"><i class="fa fa-check"></i>Esercizio 2.4.3</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.4.4"><i class="fa fa-check"></i>Esercizio 2.4.4</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#soluzioni-esercitazione-2.4"><i class="fa fa-check"></i>Soluzioni esercitazione 2.4</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="inferenza.html"><a href="inferenza.html"><i class="fa fa-check"></i><b>3</b> Inferenza</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="inferenza.html"><a href="inferenza.html#intervalli-di-confidenza-e-test-per-campioni-estratti-da-una-popolazione-normale"><i class="fa fa-check"></i><b>3.1</b> Intervalli di confidenza e test per campioni estratti da una popolazione Normale</a>
+<ul>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.1"><i class="fa fa-check"></i>Esercizio 3.1</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.2"><i class="fa fa-check"></i>Esercizio 3.2</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.3"><i class="fa fa-check"></i>Esercizio 3.3</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.4"><i class="fa fa-check"></i>Esercizio 3.4</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="inferenza.html"><a href="inferenza.html#intervalli-di-confidenza-e-test-per-campioni-estratti-da-popolazioni-normali-con-media-e-varianza-incognite"><i class="fa fa-check"></i><b>3.2</b> Intervalli di confidenza e test per campioni estratti da popolazioni Normali con media e varianza incognite</a>
+<ul>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.5"><i class="fa fa-check"></i>Esercizio 3.5</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.6"><i class="fa fa-check"></i>Esercizio 3.6</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.7"><i class="fa fa-check"></i>Esercizio 3.7</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.8"><i class="fa fa-check"></i>Esercizio 3.8</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="inferenza.html"><a href="inferenza.html#test-t-per-campioni-appaiati"><i class="fa fa-check"></i><b>3.3</b> Test t per campioni appaiati</a>
+<ul>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.9"><i class="fa fa-check"></i>Esercizio 3.9</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.10"><i class="fa fa-check"></i>Esercizio 3.10</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.11"><i class="fa fa-check"></i>Esercizio 3.11</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.12"><i class="fa fa-check"></i>Esercizio 3.12</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.13"><i class="fa fa-check"></i>Esercizio 3.13</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.14"><i class="fa fa-check"></i>Esercizio 3.14</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.15"><i class="fa fa-check"></i>Esercizio 3.15</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.16"><i class="fa fa-check"></i>Esercizio 3.16</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.17"><i class="fa fa-check"></i>Esercizio 3.17</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.18"><i class="fa fa-check"></i>Esercizio 3.18</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.19"><i class="fa fa-check"></i>Esercizio 3.19</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercitazione-3.1"><i class="fa fa-check"></i>Esercitazione 3.1</a>
+<ul>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.1.1"><i class="fa fa-check"></i>Esercizio 3.1.1</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.1.2"><i class="fa fa-check"></i>Esercizio 3.1.2</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.1.3"><i class="fa fa-check"></i>Esercizio 3.1.3</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.1.4"><i class="fa fa-check"></i>Esercizio 3.1.4</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.1.5"><i class="fa fa-check"></i>Esercizio 3.1.5</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.1.6"><i class="fa fa-check"></i>Esercizio 3.1.6</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.1.7"><i class="fa fa-check"></i>Esercizio 3.1.7</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#soluzioni-esercitazione-3.1"><i class="fa fa-check"></i>Soluzioni esercitazione 3.1</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercitazione-3.2"><i class="fa fa-check"></i>Esercitazione 3.2</a>
+<ul>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.2.1"><i class="fa fa-check"></i>Esercizio 3.2.1</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.2.3"><i class="fa fa-check"></i>Esercizio 3.2.3</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.2.4"><i class="fa fa-check"></i>Esercizio 3.2.4</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.2.6"><i class="fa fa-check"></i>Esercizio 3.2.6</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.2.7"><i class="fa fa-check"></i>Esercizio 3.2.7</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#soluzioni-esercitazione-3.2"><i class="fa fa-check"></i>Soluzioni esercitazione 3.2</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="dati-categorici.html"><a href="dati-categorici.html"><i class="fa fa-check"></i><b>4</b> Dati categorici</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="dati-categorici.html"><a href="dati-categorici.html#tabelle-di-contingenza"><i class="fa fa-check"></i><b>4.1</b> Tabelle di contingenza</a>
+<ul>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.1"><i class="fa fa-check"></i>Esercizio 4.1</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.2"><i class="fa fa-check"></i>Esercizio 4.2</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="dati-categorici.html"><a href="dati-categorici.html#inferenza-su-una-singola-proporzione"><i class="fa fa-check"></i><b>4.2</b> Inferenza su una singola proporzione</a>
+<ul>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.3"><i class="fa fa-check"></i>Esercizio 4.3</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.4"><i class="fa fa-check"></i>Esercizio 4.4</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.5"><i class="fa fa-check"></i>Esercizio 4.5</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.6"><i class="fa fa-check"></i>Esercizio 4.6</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.7"><i class="fa fa-check"></i>Esercizio 4.7</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.8"><i class="fa fa-check"></i>Esercizio 4.8</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.9"><i class="fa fa-check"></i>Esercizio 4.9</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.10"><i class="fa fa-check"></i>Esercizio 4.10</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.11"><i class="fa fa-check"></i>Esercizio 4.11</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.12"><i class="fa fa-check"></i>Esercizio 4.12</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.13"><i class="fa fa-check"></i>Esercizio 4.13</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.14"><i class="fa fa-check"></i>Esercizio 4.14</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.15"><i class="fa fa-check"></i>Esercizio 4.15</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.16"><i class="fa fa-check"></i>Esercizio 4.16</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.17"><i class="fa fa-check"></i>Esercizio 4.17</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.18"><i class="fa fa-check"></i>Esercizio 4.18</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.19"><i class="fa fa-check"></i>Esercizio 4.19</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.20"><i class="fa fa-check"></i>Esercizio 4.20</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="dati-categorici.html"><a href="dati-categorici.html#inferenza-sulla-differenza-tra-due-proporzioni"><i class="fa fa-check"></i><b>4.3</b> Inferenza sulla differenza tra due proporzioni</a>
+<ul>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.21"><i class="fa fa-check"></i>Esercizio 4.21</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.22"><i class="fa fa-check"></i>Esercizio 4.22</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.23"><i class="fa fa-check"></i>Esercizio 4.23</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.24"><i class="fa fa-check"></i>Esercizio 4.24</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.25"><i class="fa fa-check"></i>Esercizio 4.25</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.26"><i class="fa fa-check"></i>Esercizio 4.26</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.27"><i class="fa fa-check"></i>Esercizio 4.27</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.28"><i class="fa fa-check"></i>Esercizio 4.28</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="dati-categorici.html"><a href="dati-categorici.html#verifica-della-bontà-di-adattamento"><i class="fa fa-check"></i><b>4.4</b> Verifica della bontà di adattamento</a>
+<ul>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.29"><i class="fa fa-check"></i>Esercizio 4.29</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.30"><i class="fa fa-check"></i>Esercizio 4.30</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="dati-categorici.html"><a href="dati-categorici.html#test-di-indipendenza"><i class="fa fa-check"></i><b>4.5</b> Test di indipendenza</a>
+<ul>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.31"><i class="fa fa-check"></i>Esercizio 4.31</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.32"><i class="fa fa-check"></i>Esercizio 4.32</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.33"><i class="fa fa-check"></i>Esercizio 4.33</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.34"><i class="fa fa-check"></i>Esercizio 4.34</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="regressione-lineare.html"><a href="regressione-lineare.html"><i class="fa fa-check"></i><b>5</b> Regressione lineare</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="regressione-lineare.html"><a href="regressione-lineare.html#regressione-lineare-semplice"><i class="fa fa-check"></i><b>5.1</b> Regressione lineare semplice</a>
+<ul>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.1"><i class="fa fa-check"></i>Esercizio 5.1</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.2"><i class="fa fa-check"></i>Esercizio 5.2</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.3"><i class="fa fa-check"></i>Esercizio 5.3</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.4"><i class="fa fa-check"></i>Esercizio 5.4</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="regressione-lineare.html"><a href="regressione-lineare.html#inferenza-nel-modello-di-regressione-lineare"><i class="fa fa-check"></i><b>5.2</b> Inferenza nel modello di regressione lineare</a>
+<ul>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.5"><i class="fa fa-check"></i>Esercizio 5.5</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="regressione-lineare.html"><a href="regressione-lineare.html#correlazione-e-regressione"><i class="fa fa-check"></i><b>5.3</b> Correlazione e Regressione</a>
+<ul>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.6"><i class="fa fa-check"></i>Esercizio 5.6</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.7"><i class="fa fa-check"></i>Esercizio 5.7</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.8"><i class="fa fa-check"></i>Esercizio 5.8</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.9"><i class="fa fa-check"></i>Esercizio 5.9</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.10"><i class="fa fa-check"></i>Esercizio 5.10</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.11"><i class="fa fa-check"></i>Esercizio 5.11</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="regressione-lineare.html"><a href="regressione-lineare.html#analisi-dei-residui"><i class="fa fa-check"></i><b>5.4</b> Analisi dei residui</a>
+<ul>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.12"><i class="fa fa-check"></i>Esercizio 5.12</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.13"><i class="fa fa-check"></i>Esercizio 5.13</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.14"><i class="fa fa-check"></i>Esercizio 5.14</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.15"><i class="fa fa-check"></i>Esercizio 5.15</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.16"><i class="fa fa-check"></i>Esercizio 5.16</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.17"><i class="fa fa-check"></i>Esercizio 5.17</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.18"><i class="fa fa-check"></i>Esercizio 5.18</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.19"><i class="fa fa-check"></i>Esercizio 5.19</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.20"><i class="fa fa-check"></i>Esercizio 5.20</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.21"><i class="fa fa-check"></i>Esercizio 5.21</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.22"><i class="fa fa-check"></i>Esercizio 5.22</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.23"><i class="fa fa-check"></i>Esercizio 5.23</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.24"><i class="fa fa-check"></i>Esercizio 5.24</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.25"><i class="fa fa-check"></i>Esercizio 5.25</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.26"><i class="fa fa-check"></i>Esercizio 5.26</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.27"><i class="fa fa-check"></i>Esercizio 5.27</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.28"><i class="fa fa-check"></i>Esercizio 5.28</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.29"><i class="fa fa-check"></i>Esercizio 5.29</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.30"><i class="fa fa-check"></i>Esercizio 5.30</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.31"><i class="fa fa-check"></i>Esercizio 5.31</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.32"><i class="fa fa-check"></i>Esercizio 5.32</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.33"><i class="fa fa-check"></i>Esercizio 5.33</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.34"><i class="fa fa-check"></i>Esercizio 5.34</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.35"><i class="fa fa-check"></i>Esercizio 5.35</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.36"><i class="fa fa-check"></i>Esercizio 5.36</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.37"><i class="fa fa-check"></i>Esercizio 5.37</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.38"><i class="fa fa-check"></i>Esercizio 5.38</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.39"><i class="fa fa-check"></i>Esercizio 5.39</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.40"><i class="fa fa-check"></i>Esercizio 5.40</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.41"><i class="fa fa-check"></i>Esercizio 5.41</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.42"><i class="fa fa-check"></i>Esercizio 5.42</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.43"><i class="fa fa-check"></i>Esercizio 5.43</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.44"><i class="fa fa-check"></i>Esercizio 5.44</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.45"><i class="fa fa-check"></i>Esercizio 5.45</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.46"><i class="fa fa-check"></i>Esercizio 5.46</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercitazione-5.1"><i class="fa fa-check"></i>Esercitazione 5.1</a>
+<ul>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.1.1"><i class="fa fa-check"></i>Esercizio 5.1.1</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.1.2"><i class="fa fa-check"></i>Esercizio 5.1.2</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#soluzioni-esercitazione-5.1"><i class="fa fa-check"></i>Soluzioni esercitazione 5.1</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="autovalutazione.html"><a href="autovalutazione.html"><i class="fa fa-check"></i><b>6</b> Autovalutazione</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-di-ripasso-e-autovalutazione"><i class="fa fa-check"></i><b>6.1</b> Quiz di ripasso e autovalutazione</a>
+<ul>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.1"><i class="fa fa-check"></i>Quiz 6.1</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.2"><i class="fa fa-check"></i>Quiz 6.2</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.3"><i class="fa fa-check"></i>Quiz 6.3</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.4"><i class="fa fa-check"></i>Quiz 6.4</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.5"><i class="fa fa-check"></i>Quiz 6.5</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.6"><i class="fa fa-check"></i>Quiz 6.6</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.7"><i class="fa fa-check"></i>Quiz 6.7</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.8"><i class="fa fa-check"></i>Quiz 6.8</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.9"><i class="fa fa-check"></i>Quiz 6.9</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.10"><i class="fa fa-check"></i>Quiz 6.10</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.11"><i class="fa fa-check"></i>Quiz 6.11</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.12"><i class="fa fa-check"></i>Quiz 6.12</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.13"><i class="fa fa-check"></i>Quiz 6.13</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.14"><i class="fa fa-check"></i>Quiz 6.14</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.15"><i class="fa fa-check"></i>Quiz 6.15</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.16"><i class="fa fa-check"></i>Quiz 6.16</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.17"><i class="fa fa-check"></i>Quiz 6.17</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.18"><i class="fa fa-check"></i>Quiz 6.18</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.19"><i class="fa fa-check"></i>Quiz 6.19</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.20"><i class="fa fa-check"></i>Quiz 6.20</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.21"><i class="fa fa-check"></i>Quiz 6.21</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.22"><i class="fa fa-check"></i>Quiz 6.22</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.23"><i class="fa fa-check"></i>Quiz 6.23</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.24"><i class="fa fa-check"></i>Quiz 6.24</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.25"><i class="fa fa-check"></i>Quiz 6.25</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.26"><i class="fa fa-check"></i>Quiz 6.26</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.27"><i class="fa fa-check"></i>Quiz 6.27</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.28"><i class="fa fa-check"></i>Quiz 6.28</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.29"><i class="fa fa-check"></i>Quiz 6.29</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.30"><i class="fa fa-check"></i>Quiz 6.30</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.31"><i class="fa fa-check"></i>Quiz 6.31</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.32"><i class="fa fa-check"></i>Quiz 6.32</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.33"><i class="fa fa-check"></i>Quiz 6.33</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.34"><i class="fa fa-check"></i>Quiz 6.34</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.35"><i class="fa fa-check"></i>Quiz 6.35</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.36"><i class="fa fa-check"></i>Quiz 6.36</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.37"><i class="fa fa-check"></i>Quiz 6.37</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.38"><i class="fa fa-check"></i>Quiz 6.38</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.39"><i class="fa fa-check"></i>Quiz 6.39</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.40"><i class="fa fa-check"></i>Quiz 6.40</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.41"><i class="fa fa-check"></i>Quiz 6.41</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.42"><i class="fa fa-check"></i>Quiz 6.42</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.43"><i class="fa fa-check"></i>Quiz 6.43</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.44"><i class="fa fa-check"></i>Quiz 6.44</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.45"><i class="fa fa-check"></i>Quiz 6.45</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.46"><i class="fa fa-check"></i>Quiz 6.46</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.47"><i class="fa fa-check"></i>Quiz 6.47</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.48"><i class="fa fa-check"></i>Quiz 6.48</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.49"><i class="fa fa-check"></i>Quiz 6.49</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.50"><i class="fa fa-check"></i>Quiz 6.50</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.51"><i class="fa fa-check"></i>Quiz 6.51</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.52"><i class="fa fa-check"></i>Quiz 6.52</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.53"><i class="fa fa-check"></i>Quiz 6.53</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.54"><i class="fa fa-check"></i>Quiz 6.54</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.55"><i class="fa fa-check"></i>Quiz 6.55</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.56"><i class="fa fa-check"></i>Quiz 6.56</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.57"><i class="fa fa-check"></i>Quiz 6.57</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.58"><i class="fa fa-check"></i>Quiz 6.58</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.59"><i class="fa fa-check"></i>Quiz 6.59</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.60"><i class="fa fa-check"></i>Quiz 6.60</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.61"><i class="fa fa-check"></i>Quiz 6.61</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.62"><i class="fa fa-check"></i>Quiz 6.62</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.63"><i class="fa fa-check"></i>Quiz 6.63</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.64"><i class="fa fa-check"></i>Quiz 6.64</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.65"><i class="fa fa-check"></i>Quiz 6.65</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.66"><i class="fa fa-check"></i>Quiz 6.66</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.67"><i class="fa fa-check"></i>Quiz 6.67</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.68"><i class="fa fa-check"></i>Quiz 6.68</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.69"><i class="fa fa-check"></i>Quiz 6.69</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.70"><i class="fa fa-check"></i>Quiz 6.70</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.71"><i class="fa fa-check"></i>Quiz 6.71</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.72"><i class="fa fa-check"></i>Quiz 6.72</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.73"><i class="fa fa-check"></i>Quiz 6.73</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.74"><i class="fa fa-check"></i>Quiz 6.74</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.75"><i class="fa fa-check"></i>Quiz 6.75</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.76"><i class="fa fa-check"></i>Quiz 6.76</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.77"><i class="fa fa-check"></i>Quiz 6.77</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.78"><i class="fa fa-check"></i>Quiz 6.78</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.79"><i class="fa fa-check"></i>Quiz 6.79</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.80"><i class="fa fa-check"></i>Quiz 6.80</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.81"><i class="fa fa-check"></i>Quiz 6.81</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.82"><i class="fa fa-check"></i>Quiz 6.82</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.83"><i class="fa fa-check"></i>Quiz 6.83</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.84"><i class="fa fa-check"></i>Quiz 6.84</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.85"><i class="fa fa-check"></i>Quiz 6.85</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.86"><i class="fa fa-check"></i>Quiz 6.86</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.87"><i class="fa fa-check"></i>Quiz 6.87</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.88"><i class="fa fa-check"></i>Quiz 6.88</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.89"><i class="fa fa-check"></i>Quiz 6.89</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.90"><i class="fa fa-check"></i>Quiz 6.90</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.91"><i class="fa fa-check"></i>Quiz 6.91</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.92"><i class="fa fa-check"></i>Quiz 6.92</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.93"><i class="fa fa-check"></i>Quiz 6.93</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.94"><i class="fa fa-check"></i>Quiz 6.94</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.95"><i class="fa fa-check"></i>Quiz 6.95</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.96"><i class="fa fa-check"></i>Quiz 6.96</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.97"><i class="fa fa-check"></i>Quiz 6.97</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.98"><i class="fa fa-check"></i>Quiz 6.98</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.99"><i class="fa fa-check"></i>Quiz 6.99</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.100"><i class="fa fa-check"></i>Quiz 6.100</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="./" target="blank"></a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Esercizi Statistica di Base</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="dati-categorici" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">4</span> Dati categorici<a href="dati-categorici.html#dati-categorici" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="tabelle-di-contingenza" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Tabelle di contingenza<a href="dati-categorici.html#tabelle-di-contingenza" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="esercizio-4.1" class="section level3 unnumbered hasAnchor">
+<h3>Esercizio 4.1<a href="dati-categorici.html#esercizio-4.1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<center>
+<em>Depressione e stato civile, I parte</em>
+</center>
+<p>Consideriamo i dati di un medico su 159 pazienti depressi. La seguente
+tabella riporta il livello depressivo osservato rispetto allo stato
+civile:</p>
+<table>
+<colgroup>
+<col width="30%" />
+<col width="16%" />
+<col width="22%" />
+<col width="15%" />
+<col width="15%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"><strong>stato civile</strong></th>
+<th align="center"></th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><strong>livello depressivo</strong></td>
+<td align="center"><strong>sposato</strong></td>
+<td align="center"><strong>celibe</strong></td>
+<td align="center"><strong>vedovo</strong></td>
+<td align="center"><strong>Totale</strong></td>
+</tr>
+<tr class="even">
+<td align="center"><strong>grave</strong></td>
+<td align="center">22</td>
+<td align="center">16</td>
+<td align="center">19</td>
+<td align="center">57</td>
+</tr>
+<tr class="odd">
+<td align="center"><strong>medio</strong></td>
+<td align="center">33</td>
+<td align="center">29</td>
+<td align="center">14</td>
+<td align="center">76</td>
+</tr>
+<tr class="even">
+<td align="center"><strong>leggero</strong></td>
+<td align="center">14</td>
+<td align="center">9</td>
+<td align="center">3</td>
+<td align="center">26</td>
+</tr>
+<tr class="odd">
+<td align="center"><strong>Totale</strong></td>
+<td align="center">69</td>
+<td align="center">54</td>
+<td align="center">36</td>
+<td align="center">159</td>
+</tr>
+</tbody>
+</table>
+<ol style="list-style-type: lower-alpha">
+<li><p>Di che tipo di variabili si tratta?</p></li>
+<li><p>Determinare la distribuzione marginale di frequenza dello stato
+civile.</p></li>
+<li><p>Quale é la moda per il carattere livello depressivo?</p></li>
+<li><p>Quale è la percentuale di pazienti che risultano vedovi e con un
+livello depressivo grave?</p></li>
+<li><p>Quale è la percentuale di vedovi con livello depressivo grave?</p></li>
+<li><p>Quale è la percentuale di pazienti con livello depressivo almeno
+pari a un livello ‘medio’?</p></li>
+<li><p>Determinare la distribuzione condizionata, di frequenze assolute e
+di frequenze percentuali, del livello depressivo allo stato civile
+vedovo.</p></li>
+<li><p>Determinare la distribuzione marginale del livello depressivo e
+confrontarla con la distribuzione condizionata ricavata al punto
+precedente. Cosa si può dire sull’associazione tra i due caratteri?</p></li>
+</ol>
+<div id="soluzione-79" class="section level4 unnumbered sol hasAnchor">
+<h4>Soluzione<a href="dati-categorici.html#soluzione-79" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ol style="list-style-type: lower-alpha">
+<li><p>Il livello depressivo è un carattere qualitativo ordinato, lo stato
+civile è un carattere qualitativo sconnesso.</p></li>
+<li><p>La distribuzione marginale dello stato civile è la seguente:</p>
+<div class="center">
+<table>
+<tbody>
+<tr class="odd">
+<td align="center">sposato</td>
+<td align="center">celibe</td>
+<td align="center">vedovo</td>
+<td align="center">Totale</td>
+</tr>
+<tr class="even">
+<td align="center">69</td>
+<td align="center">54</td>
+<td align="center">36</td>
+<td align="center">159</td>
+</tr>
+</tbody>
+</table>
+</div></li>
+<li><p>La moda è il livello depressivo ‘medio’ ovvero la modalità del
+carattere alla quale è associata la massima frequenza.</p></li>
+<li><p>La percentuale di pazienti che sono simultaneamente vedovi e con
+livello depressivo grave è data da: <span class="math display">\[\frac{19}{159} 100 = 11.9\%\]</span></p></li>
+<li><p>La percentuale di vedovi che presentano un livello depressivo grave
+è data da <span class="math display">\[\frac{19}{36} 100 = 52.8\%\]</span></p></li>
+<li><p>Il numero di pazienti con un livello depressivo pari almeno ad un
+livello medio è dato dalla somma tra il numero di pazienti con
+livello depressivo medio e quello con livello depressivo grave,
+<span class="math inline">\(76+57 = 133\)</span>. La percentuale richiesta è quindi:
+<span class="math display">\[\frac{133}{159} 100 = 84\%\]</span></p></li>
+<li><p>la distribuzione condizionata è riportata nella seguente tabella:</p>
+<div class="center">
+<table>
+<thead>
+<tr class="header">
+<th align="center"><strong>stato civile</strong><span class="math inline">\(=\)</span>vedovo</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><strong>livello depressivo</strong></td>
+<td>freq. assolute</td>
+<td>freq.percentuali</td>
+</tr>
+<tr class="even">
+<td align="center">grave</td>
+<td>19</td>
+<td><span class="math inline">\(19/ 36 \cdot 100 = 52.8\%\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center">medio</td>
+<td>14</td>
+<td><span class="math inline">\(14/36\cdot 100 = 38.9\%\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">leggero</td>
+<td>3</td>
+<td><span class="math inline">\(3/36\cdot 100 = 8.3\%\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center">Totale</td>
+<td>36</td>
+<td>100</td>
+</tr>
+</tbody>
+</table>
+</div></li>
+<li><p>La distribuzione marginale del livello depressivo è la seguente:</p>
+<div class="center">
+<table>
+<tbody>
+<tr class="odd">
+<td align="center"><strong>livello depressivo</strong></td>
+<td align="center">freq. assolute</td>
+<td align="center">freq.percentuali</td>
+</tr>
+<tr class="even">
+<td align="center">grave</td>
+<td align="center">57</td>
+<td align="center"><span class="math inline">\(57/ 159 \cdot 100 = 35.8\%\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center">medio</td>
+<td align="center">76</td>
+<td align="center"><span class="math inline">\(76/159\cdot 100 = 47.8\%\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">leggero</td>
+<td align="center">26</td>
+<td align="center"><span class="math inline">\(26/159\cdot 100 = 16.4\%\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center">Totale</td>
+<td align="center">159</td>
+<td align="center">100</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Analizzando la distribuzione condizionata allo stato civile vedovo,
+possiamo notare che la proporzione di vedovi con livello depressivo
+grave è superiore rispetto a quella calcolata sul totale. Dal
+confronto tra distribuzione condizionata e distribuzione marginale
+si può notare che le frequenze percentuali sono diverse, il che
+indica la presenza di un’associazione tra i due caratteri.</p></li>
+</ol>
+</div>
+</div>
+<div id="esercizio-4.2" class="section level3 unnumbered hasAnchor">
+<h3>Esercizio 4.2<a href="dati-categorici.html#esercizio-4.2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<center>
+<em>Effetti collaterali di Avandia, I parte.</em>
+</center>
+<p><strong>(dal libro di testo <em>OpenIntro Statistics</em> di Diez et al., es. 1.51)</strong><br />
+</p>
+<p>Il rosiglitazone è il principio attivo presente nella medicina per il
+diabete di tipo 2 Avandia ed è stato considerato causa dell’insorgenza
+di seri problemi cardiovascolari come infarto, insufficienza cardiaca e
+morte. Un trattamento alternativo è il pioglitazone, principio attivo
+presente in un’altra medicina per il diabete, Actos. Nella seguente
+tabella sono riportati i dati relativi ad uno studio osservazionale
+retrospettivo su 22,571 beneficiari di assistenza pubblica di età pari a
+65 anni o più.</p>
+<div class="center">
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="center"><em>Problemi cardiovascolari</em></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><em>Trattamento</em></td>
+<td align="center">Si</td>
+<td>No</td>
+<td>Totale</td>
+</tr>
+<tr class="even">
+<td>Rosiglitazone</td>
+<td align="center">2,593</td>
+<td>65,000</td>
+<td>67,593</td>
+</tr>
+<tr class="odd">
+<td>Pioglitazone</td>
+<td align="center">5,386</td>
+<td>154,592</td>
+<td>159,978</td>
+</tr>
+<tr class="even">
+<td>Totale</td>
+<td align="center">7,979</td>
+<td>219,592</td>
+<td>227,571</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Determinare se ciascuna delle seguenti affermazioni è vera o falsa. Se
+falsa, spiegare perché. Attenzione: il ragionamento può essere sbagliato
+anche se la conclusione dell’affermazione è corretta. I questi casi,
+l’affermazione dovrebbe essere considerata falsa.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Poiché più pazienti con trattamento pioglitazone hanno avuto
+problemi cardiovascolari (5,386 vs. 2,593), possiamo concludere che
+il tasso di problemi cardiovascolari per quelli a cui è stato
+somministrato questo trattamento è più alto.</p></li>
+<li><p>I dati suggeriscono che i pazienti diabetici a cui è stato
+somministrato rosiglitazone sono più inclini ad avere problemi
+cardiovascolari poiché il tasso di incidenza è
+(<span class="math inline">\(2,593 / 67,593 = 0.038\)</span>) <span class="math inline">\(3.8\%\)</span> per pazienti con questo
+trattamento, mentre solo (<span class="math inline">\(5,386 / 159,978 = 0.034\)</span>) <span class="math inline">\(3.4\%\)</span> per
+pazienti a cui è stato somministrato l’altro trattamento
+(pioglitazone).</p></li>
+<li><p>Il fatto che il tasso di incidenza sia più alto per il gruppo
+rosiglitazone dimostra che il rosiglitazone causa seri problemi
+cardiovascolari.</p></li>
+<li><p>Sulla base delle informazioni a disposizione, non possiamo dire se
+la differenza tra i tassi di incidenza è dovuta alla relazione tra
+le due variabili o al caso.</p></li>
+</ol>
+<div id="soluzione-80" class="section level4 unnumbered sol hasAnchor">
+<h4>Soluzione<a href="dati-categorici.html#soluzione-80" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ol style="list-style-type: lower-alpha">
+<li><p>Falso. Invece di confrontare le frequenze assolute, bisognerebbe
+confrontare le percentuali.</p></li>
+<li><p>Vero.</p></li>
+<li><p>Falso. Non possiamo dedurre una relazione causale da una
+associazione in uno studio osservazionale. Comunque, possiamo dire
+che il trattamento a cui uno è sottoposto ha un impatto sul rischio
+in questo caso, perché il paziente ha scelto quel trattamento e la
+sua scelta può essere associata ad altre variabili, che è il motivo
+per cui il punto b. è vero. La differenza in queste affermazioni è
+sottile ma importante.</p></li>
+<li><p>Vero.</p></li>
+</ol>
+</div>
+</div>
+</div>
+<div id="inferenza-su-una-singola-proporzione" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Inferenza su una singola proporzione<a href="dati-categorici.html#inferenza-su-una-singola-proporzione" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="esercizio-4.3" class="section level3 unnumbered hasAnchor">
+<h3>Esercizio 4.3<a href="dati-categorici.html#esercizio-4.3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<center>
+<em>Studenti fumatori</em>
+</center>
+<p>Su un campione casuale di 100 studenti di un’università, 82 hanno
+dichiarato di non essere fumatori. Sulla base di questo, costruisci un
+intervallo di confidenza a livello <span class="math inline">\(1-\alpha = 0.99\)</span> per <span class="math inline">\(p\)</span>, la
+proporzione di tutti gli studenti dell’università che non fumano.<br />
+</p>
+<div id="soluzione-81" class="section level4 unnumbered sol hasAnchor">
+<h4>Soluzione<a href="dati-categorici.html#soluzione-81" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Dobbiamo costruire un intervallo di confidenza per la proporzione <span class="math inline">\(p\)</span> di
+tutti gli studenti dell’università che non fumano. Tale intervallo di
+confidenza ha la seguente forma
+<span class="math display">\[\left[\hat{p}-z^{*}\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}, \hat{p}+z^{*}\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}\right]\]</span>
+dove</p>
+<ul>
+<li><p><span class="math inline">\(\hat{p}\)</span> è la proporzione di non fumatori nel campione osservato:
+<span class="math inline">\(\hat{p}=\frac{82}{100}=0.82\)</span>;</p></li>
+<li><p><span class="math inline">\(z^{*}\)</span> è il quantile a livello <span class="math inline">\(\alpha/2=(1-0.99)/2=0.005\)</span> di una
+distribuzione Normale standard; dalla tavola C (oppure dalla tavola
+della distribuzione Normale standard) si ha <span class="math inline">\(z^{*}=2.576\)</span>;</p></li>
+<li><p><span class="math inline">\(n = 100\)</span> è la numerosità campionaria.</p></li>
+</ul>
+<p>Sostituendo questi valori, si ottiene il seguente intervallo di
+confidenza: <span class="math display">\[[0.721,0.919]\]</span></p>
+</div>
+</div>
+<div id="esercizio-4.4" class="section level3 unnumbered hasAnchor">
+<h3>Esercizio 4.4<a href="dati-categorici.html#esercizio-4.4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<center>
+<em>Legalizzazione delle droghe leggere </em>
+</center>
+<p>Un’indagine Gallup studia periodicamente un campione casuale di 1500
+americani. La percentuale di individui nel campione che è a favore della
+legalizzazione del possesso di marijuana è scesa dal 52% nel 1980 al 46%
+nel 1985.</p>
+<ol style="list-style-type: decimal">
+<li><p>Si costruisca un intervallo di confidenza al 95% per la percentuale
+della popolazione a favore della legalizzazione nel 1980;</p></li>
+<li><p>Si costruisca un intervallo di confidenza al 95% per la percentuale
+della popolazione a favore della legalizzazione nel 1985.</p></li>
+</ol>
+<div id="soluzione-82" class="section level4 unnumbered sol hasAnchor">
+<h4>Soluzione<a href="dati-categorici.html#soluzione-82" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Dobbiamo costruire un intervallo di confidenza per una proporzione:
+<span class="math display">\[\left[\hat{p}-z^{*}\sqrt{\frac{\hat{p}(1-\hat{p})}{n}} ; \hat{p}+z^{*}\sqrt{\frac{\hat{p}(1-\hat{p})}{n}} \right]\]</span>
+Quindi per ciascun anno si ha:</p>
+<ol style="list-style-type: decimal">
+<li><p>Per l’anno 1980:
+<span class="math display">\[\left[0.52 - 1.96 \sqrt{\frac{0.52(1-0.52)}{1500}} ; 0.52 + 1.96 \sqrt{\frac{0.52(1-0.52)}{1500}}\right] = [0.495; 0.545]\]</span></p></li>
+<li><p>Per l’anno 1985:
+<span class="math display">\[\left[0.46 - 1.96 \sqrt{\frac{0.46(1-0.46)}{1500}} ; 0.46 + 1.96 \sqrt{\frac{0.46(1-0.46)}{1500}}\right] = [0.435; 0.485]\]</span></p></li>
+</ol>
+</div>
+</div>
+<div id="esercizio-4.5" class="section level3 unnumbered hasAnchor">
+<h3>Esercizio 4.5<a href="dati-categorici.html#esercizio-4.5" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<center>
+<em>Effetti collaterali di Avandia, II parte. </em>
+</center>
+<p><strong>(dal libro di testo <em>OpenIntro Statistics</em> di Diez et al., es. 1.53)</strong><br />
+</p>
+<p>Nell’Esercizio 4.2 è stato introdotto uno studio in cui vengono
+confrontati i tassi di incidenza di alcune gravi patologie
+cardiovascolari per pazienti affetti da diabete, trattati con
+rosiglitazone e pioglitazone. La seguente tabella rappresenta i dati
+raccolti:</p>
+<div class="center">
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="center"><em>Problemi cardiovascolari</em></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><em>Trattamento</em></td>
+<td align="center">Si</td>
+<td>No</td>
+<td>Totale</td>
+</tr>
+<tr class="even">
+<td>Rosiglitazone</td>
+<td align="center">2,593</td>
+<td>65,000</td>
+<td>67,593</td>
+</tr>
+<tr class="odd">
+<td>Pioglitazone</td>
+<td align="center">5,386</td>
+<td>154,592</td>
+<td>159,978</td>
+</tr>
+<tr class="even">
+<td>Totale</td>
+<td align="center">7,979</td>
+<td>219,592</td>
+<td>227,571</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ol style="list-style-type: lower-alpha">
+<li><p>Quale è la proporzione di pazienti sul totale che hanno avuto
+problemi cardiovascolari?</p></li>
+<li><p>Se il tipo di trattamento e l’insorgenza di problemi cardiovascolari
+fossero indipendenti, quanti pazienti con problemi cardiovascolari
+ci dovremmo aspettare nel gruppo rosiglitazone?</p></li>
+<li><p>La relazione tra trattamento e outcome in questo studio può essere
+analizzata adottando una tecnica di randomizzazione. L’istogramma
+seguente rappresenta la simulazione dei conteggi degli eventi
+cardiovascolari nel gruppo rosiglitazione assumendo il modello di
+indipendenza. (i) Quali sono le ipotesi sottoposte a verifica? (ii)
+Rispetto al numero calcolato al punto b., fornirebbe maggiore
+supporto all’ipotesi alternativa un numero maggiore o un numero
+minore di pazienti con problemi cardiovascolari nel gruppo
+rosiglitazione? (iii) Cosa suggeriscono i risultati della
+simulazione rispetto alla relazione tra il trattamento
+rosiglitazione e l’insorgenza di problemi cardiovascolari nei
+pazienti diabetici?</p></li>
+</ol>
+<center>
+<img src="cap4/1_53.png" />
+</center>
+<div id="soluzione-83" class="section level4 unnumbered sol hasAnchor">
+<h4>Soluzione<a href="dati-categorici.html#soluzione-83" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ol style="list-style-type: lower-alpha">
+<li><p>La proporzione di pazienti che hanno avuto problemi cardiovascolari
+è pari a <span class="math inline">\(\frac{7979}{227571} \approx 0.035\)</span>.</p></li>
+<li><p>Il numero atteso di problemi cardivascolari nel gruppo
+rosiglitazione sotto l’ipotesi di indipendenza, può essere calcolato
+moltiplicando il numero di pazienti di quel gruppo per il tasso
+complessivo di problemi cardiovascolari osservato nello studio,
+ovvero: <span class="math inline">\(67593 \cdot \frac{7979}{227571} = 2730\)</span></p></li>
+<li><p> (i) L’ipotesi nulla <span class="math inline">\(H_0\)</span> corrisponde al modello di indipendenza:
+il trattamento e l’insorgenza di problemi cardiovascolari sono
+indipendenti, ovvero non c’è relazione tra loro, quindi la
+differenza riscontrata nei tassi di incidenza nei due gruppi di
+trattamento è dovuta al caso. L’ipotesi alternativa <span class="math inline">\(H_A\)</span>
+corrisponde invece alla negazione del modello di indipendenza: il
+trattamento e l’insorgenza di problemi cardiovascolari non sono
+indipendenti, ovvero la differenza riscontrata nei tassi di
+incidenza nei due gruppi di trattamento non è dovuta al caso, ma il
+rosiglitazione è associato con un maggior rischio di sviluppare
+problemi cardiovascolari. (ii) Un numero di pazienti con problemi
+cardiovascolari nel gruppo rosiglitazione piú elevato rispetto a
+quello atteso sotto l’ipotesi di indipendenza fornirebbe un maggiore
+supporto all’ipotesi alternativa. Questo suggerirebbe che il
+rosiglitazione comporta un incremento del rischio di problemi
+cardiovascolari. (iii) In questo studio sono stati effettivamente
+osservati 2593 eventi cardiovascolari nel gruppo rosiglitazione.
+Nelle 1000 simulazioni effettuate sotto il modello di indipendenza
+sono stati osservati praticamente sempre meno di 2593 eventi, il che
+induce a concludere che i dati osservati non siano compatibili con
+il modello di indipendenza. In altre parole, l’analisi fornisce
+forte evidenza contro l’ipotesi nulla ovvero a supporto dell’ipotesi
+che il rosiglitazione sia associato significativamente con un
+maggiore rischio di problemi cardiovascolari.</p></li>
+</ol>
+</div>
+</div>
+<div id="esercizio-4.6" class="section level3 unnumbered hasAnchor">
+<h3>Esercizio 4.6<a href="dati-categorici.html#esercizio-4.6" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<center>
+<em>Studenti vegetariani </em>
+</center>
+<p><strong>(dal libro di testo <em>OpenIntro Statistics</em> di Diez et al., es. 6.1)</strong><br />
+</p>
+<p>Supponendo che l’ <span class="math inline">\(8\%\)</span> degli studenti siano vegetariani, determinare se
+le seguenti affermazioni sono vere o false, fornendo motivazioni
+appropriate.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>La distribuzione della proporzione campionaria di vegetariani in un
+campione casuale di dimensione 60 è approssimativamente normale dal
+momento che <span class="math inline">\(n \geq 30\)</span>.</p></li>
+<li><p>La distribuzione della proporzione campionaria di vegetariani in un
+campione casuale di dimensione 50 è asimmetrica a destra.</p></li>
+<li><p>Un campione casuale di 125 studenti di cui il <span class="math inline">\(12\%\)</span> sono
+vegetariani può essere considerato anomalo.</p></li>
+<li><p>Un campione casuale di 250 studenti di cui il <span class="math inline">\(12\%\)</span> sono
+vegetariani può essere considerato anomalo.</p></li>
+<li><p>L’errore standard si dimezzerebbe se la dimensione campionaria
+aumentasse da 125 a 250.</p></li>
+</ol>
+<div id="soluzione-84" class="section level4 unnumbered sol hasAnchor">
+<h4>Soluzione<a href="dati-categorici.html#soluzione-84" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ol style="list-style-type: lower-alpha">
+<li><p>Falso. Infatti non è soddisfatta la condizione: <span class="math inline">\(np \geq 10\)</span> e
+<span class="math inline">\(n(1 - p) \geq 10\)</span>.</p></li>
+<li><p>Vero. Infatti non è soddisfatta la condizione: <span class="math inline">\(np \geq 10\)</span> e
+<span class="math inline">\(n(1 - p) \geq 10\)</span>. Inoltre, nella maggior parte dei campioni ci si
+può aspettare che <span class="math inline">\(\hat{p}\)</span> sia vicina a 0.08 che rappresenta la
+proporzione vera di vegetariani nella popolazione. Mentre <span class="math inline">\(\hat{p}\)</span>
+può assumere valori anche di molto superiori a 0.08, sarà certamente
+limitata dal valore 0; ciò implica che la forma della distribuzione
+tenderà ad essere asimmetrica a destra.</p></li>
+<li><p>Falso. L’errore standard è pari a
+<span class="math inline">\(SE_{\hat{p}} = \sqrt{\frac{p(1-p)}{n}} = 0.0243\)</span> e <span class="math inline">\(\hat{p} = 0.12\)</span>
+è distante soltanto <span class="math inline">\(\frac{0.12-0.08}{0.0243} = 1.65 SE\)</span> dalla
+media, cosa che non può essere considerata anomala.</p></li>
+<li><p>Vero. L’errore standard è pari a
+<span class="math inline">\(SE_{\hat{p}} = \sqrt{\frac{p(1-p)}{n}} = 0.0172\)</span> e <span class="math inline">\(\hat{p} = 0.12\)</span>
+è distante soltanto <span class="math inline">\(\frac{0.12-0.08}{0.0172} = 2.32 SE\)</span> dalla media
+e rappresenta quindi un valore anomalo.</p></li>
+<li><p>Falso. L’errore standard si ridurrebbe di un fattore
+<span class="math inline">\(\frac{1}{\sqrt{2}}\)</span>.</p></li>
+</ol>
+</div>
+</div>
+<div id="esercizio-4.7" class="section level3 unnumbered hasAnchor">
+<h3>Esercizio 4.7<a href="dati-categorici.html#esercizio-4.7" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<center>
+<em>Gatti rossi tigrati</em>
+</center>
+<p><strong>(dal libro di testo <em>OpenIntro Statistics</em> di Diez et al., es. 6.3)</strong><br />
+</p>
+<p>Supponendo che il <span class="math inline">\(90\%\)</span> dei gatti rossi tigrati sia maschio,
+determinare se le seguenti affermazioni sono vere o false, fornendo
+motivazioni appropriate.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>La distribuzione della proporzione campionaria di un campione
+casuale di dimensione 30 è asimmetrica a sinistra.</p></li>
+<li><p>Adottando una dimensione campionaria 4 volte maggiore, lo standard
+error della proporzione campionaria si dimezza.</p></li>
+<li><p>La distribuzione della proporzione campionaria di un campione
+casuale di dimensione 140 è approssimativamente normale.</p></li>
+<li><p>La distribuzione della proporzione campionaria di un campione
+casuale di dimensione 280 è approssimativamente normale.</p></li>
+</ol>
+<div id="soluzione-85" class="section level4 unnumbered sol hasAnchor">
+<h4>Soluzione<a href="dati-categorici.html#soluzione-85" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ol style="list-style-type: lower-alpha">
+<li><p>Vero. Infatti non è soddisfatta la condizione: <span class="math inline">\(np \geq 10\)</span> e
+<span class="math inline">\(n(1 - p) \geq 10\)</span>. Inoltre, nella maggior parte dei campioni ci si
+può aspettare che <span class="math inline">\(\hat{p}\)</span> sia vicina a 0.90 che rappresenta la
+proporzione vera di maschi nella popolazione. Mentre <span class="math inline">\(\hat{p}\)</span> può
+assumere valori anche di molto inferiori a 0.90, sarà certamente
+limitata dal valore 1; ciò implica che la forma della distribuzione
+tenderà ad essere asimmetrica a sinistra.</p></li>
+<li><p>Vero. Nella formula dell’errore standard compare infatti la radice
+quadrata della numerosità campionaria.</p></li>
+<li><p>Vero. Sono rispettate sia la condizione di indipendenza sia la
+condizione: <span class="math inline">\(np \geq 10\)</span> e <span class="math inline">\(n(1 - p) \geq 10\)</span>.</p></li>
+<li><p>Vero. Sono rispettate sia la condizione di indipendenza sia la
+condizione: <span class="math inline">\(np \geq 10\)</span> e <span class="math inline">\(n(1 - p) \geq 10\)</span>.</p></li>
+</ol>
+</div>
+</div>
+<div id="esercizio-4.8" class="section level3 unnumbered hasAnchor">
+<h3>Esercizio 4.8<a href="dati-categorici.html#esercizio-4.8" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<center>
+<em>Prop 19 in California</em>
+</center>
+<p><strong>(dal libro di testo <em>OpenIntro Statistics</em> di Diez et al., es. 6.5)</strong><br />
+</p>
+<p>In un’indagine condotta da Survey USA nel 2010, il <span class="math inline">\(70\%\)</span> dei <span class="math inline">\(119\)</span>
+rispondenti di età compresa tra i 18 e i 34 anni ha affermato che
+avrebbe votato a favore della cosiddetta <em>Prop 19</em>, un provvedimento per
+legalizzare la marjiuana in California modificando la legge vigente e
+adottando una opportuna regolamentazione e tassazione. Ad un livello di
+confidenza del <span class="math inline">\(95\%\)</span>, il margine di errore per questo campione è pari
+all’<span class="math inline">\(8\%\)</span>. Sulla base di queste informazioni, determinare se le seguenti
+affermazioni sono vere o false, fornendo motivazioni appropriate.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Si può essere fiduciosi, con un livello di confidenza del <span class="math inline">\(95\%\)</span>,
+che una percentuale di elettori compresa tra il <span class="math inline">\(62\%\)</span> e il <span class="math inline">\(78\%\)</span>
+in questo campione voterà a favore della Prop 19.</p></li>
+<li><p>Si può essere fiduciosi, con un livello di confidenza del <span class="math inline">\(95\%\)</span>,
+che tra gli elettori di età tra i 18 e i 34 anni, una percentuale
+compresa tra il <span class="math inline">\(62\%\)</span> e il <span class="math inline">\(78\%\)</span> voterà a favore della Prop 19.</p></li>
+<li><p>Se si considerassero molti campioni casuali di 119 elettori di età
+tra i 18 e i 34 anni, e si calcolassero i corrispondenti intervalli
+di confidenza, il <span class="math inline">\(95\%\)</span> di essi includerebbe il valore vero della
+proporzione di elettori favorevoli alla Prop 19 nella popolazione.</p></li>
+<li><p>Per ridurre il margine di errore al <span class="math inline">\(4\%\)</span>, è necessario moltiplicare
+la dimensione campionaria per 4.</p></li>
+<li><p>In base a questo intervallo di confidenza, c’è evidenza sufficiente
+per concludere che la maggioranza degli elettori Californiani di età
+tra i 18 e i 34 anni, supportano la Prop 19.</p></li>
+</ol>
+<div id="soluzione-86" class="section level4 unnumbered sol hasAnchor">
+<h4>Soluzione<a href="dati-categorici.html#soluzione-86" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ol style="list-style-type: lower-alpha">
+<li><p>Falso. Un intervallo di confidenza viene costruito per stimare la
+proporzione nella popolazione, non nel campione.</p></li>
+<li><p>Vero. L’intervallo di confidenza al <span class="math inline">\(95\%\)</span> è <span class="math inline">\(70\% \pm 8\%\)</span>.</p></li>
+<li><p>Vero, per la definizione di intervallo di confidenza.</p></li>
+<li><p>Vero. Moltiplicando la dimensione campionaria per 4, l’errore
+standard e il margine di errore si riducono di un fattore
+<span class="math inline">\(\frac{1}{\sqrt{4}}\)</span>.</p></li>
+<li><p>Vero. L’intervallo di confidenza al <span class="math inline">\(95\%\)</span> è tutto al di sopra del
+<span class="math inline">\(50\%\)</span>.</p></li>
+</ol>
+</div>
+</div>
+<div id="esercizio-4.9" class="section level3 unnumbered hasAnchor">
+<h3>Esercizio 4.9<a href="dati-categorici.html#esercizio-4.9" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<center>
+<em>Fuochi d’artificio il 4 Luglio </em>
+</center>
+<p><strong>(dal libro di testo <em>OpenIntro Statistics</em> di Diez et al., es. 6.7)</strong><br />
+</p>
+<p>Alla fine di Giugno 2012, Survey USA ha pubblicato i risultati di
+un’indagine in cui si diceva che il <span class="math inline">\(56\%\)</span> di 600 residenti del Kansas
+scelti in modo casuale aveva programmato di fare i fuochi d’artificio il
+4 Luglio. Determinare il margine di errore per la stima puntuale per un
+livello di confidenza del <span class="math inline">\(95\%\)</span>.</p>
+<div id="soluzione-87" class="section level4 unnumbered sol hasAnchor">
+<h4>Soluzione<a href="dati-categorici.html#soluzione-87" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Dal momento che il campione considerato è inferiore al 10<span class="math inline">\(\%\)</span> della
+popolazione, la condizione di indipendenza è soddisfatta. Anche la
+condizione <span class="math inline">\(np \geq 10\)</span> e <span class="math inline">\(n(1 - p) \geq 10\)</span> è verificata. Il margine di
+errore è dunque:
+<span class="math inline">\(ME = z^* \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} = 1.96 \sqrt{\frac{0.56 \cdot 0.44}{600}} = 0.0397 = 4\%\)</span>.</p>
+</div>
+</div>
+<div id="esercizio-4.10" class="section level3 unnumbered hasAnchor">
+<h3>Esercizio 4.10<a href="dati-categorici.html#esercizio-4.10" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<center>
+<em>Vita dopo il college</em>
+</center>
+<p><strong>(dal libro di testo <em>OpenIntro Statistics</em> di Diez et al., es. 6.9)</strong><br />
+</p>
+<p>L’obiettivo di questa indagine è stimare la proporzione di laureati in
+una classe di piú di 4500 studenti che hanno trovato un lavoro entro un
+anno dalla laurea. Supponendo che 348 su 400 studenti estratti
+casualmente abbiano dichiarato di avere un lavoro, rispondere ai
+seguenti quesiti.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Descrivere il parametro di interesse della popolazione. Quale è la
+stima puntuale di questo parametro?</p></li>
+<li><p>Controllare se le condizioni per la costruzione di un intervallo di
+confidenza sono soddisfatte dai dati a disposizione.</p></li>
+<li><p>Calcolare un intervallo di confidenza al <span class="math inline">\(95\%\)</span> per la proporzione
+di laureati che ha trovato lavoro entro un anno dalla laurea e
+fornire una sua interpretazione.</p></li>
+<li><p>Cosa significa confidenza al <span class="math inline">\(95\%\)</span>?</p></li>
+<li><p>Calcolare ora un intervallo di confidenza al <span class="math inline">\(99\%\)</span> per la
+proporzione di laureati che ha trovato lavoro entro un anno dalla
+laurea e fornire una sua interpretazione.</p></li>
+<li><p>Confrontare le ampiezze dei due intervalli al livello <span class="math inline">\(95\%\)</span> e
+<span class="math inline">\(99\%\)</span>. Quale è piú ampio? Spiegare il perché.</p></li>
+</ol>
+<div id="soluzione-88" class="section level4 unnumbered sol hasAnchor">
+<h4>Soluzione<a href="dati-categorici.html#soluzione-88" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ol style="list-style-type: lower-alpha">
+<li><p>Il parametro di interesse della popolazione è la proporzione di
+laureati che ha trovato lavoro a un anno dalla laurea. La stima
+puntuale è <span class="math inline">\(\hat{p} = 348/400 = 0.87\)</span>.</p></li>
+<li><p>Il campione considerato è inferiore al 10<span class="math inline">\(\%\)</span> della popolazione,
+quindi la condizione di indipendenza è soddisfatta. Anche la
+condizione <span class="math inline">\(np \geq 10\)</span> e <span class="math inline">\(n(1 - p) \geq 10\)</span> è verificata.</p></li>
+<li><p>L’intervallo è: <span class="math inline">\((0.8371,0.9029)\)</span>. Si può essere fiduciosi al <span class="math inline">\(95\%\)</span>
+che approssimativamente una percentuale compresa tra l’<span class="math inline">\(84\%\)</span> e il
+<span class="math inline">\(90\%\)</span> dei laureati abbia trovato lavoro entro un anno dalla laurea.</p></li>
+<li><p>Significa che estraendo un gran numero di campioni e calcolando gli
+intervalli corrispondenti, si otterrebbe nel <span class="math inline">\(95\%\)</span> dei casi un
+intervallo contenente il valore vero del parametro.</p></li>
+<li><p>L’intervallo è <span class="math inline">\((0.8267, 0.9133)\)</span>. Si può essere fiduciosi al <span class="math inline">\(99\%\)</span>
+che approssimativamente una percentuale compresa tra l’<span class="math inline">\(83\%\)</span> e il
+<span class="math inline">\(91\%\)</span> dei laureati abbia trovato lavoro entro un anno dalla laurea.</p></li>
+<li><p>L’intervallo a livello <span class="math inline">\(99\%\)</span> è piú ampio, perché richiede un
+livello di fiducia maggiore che la proporzione vera sia contenuta
+all’interno dell’intervallo e quindi deve coprire un range maggiore.</p></li>
+</ol>
+</div>
+</div>
+<div id="esercizio-4.11" class="section level3 unnumbered hasAnchor">
+<h3>Esercizio 4.11<a href="dati-categorici.html#esercizio-4.11" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<center>
+<em>Studiare all’estero</em>
+</center>
+<p><strong>(dal libro di testo <em>OpenIntro Statistics</em> di Diez et al., es. 6.11)</strong><br />
+</p>
+<p>Un’indagine su 1509 studenti liceali che hanno compilato un questionario
+online non obbligatorio tra il 25 e il 30 aprile 2007 mostra che il 55<span class="math inline">\(\%\)</span> degli intervistati è piuttosto sicuro che in seguito parteciperà ad un programma di studio all’estero.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Questo campione è rappresentativo della popolazione di tutti i
+liceali degli Stati Uniti? Spiegare il perché.</p></li>
+<li><p>Supponendo che le condizioni per fare inferenza siano soddisfatte,
+anche se la risposta al punto a. indicasse che questo approccio non
+è affidabile, questa analisi potrebbe essere ancora interessante.
+Costruire un intervallo di confidenza al <span class="math inline">\(90\%\)</span> per la proporzione
+di studenti che è piuttosto sicura che in seguito parteciperà ad un
+programma di studio all’estero e fornire una sua interpretazione.</p></li>
+<li><p>Cosa significa confidenza al <span class="math inline">\(90\%\)</span>?</p></li>
+<li><p>In base a questo intervallo, sarebbe corretto affermare che la
+maggior parte degli studenti è piuttosto sicura che in seguito
+parteciperà ad un programma di studio all’estero?</p></li>
+</ol>
+<div id="soluzione-89" class="section level4 unnumbered sol hasAnchor">
+<h4>Soluzione<a href="dati-categorici.html#soluzione-89" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ol style="list-style-type: lower-alpha">
+<li><p>No. Si tratta di un campione di volontari, quindi un campione non
+casuale.</p></li>
+<li><p><span class="math inline">\((0.5289, 0.5711)\)</span>. Si può essere fiduciosi al <span class="math inline">\(90\%\)</span> che una
+percentuale di studenti compresa tra il <span class="math inline">\(53\%\)</span> e il <span class="math inline">\(57\%\)</span> sia
+piuttosto sicura che in seguito parteciperà ad un programma di
+studio all’estero.</p></li>
+<li><p>Significa che estraendo un gran numero di campioni e calcolando gli
+intervalli corrispondenti, si otterrebbe nel <span class="math inline">\(90\%\)</span> dei casi un
+intervallo contenente il valore vero del parametro.</p></li>
+<li><p>Si perché l’intervallo cade al di sopra del valore 0.5.</p></li>
+</ol>
+</div>
+</div>
+<div id="esercizio-4.12" class="section level3 unnumbered hasAnchor">
+<h3>Esercizio 4.12<a href="dati-categorici.html#esercizio-4.12" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<center>
+<em>Sistema sanitario pubblico, I parte</em>
+</center>
+<p><strong>(dal libro di testo <em>OpenIntro Statistics</em> di Diez et al., es. 6.13)</strong><br />
+</p>
+<p>Un articolo del Washington Post del 2009 ha riportato che 7 democratici
+su 10 sostengono la riforma della sanità, mentre quasi 9 su 10
+repubblicani sono contrari a questa riforma. Il 52<span class="math inline">\(\%\)</span> degli
+indipendenti sono contro e il 42<span class="math inline">\(\%\)</span> a favore (il <span class="math inline">\(6\%\)</span> rispondono
+‘altro’). Complessivamente erano stati intervistati 819 democratici, 566
+repubblicani e 783 indipendenti.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Una trasmissione televisiva riportando questa notizia, ha affermato
+che la maggior parte degli Indipendenti è contraria alla riforma.
+Questi dati forniscono una forte evidenza a supporto di questa
+affermazione?</p></li>
+<li><p>Ci si può aspettare che un intervallo di confidenza per la
+proporzione di indipendenti contrari alla riforma includa il valore
+<span class="math inline">\(0.5\)</span>? Motivare la risposta.</p></li>
+</ol>
+<div id="soluzione-90" class="section level4 unnumbered sol hasAnchor">
+<h4>Soluzione<a href="dati-categorici.html#soluzione-90" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ol style="list-style-type: lower-alpha">
+<li><p>In questo caso si può impostare il seguente sistema di ipotesi:
+<span class="math inline">\(H_0: p = 0.50 \text{   vs   } H_A: p &gt; 0.50\)</span>. Le due condizioni
+(indipendenza e <span class="math inline">\(np \geq 10\)</span> e <span class="math inline">\(n(1 - p) \geq 10\)</span>) sono entrambe
+verificate. In questo caso si ottiene un valore osservato della
+statistica test <span class="math inline">\(z = 1.12\)</span> che corrisponde ad un p-value pari a
+<span class="math inline">\(0.1314\)</span>. Dal momento che il p-value supera la soglia <span class="math inline">\(0.05\)</span>, non è
+possibile rifiutare <span class="math inline">\(H_0\)</span>, ovvero i dati non forniscono forte
+evidenza a favore dell’affermazione di interesse.</p></li>
+<li><p>Si, da quanto affermato al punto precedente segue che l’intervallo
+conterrà il valore <span class="math inline">\(0.5\)</span>.</p></li>
+</ol>
+</div>
+</div>
+<div id="esercizio-4.13" class="section level3 unnumbered hasAnchor">
+<h3>Esercizio 4.13<a href="dati-categorici.html#esercizio-4.13" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<center>
+<em>Internet su dispositivi mobili</em>
+</center>
+<p><strong>(dal libro di testo <em>OpenIntro Statistics</em> di Diez et al., es. 6.15)</strong><br />
+</p>
+<p>Un’indagine del 2012 su 2254 americani adulti ha mostrato che il <span class="math inline">\(17\%\)</span>
+di coloro che possiedono un telefono cellulare naviga su internet
+utilizzando il suo dispositivo mobile anziché un personal computer.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Secondo un articolo pubblicato online, una ricerca condotta da una
+compagnia telefonica ha mostrato che il <span class="math inline">\(38\%\)</span> degli utenti Cinesi
+accede a internet solo attraverso i cellulari. Verificare mediante
+un test di ipotesi se questi dati supportano l’ipotesi che la
+proporzione di Americani che utilizza il telefono cellulare per
+navigare su internet è differente dalla medesima proporzione nella
+popolazione cinese.</p></li>
+<li><p>Interpretare il p-value ottenuto al punto a.</p></li>
+<li><p>Calcolare un intervallo al <span class="math inline">\(95\%\)</span> per la proporzione di americani
+che utilizza il telefono cellulare per navigare su internet e
+fornire un’interpretazione.</p></li>
+</ol>
+<div id="soluzione-91" class="section level4 unnumbered sol hasAnchor">
+<h4>Soluzione<a href="dati-categorici.html#soluzione-91" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ol style="list-style-type: lower-alpha">
+<li><p>In questo caso si può impostare il seguente sistema di ipotesi:
+<span class="math inline">\(H_0: p = 0.38 \text{   vs   } H_A: p \neq 0.38\)</span>. Le due condizioni
+(indipendenza e <span class="math inline">\(np \geq 10\)</span> e <span class="math inline">\(n(1 - p) \geq 10\)</span>) sono entrambe
+verificate. Il valore osservato della statistica test è <span class="math inline">\(z = 20.5\)</span> e
+il corrispondente p-value <span class="math inline">\(\approx 0\)</span>, Dal momento che il p-value è
+trascurabile si può rifiutare l’ipotesi nulla, quindi i dati
+forniscono forte evidenza che la proporzione di Americani che
+utilizza il telefono cellulare per navigare su internet è diversa
+dalla (in particolare, inferiore alla) proporzione corrispondente
+nella popolazione Cinese.</p></li>
+<li><p>Se il <span class="math inline">\(38\%\)</span> degli americani usasse il cellulare come mezzo per
+accedere a internet, la probabilità di ottenere un campione casuale
+di 2254 americani in cui una percentuale inferiore o uguale al
+<span class="math inline">\(17\%\)</span> o superiore o uguale al <span class="math inline">\(59\%\)</span> di utenti di internet via
+cellulare sarebbe pressoché trascurabile.</p></li>
+<li><p>L’intervallo è <span class="math inline">\((0.1545, 0.1855)\)</span>. Si può avere fiducia a livello
+<span class="math inline">\(95\%\)</span> che approssimativamente una percentuale compresa tra il
+<span class="math inline">\(15\%\)</span> e il <span class="math inline">\(18.6\%\)</span> degli americani utilizza il proprio cellulare
+per navigare su internet.</p></li>
+</ol>
+</div>
+</div>
+<div id="esercizio-4.14" class="section level3 unnumbered hasAnchor">
+<h3>Esercizio 4.14<a href="dati-categorici.html#esercizio-4.14" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<center>
+<em>Test sul gusto</em>
+</center>
+<p><strong>(dal libro di testo <em>OpenIntro Statistics</em> di Diez et al., es. 6.17)</strong><br />
+</p>
+<p>Alcune persone sostengono di poter individuare la differenza tra una
+bevanda dietetica e una normale al primo sorso. Un ricercatore volendo
+sottoporre a verifica questa affermazione, ha estratto un campione
+casuale tra queste persone di numerosità pari a 80. Ha poi predisposto
+40 bicchieri della bevanda dietetica e 40 di quella normale in modo
+casuale e infine ha chiesto a ciascun assaggiatore di provare le bevande
+e classificarle come dietetiche o regolari. 53 partecipanti hanno
+classificato correttamente le bevande.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Questi dati forniscono forte evidenza del fatto che queste persone
+sono capaci di individuare la differenza tra la bevanda dietetica e
+quella normale? In altre parole, i risultati sono significativamente
+migliori rispetto a un’assegnazione casuale alle due tipologie?</p></li>
+<li><p>Interpretare il p-value ottenuto al punto a.</p></li>
+</ol>
+<div id="soluzione-92" class="section level4 unnumbered sol hasAnchor">
+<h4>Soluzione<a href="dati-categorici.html#soluzione-92" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ol style="list-style-type: lower-alpha">
+<li><p>In questo caso si può impostare il seguente sistema di ipotesi:
+<span class="math inline">\(H_0: p = 0.5 \text{   vs   } H_A: p &gt; 0.5\)</span>. Le due condizioni
+(indipendenza e <span class="math inline">\(np \geq 10\)</span> e <span class="math inline">\(n(1 - p) \geq 10\)</span>) sono entrambe
+verificate. Il valore osservato della statistica test è <span class="math inline">\(z = 2.91\)</span> e
+il corrispondente p-value è pari a <span class="math inline">\(0.0018\)</span>. Poiché il p-value è
+inferiore a 0.05, rifiutiamo l’ipotesi nulla. I dati forniscono
+forte evidenza che il tasso di corretta identificazione della
+tipologia di bevanda di queste persone è significativamente migliore
+rispetto a un’assegnazione casuale.</p></li>
+<li><p>Se le persone assegnassero casualmente la tipologia di bevanda, la
+probabilità di ottenere una campione casuale in cui 53 persone su 80
+identificassero correttamente la bevanda sarebbe pari a <span class="math inline">\(0.0018\)</span>.</p></li>
+</ol>
+</div>
+</div>
+<div id="esercizio-4.15" class="section level3 unnumbered hasAnchor">
+<h3>Esercizio 4.15<a href="dati-categorici.html#esercizio-4.15" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<center>
+<em>Fumatori universitari </em>
+</center>
+<p><strong>(dal libro di testo <em>OpenIntro Statistics</em> di Diez et al., es. 6.19)</strong><br />
+</p>
+<p>Si vuole stimare la proporzione di studenti universitari fumatori. In un
+campione casuale di 200 studenti universitari, 40 sono fumatori.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Calcolare un intervallo di confidenza al <span class="math inline">\(95\%\)</span> per la proporzione
+di studenti universitari fumatori, e fornire un’interpretazione
+dell’intervallo.</p></li>
+<li><p>Se si volesse un margine di errore non superiore al <span class="math inline">\(2\%\)</span> per
+l’intervallo di confidenza al <span class="math inline">\(95\%\)</span>, quale dovrebbe essere la
+dimensione campionaria?</p></li>
+</ol>
+<div id="soluzione-93" class="section level4 unnumbered sol hasAnchor">
+<h4>Soluzione<a href="dati-categorici.html#soluzione-93" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ol style="list-style-type: lower-alpha">
+<li><p>Le due condizioni (indipendenza e <span class="math inline">\(np \geq 10\)</span> e <span class="math inline">\(n(1 - p) \geq 10\)</span>)
+sono entrambe verificate. L’intervallo di confidenza a livello
+<span class="math inline">\(95\%\)</span> risulta essere <span class="math inline">\((0.145,0.255)\)</span>. Si può avere un livello di
+fiducia del <span class="math inline">\(95\%\)</span> che una percentuale compresa tra il <span class="math inline">\(14\%\)</span> e il
+<span class="math inline">\(25.5\%\)</span> degli studenti universitari fumi.</p></li>
+<li><p><span class="math inline">\(z^* SE\)</span> non deve eccedere il valore 0.02. Dato che <span class="math inline">\(z^* = 1.96\)</span>,
+sostituendo la stima puntuale di p, <span class="math inline">\(\hat{p} = 0.2\)</span> nella formula
+dell’errore standard si ha <span class="math inline">\(1.96 \sqrt{0.2(1-0.2)/n} \leq 0.02\)</span>, da
+cui segue che la numerosità campionaria dovrà essere almeno pari
+a 1537.</p></li>
+</ol>
+</div>
+</div>
+<div id="esercizio-4.16" class="section level3 unnumbered hasAnchor">
+<h3>Esercizio 4.16<a href="dati-categorici.html#esercizio-4.16" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<center>
+<em>Sistema sanitario pubblico, II parte</em>
+</center>
+<p><strong>(dal libro di testo <em>OpenIntro Statistics</em> di Diez et al., es. 6.21)</strong><br />
+</p>
+<p>Nell’Esercizio 4.12 si è detto che il <span class="math inline">\(52\%\)</span> degli Indipendenti
+intervistati a proposito della riforma del sistema sanitario, si è
+dichiarato contrario alla riforma stessa. Se volessimo stimare questo
+numero con un margine di errore dell’<span class="math inline">\(1\%\)</span> con un livello di confidenza
+del <span class="math inline">\(90\%\)</span>, quale dimensione campionaria risulterebbe adeguata a tale
+obiettivo?</p>
+<div id="soluzione-94" class="section level4 unnumbered sol hasAnchor">
+<h4>Soluzione<a href="dati-categorici.html#soluzione-94" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Il margine di errore <span class="math inline">\(z^* SE\)</span> deve essere minore di <span class="math inline">\(0.01\)</span>. Poiché
+vogliamo un livello di confidenza del <span class="math inline">\(90\%\)</span> avremo <span class="math inline">\(z^* = 1.65\)</span> e
+sostituiremo la stima puntuale <span class="math inline">\(\hat{p} = 0.52\)</span> nella formula
+<span class="math inline">\(1.96 \sqrt{0.52(1-0.52)/n} \leq 0.01\)</span>, ottenendo una numerosità
+campionaria maggiore o uguale a 6796.</p>
+</div>
+</div>
+<div id="esercizio-4.17" class="section level3 unnumbered hasAnchor">
+<h3>Esercizio 4.17<a href="dati-categorici.html#esercizio-4.17" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<center>
+<em>Attività in fallimento</em>
+</center>
+<p>In un campione di 400 proprietari di negozi e piccole imprese, che hanno
+dichiarato fallimento, 88 non hanno alcuna esperienza professionale
+precedente.</p>
+<ol style="list-style-type: decimal">
+<li><p>Sottoporre a test l’ipotesi nulla che il 25% di coloro che vanno in
+fallimento non hanno esperienze precedenti al livello di
+significatività del 5% contro l’ipotesi alternativa che la
+percentuale sia inferiore;</p></li>
+<li><p>Definire il <span class="math inline">\(p-value\)</span> del test e calcolarlo;</p></li>
+<li><p>Se il livello di significatività fosse stato il 10% l’ipotesi nulla
+sarebbe stata respinta?</p></li>
+</ol>
+<div id="soluzione-95" class="section level4 unnumbered sol hasAnchor">
+<h4>Soluzione<a href="dati-categorici.html#soluzione-95" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>È un test sulla proporzione di successi. Qui il successo è “il proprietario ha dichiarato fallimento”. La proporzione stimata è
+<span class="math inline">\(\hat{p}=88/400=0.22\)</span>. Useremo l’approssimazione normale della
+statistica test, avendo cura di sostituire la deviazione standard con
+l’errore standard. Le ipotesi sono:
+<span class="math display">\[H_0:\: p=p_0=0.25; \qquad H_1:\: p &lt; 0.25\]</span> Determiniamo il <span class="math inline">\(p-value\)</span>:
+<span class="math display">\[p-value = P(Z&lt;z)\]</span> La statistica test Z si distribuisce come una
+normale standard. Il valore <span class="math inline">\(z\)</span> è il valore della statistica test
+osservato nel campione
+<span class="math display">\[z= \frac{\hat{p} - p_0}{\sqrt{\frac{p_0 (1-p_0)}{n}}} = \frac{0.22 -0.25}{
+        \sqrt{\frac{0.25 \cdot (1-0.25)}{400}}} = -1.39\]</span> Il <span class="math inline">\(p-value\)</span>
+risulta quindi <span class="math display">\[p-value = P(Z&lt;z)=0.0823\]</span> Non possiamo rifiutare
+l’ipotesi <span class="math inline">\(H_0\)</span> a livello di significatività <span class="math inline">\(\alpha = 0.05\)</span> perché
+ovviamente il <span class="math inline">\(p-value\)</span> è <span class="math inline">\(&gt;\)</span> 0.05.</p>
+<p>Se consideriamo invece un livello di significatività <span class="math inline">\(\alpha = 0.1\)</span>,
+poiché <span class="math inline">\(p-value &lt; \alpha\)</span>, possiamo rifiutare l’ipotesi nulla.</p>
+</div>
+</div>
+<div id="esercizio-4.18" class="section level3 unnumbered hasAnchor">
+<h3>Esercizio 4.18<a href="dati-categorici.html#esercizio-4.18" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<center>
+<em>Educazione in TV</em>
+</center>
+<p>Un famoso educatore dichiara che piú della metà della popolazione adulta
+degli USA è preoccupata dalla carenza di programmi educativi in
+televisione. Per raccogliere dati sulla questione, nell’ambito di un
+sondaggio nazionale vengono scelti e intervistati 920 individui. Se 478
+(52%) degli intervistati dichiarano di essere preoccupati, abbiamo
+dimostrato la dichiarazione dell’educatore?<br />
+</p>
+<div id="soluzione-96" class="section level4 unnumbered sol hasAnchor">
+<h4>Soluzione<a href="dati-categorici.html#soluzione-96" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Dobbiamo valutare il seguente sistema di ipotesi per la proporzione <span class="math inline">\(p\)</span>
+di popolazione americana preoccupata per la carenza di programmi
+educativi in televisione: <span class="math display">\[H_{0}: p = 0.50 \hspace{2cm} H_{1}:p&gt;0.50\]</span>
+Si tratta di un test per proporzioni; in questo caso la statistica test,
+<span class="math inline">\(Z\)</span>, è definita come
+<span class="math display">\[Z=\frac{\hat{p}-p_0}{\sqrt{\frac{p_0(1-p_0)}{n}}}\]</span> dove</p>
+<ul>
+<li><p><span class="math inline">\(\hat{p}\)</span> è la proporzione di individui preoccupati nel campione
+osservato (<span class="math inline">\(\hat{p}=0.52\)</span>);</p></li>
+<li><p><span class="math inline">\(n\)</span> è la numerosità campionaria (<span class="math inline">\(n=920\)</span>).</p></li>
+</ul>
+<p>Si dimostra che sotto l’ipotesi nulla <span class="math inline">\(H_{0}\)</span>, questa statistica test ha
+distribuzione Normale standardizzata, ossia <span class="math display">\[Z \sim N(0,1)\]</span> Al fine di
+valutare questo sistema di ipotesi possiamo calcolare il p-value
+corrispondente, ossia dobbiamo valutare <span class="math inline">\(Pr(Z&gt;z)\)</span> dove
+<span class="math inline">\(z=\frac{\hat{p}-p_{0}}{\sqrt{\frac{p_{0}(1-p_{0})}{n}}}\)</span> con <span class="math inline">\(p_{0}\)</span>
+valore della proporzione assunta sotto l’ipotesi nulla (<span class="math inline">\(p_{0}=0.5\)</span>).
+Possiamo quindi calcolare il <span class="math inline">\(p-value\)</span> come segue: <span class="math display">\[\begin{aligned}
+p-value=Pr(Z &gt; z) &amp;= Pr\left(Z&gt;\frac{\hat{p}-p_{0}}{\sqrt{\frac{p_{0}(1-p_{0})}{n}}}\right)=\\
+&amp;= Pr\left(Z&gt; \frac{0.52-0.50}{\sqrt{\frac{0.50(1-0.50)}{920}}}\right)=\\
+&amp;= Pr(Z&gt; 1.21)=1-Pr(Z \leq 1.21) = 1-0.887=0.113\end{aligned}\]</span> dove il
+valore 0.877 è stato controllato sulle tavole della distribuzione
+Normale standardizzata.<br />
+Concludendo, poiché il <span class="math inline">\(p-value=0.113\)</span>, possiamo rifiutare l’ipotesi
+nulla e quindi validiamo l’ipotesi dell’educatore, solo se consideriamo
+un livello di significatività <span class="math inline">\(\alpha&gt;0.113\)</span> (con <span class="math inline">\(\alpha=0.05\)</span> o
+<span class="math inline">\(\alpha=0.10\)</span> l’ipotesi nulla non viene rifiutata).</p>
+</div>
+</div>
+<div id="esercizio-4.19" class="section level3 unnumbered hasAnchor">
+<h3>Esercizio 4.19<a href="dati-categorici.html#esercizio-4.19" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<center>
+<em>Pubblicazioni su riviste internazionali</em>
+</center>
+<p>Un professore ritiene che la percentuale di ricercatori che, nel suo
+settore scientifico disciplinare, pubblicano su riviste internazionali è
+pari al 70%. In un campione di 160 ricercatori, 108 hanno pubblicazioni
+internazionali. Verificare il seguente sistema di ipotesi:
+<span class="math display">\[H_{0}: p = 0.7 \       \ H_{1}: p &lt;0.7\]</span></p>
+<div id="soluzione-97" class="section level4 unnumbered sol hasAnchor">
+<h4>Soluzione<a href="dati-categorici.html#soluzione-97" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Anche in questo caso possiamo procedere come fatto nel precedente
+esercizio calcolando il p-value come segue
+(<span class="math inline">\(\hat{p}=\frac{108}{160}=0.675\)</span>): <span class="math display">\[\begin{aligned}
+p-value&amp;=Pr(Z&lt;z)=Pr\left(Z&lt;\frac{\hat{p}-p_{0}}{\sqrt{\frac{p_{0}(1-p_{0})}{n}}}\right)=\\
+&amp;= Pr \left(Z&lt; \frac{0.675-0.70}{\sqrt{\frac{0.70(1-0.70)}{160}}}\right)= Pr(Z &lt; -0.69) = 0.2451\end{aligned}\]</span>
+Pertanto, il valore minimo di <span class="math inline">\(\alpha\)</span> per rifiutare l’ipotesi nulla è
+0.25.</p>
+</div>
+</div>
+<div id="esercizio-4.20" class="section level3 unnumbered hasAnchor">
+<h3>Esercizio 4.20<a href="dati-categorici.html#esercizio-4.20" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<center>
+<em>Bullismo nelle scuole </em>
+</center>
+<p><strong>(dal libro di testo <em>OpenIntro Statistics</em> di Diez et al., es. 6.47)</strong><br />
+</p>
+<p>In un’indagine campionaria USA del 2012 i residenti in Florida sono
+stati interrogati su quanto grande fosse secondo loro il problema del
+bullismo nelle scuole locali. 9 su 191 tra i 18 e i 34 anni hanno
+risposto che il bullismo non è affatto un problema. Usando questi dati,
+è possibile costruire un intervallo di confidenza utilizzando la formula
+<span class="math inline">\(\widehat{p}\pm z^* \sqrt{\widehat{p} (1-\widehat{p})/n}\)</span> per la
+proporzione vera di residenti in Florida di età 18-34 che pensano che il
+bullismo non sia per niente un problema? Se si ritiene appropriato,
+costruire l’intervallo di confidenza, altrimenti, spiegare il perché.</p>
+<div id="soluzione-98" class="section level4 unnumbered sol hasAnchor">
+<h4>Soluzione<a href="dati-categorici.html#soluzione-98" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Non è appropriato. Ci sono solo 9 successi nel campione,
+quindi, la condizione <span class="math inline">\(np \geq 10\)</span> e <span class="math inline">\(n(1 - p) \geq 10\)</span> non è
+verificata.</p>
+</div>
+</div>
+</div>
+<div id="inferenza-sulla-differenza-tra-due-proporzioni" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Inferenza sulla differenza tra due proporzioni<a href="dati-categorici.html#inferenza-sulla-differenza-tra-due-proporzioni" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="esercizio-4.21" class="section level3 unnumbered hasAnchor">
+<h3>Esercizio 4.21<a href="dati-categorici.html#esercizio-4.21" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<center>
+<em>Esperimento sociologico, I parte </em>
+</center>
+<p><strong>(dal libro di testo <em>OpenIntro Statistics</em> di Diez et al., es. 6.23)</strong><br />
+</p>
+<p>Un esperimento sociologico condotto da un programma televisivo ha
+analizzato il comportamento di alcune persone quando assistono a un
+litigio di coppia in cui la donna viene palesemente offesa dall’uomo, in
+due differenti occasioni allo stesso ristorante. Nel primo caso la donna
+è vestita in modo provocante e nell’altro caso è invece abbligliata in
+modo castigato. La seguente tabella riassume i dati raccolti su quante
+persone hanno deciso di intervenire o meno:</p>
+<div class="center">
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="center">Provocante</th>
+<th align="center">Castigato</th>
+<th align="center">Totale</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Intervenuti</td>
+<td align="center">5</td>
+<td align="center">15</td>
+<td align="center">20</td>
+</tr>
+<tr class="even">
+<td>Non intervenuti</td>
+<td align="center">15</td>
+<td align="center">10</td>
+<td align="center">25</td>
+</tr>
+<tr class="odd">
+<td>Totale</td>
+<td align="center">20</td>
+<td align="center">25</td>
+<td align="center">45</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Spiegare perché la distribuzione campionaria della differenza tra le
+proporzioni di intervento sotto i due scenari non segue una
+distribuzione approssimativamente normale.</p>
+<div id="soluzione-99" class="section level4 unnumbered sol hasAnchor">
+<h4>Soluzione<a href="dati-categorici.html#soluzione-99" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Si tratta di un esperimento non randomizzato e non è chiaro se le
+persone possono essere influenzato dal comportamento degli altri
+avventori del ristorante. In questo caso non è quindi possibile assumere
+l’indipendenza. In piú ci sono solo 5 persone intervenute nel caso dello
+scenario ‘Provocante’, quindi non vale neanche la condizione
+<span class="math inline">\(np \geq 10\)</span> e <span class="math inline">\(n(1 - p) \geq 10\)</span>. Anche se considerassimo un test di
+ipotesi basato su una media delle proporzioni, tale condizione non
+potrebbe essere soddisfatta. Per questi motivi non è possibile assumere
+che la distribuzione campionaria della differenza delle proporzioni sia
+approssimativamente normale.</p>
+</div>
+</div>
+<div id="esercizio-4.22" class="section level3 unnumbered hasAnchor">
+<h3>Esercizio 4.22<a href="dati-categorici.html#esercizio-4.22" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<center>
+<em>Sesso e preferenze sui colori </em>
+</center>
+<p><strong>(dal libro di testo <em>OpenIntro Statistics</em> di Diez et al., es. 6.25)</strong><br />
+</p>
+<p>In uno studio del 2001, 1924 maschi e 3666 femmine tra gli studenti del
+college sono stati intervestati in merito al loro colore preferito. Un
+intervallo al <span class="math inline">\(95\%\)</span> per la differenza tra le proporzioni di maschi e
+femmine il cui colore preferito è il nero <span class="math inline">\((p_{male}-p_{female})\)</span> è
+risultato essere <span class="math inline">\((0.02,0.06)\)</span>. Sulla base di questa informazione,
+determinare se le seguenti affermazioni sono vere o false, motivando la
+risposta.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Si può essere fiduciosi al <span class="math inline">\(95\%\)</span> che la proporzione vera di maschi
+il cui colore preferito è nero sia il <span class="math inline">\(2\%\)</span> inferiore e il <span class="math inline">\(6\%\)</span>
+superiore rispetto alla proporzione vera di femmine.</p></li>
+<li><p>Si può essere fiduciosi al <span class="math inline">\(95\%\)</span> che la proporzione vera di maschi
+il cui colore preferito è nero sia tra il <span class="math inline">\(2\%\)</span> e il <span class="math inline">\(6\%\)</span> superiore
+rispetto alla proporzione vera di femmine.</p></li>
+<li><p>Il <span class="math inline">\(95\%\)</span> dei campioni casuali produrrà intervalli di confidenza che
+includono la differenza vera tra le proporzioni di maschi e femmine
+il cui colore preferito è nero.</p></li>
+<li><p>Possiamo concludere che c’è una differenza significativa tra le
+proporzioni di maschi e femmine il cui colore preferito è nero e che
+la grandezza della differenza tra le due proporzioni campionarie sia
+plausibilmente imputabile al caso.</p></li>
+<li><p>L’intervallo di confidenza al <span class="math inline">\(95\%\)</span> per <span class="math inline">\((p_{female}-p_{male})\)</span> non
+può essere calcolato sulla base delle informazioni disponibili in
+questo esercizio</p></li>
+</ol>
+<div id="soluzione-100" class="section level4 unnumbered sol hasAnchor">
+<h4>Soluzione<a href="dati-categorici.html#soluzione-100" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li><p>Falso. L’intero intervallo di confidenza supera lo 0.</p></li>
+<li><p>Vero.</p></li>
+<li><p>Vero.</p></li>
+<li><p>Vero.</p></li>
+<li><p>Falso. Si può ottenere banalmente cambiando i segni all’intervallo
+di cui sopra, ovvero <span class="math inline">\((-0.06,-0.02)\)</span>.</p></li>
+</ul>
+</div>
+</div>
+<div id="esercizio-4.23" class="section level3 unnumbered hasAnchor">
+<h3>Esercizio 4.23<a href="dati-categorici.html#esercizio-4.23" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<center>
+<em>Esperimento sociologico, II parte </em>
+</center>
+<p><strong>(dal libro di testo <em>OpenIntro Statistics</em> di Diez et al., es. 6.51)</strong><br />
+</p>
+<p>Nell’esercizio 4.21 è stato introdotto un esperimento sociologico
+condotto da un programma televisivo in cui è stato analizzato il
+comportamento di alcune persone quando assistono a un litigio di coppia
+in cui la donna viene palesemente offesa dall’uomo, in due differenti
+occasioni allo stesso ristorante. Nel primo caso la donna è vestita in
+modo provocante e nell’altro caso è invece in modo castigato. La
+seguente tabella riassume i dati raccolti su quante persone hanno deciso
+di intervenire o meno:</p>
+<div class="center">
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="center">Provocante</th>
+<th align="center">Castigato</th>
+<th align="center">Totale</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Intervenuti</td>
+<td align="center">5</td>
+<td align="center">15</td>
+<td align="center">20</td>
+</tr>
+<tr class="even">
+<td>Non intervenuti</td>
+<td align="center">15</td>
+<td align="center">10</td>
+<td align="center">25</td>
+</tr>
+<tr class="odd">
+<td>Totale</td>
+<td align="center">20</td>
+<td align="center">25</td>
+<td align="center">45</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Una simulazione è stata effettuata per verificare se le persone
+reagiscono in maniera diversa nelle due situazioni. 10000 differenze
+simulate sono state generate per costruire la distribuzione sotto
+l’ipotesi nulla. Il valore <span class="math inline">\(\widehat{p}_{pr,sim}\)</span> rappresenta la
+proporzione di clienti che è intervenuta nella simulazione per difendere
+una donna vestita in modo provocante e <span class="math inline">\(\widehat{p}_{con,sim}\)</span> la
+proporzione che è intervenuta per una donna vestita in modo castigato.</p>
+<center>
+<img src="cap4/6_51.png" />
+</center>
+<ol style="list-style-type: lower-alpha">
+<li><p>Quali sono le ipotesi? Per gli scopi di questo esercizio, si può
+assumere che ogni persona osservata al ristorante si comporti in
+modo indipendente, anche se tale assunzione dovrebbe essere
+verificata in modo rigoroso se volessimo riportare ufficialmente i
+risultati dei questo esperimento.</p></li>
+<li><p>Calcolare la differenza osservata tra i tassi di intervento nelle
+due situazioni: <span class="math inline">\(p_{pr}-p_{con}\)</span>.</p></li>
+<li><p>Stimare il <span class="math inline">\(p\)</span>-value usando il grafico riportato sopra. Cosa si può
+dedurre?</p></li>
+</ol>
+<div id="soluzione-101" class="section level4 unnumbered sol hasAnchor">
+<h4>Soluzione<a href="dati-categorici.html#soluzione-101" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Il suffisso <span class="math inline">\({}_{pr}\)</span> corrisponde a provocante e
+<span class="math inline">\({}_{con}\)</span> a castigato.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p><span class="math inline">\(H_0\)</span>: <span class="math inline">\(p_{pr}=p_{con}\)</span>. <span class="math inline">\(H_A\)</span>: <span class="math inline">\(p_{pr}\neq p_{con}\)</span>.</p></li>
+<li><p>-0.35.</p></li>
+<li><p>La coda sinistra per il <span class="math inline">\(p\)</span>-value è calcolata sommando <span class="math inline">\(0.005\)</span> e
+<span class="math inline">\(0.015\)</span>. Raddoppiando tale valore (<span class="math inline">\(0.02\)</span>) si ottiene che il
+<span class="math inline">\(p\)</span>-value è pari a 0.04. (Gli studenti possono ottenere risultati
+approssimati, e un piccolo numero di studenti può ottenere un
+<span class="math inline">\(p\)</span>-value pari a 0.05.) Poiché il <span class="math inline">\(p\)</span>-value è piccolo, rifiutiamo
+<span class="math inline">\(H_0\)</span>. I dati forniscono una forte evidenza empirica che le persone
+reagiscono in modo diverso nelle due situazioni.</p></li>
+</ol>
+</div>
+</div>
+<div id="esercizio-4.24" class="section level3 unnumbered hasAnchor">
+<h3>Esercizio 4.24<a href="dati-categorici.html#esercizio-4.24" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<center>
+<em>Sistema sanitario pubblico, III parte </em>
+</center>
+<p><strong>(dal libro di testo <em>OpenIntro Statistics</em> di Diez et al., es. 6.27)</strong><br />
+</p>
+<p>L’esercizio 4.12 presenta i risultati di un sondaggio per valutare il
+sostegno alla riforma del sistema sanitario nel 2009. Il <span class="math inline">\(70\%\)</span> dei
+democratici e il <span class="math inline">\(42\%\)</span> degli indipendenti supporta tale riforma.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Costruire l’intervallo di confidenza al <span class="math inline">\(95\%\)</span> per la differenza tra
+<span class="math inline">\(p_D\)</span> e <span class="math inline">\(p_I\)</span>, (<span class="math inline">\(p_D - p_I\)</span>), e commentare i risultati. Già sono
+state verificate le condizioni.</p></li>
+<li><p>Vero o falso: se estraiamo casualmente un democratico e un
+indipendente, contemporaneamente, dal campione preso in esame, è più
+probabile che un democratico sostenga la riforma del sistema
+sanitario piuttosto che un indipendente.</p></li>
+</ol>
+<div id="soluzione-102" class="section level4 unnumbered sol hasAnchor">
+<h4>Soluzione<a href="dati-categorici.html#soluzione-102" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ol style="list-style-type: lower-alpha">
+<li><p>L’intervallo di confidenza al <span class="math inline">\(95\%\)</span> è <span class="math inline">\((0.23, 0.33)\)</span>. Quindi, siamo
+sicuri al <span class="math inline">\(95\%\)</span> che la proporzione di Democratici che sostiene il
+sistema sanitario pubblico è da <span class="math inline">\(23\%\)</span> a <span class="math inline">\(33\%\)</span> più alta della
+proporzione di Indipendentisti.</p></li>
+<li><p>Vero.</p></li>
+</ol>
+</div>
+</div>
+<div id="esercizio-4.25" class="section level3 unnumbered hasAnchor">
+<h3>Esercizio 4.25<a href="dati-categorici.html#esercizio-4.25" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<center>
+<em>Trivellazione in mare aperto, I parte </em>
+</center>
+<p><strong>(dal libro di testo <em>OpenIntro Statistics</em> di Diez et al., es. 6.29)</strong><br />
+</p>
+<p>Un’indagine del 2010 ha chiesto a 827 elettori scelti casualmente in
+California "Sei a favore o contro la trivellazione per estrarre
+petrolio e gas naturale al largo delle coste della California? Oppure
+non ne sai abbastanza per esprimerti?" Di seguito è riportata la
+distribuzione delle risposte, in cui gli elettori sono stati divisi tra
+laureati e non laureati.</p>
+<div class="center">
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td align="center">Laureati</td>
+<td align="center">Non laureati</td>
+</tr>
+<tr class="even">
+<td>Favorevoli</td>
+<td align="center">154</td>
+<td align="center">132</td>
+</tr>
+<tr class="odd">
+<td>Contrari</td>
+<td align="center">180</td>
+<td align="center">126</td>
+</tr>
+<tr class="even">
+<td>Non sanno</td>
+<td align="center">104</td>
+<td align="center">131</td>
+</tr>
+<tr class="odd">
+<td>Totale</td>
+<td align="center">438</td>
+<td align="center">389</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ol style="list-style-type: lower-alpha">
+<li><p>Qual è la percentuale di laureati e quale la percentuale di non
+laureati in questo campione che non ne sa abbastanza per avere
+un’opinione sull’estrazione di petrolio e gas naturale al largo
+delle coste della California?</p></li>
+<li><p>Usare un test d’ipotesi per determinare se vi è una forte evidenza
+empirica per cui la proporzione di laureati che non ha un’opinione
+sull’argomento è diversa dalla proporzione di non laureati.</p></li>
+</ol>
+<div id="soluzione-103" class="section level4 unnumbered sol hasAnchor">
+<h4>Soluzione<a href="dati-categorici.html#soluzione-103" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ol style="list-style-type: lower-alpha">
+<li><p>Laureati: <span class="math inline">\(23,7\%\)</span>. Non laureati: <span class="math inline">\(33,7\%\)</span>.</p></li>
+<li><p>Siano <span class="math inline">\(p_{L}\)</span> e <span class="math inline">\(p_{NL}\)</span>, rispettivamente, la proporzione di
+laureati e la proporzione di non laureati che hanno risposto “non
+so”. <span class="math inline">\(H_0: p_{L}=p_{NL}\)</span> e <span class="math inline">\(H_A: p_{L}\neq p_{NL}\)</span>. Le due
+condizioni (indipendenza e <span class="math inline">\(np \geq 10\)</span> e <span class="math inline">\(n(1 - p) \geq 10\)</span>) sono
+entrambe verificate. Per la seconda condizione si usa la proporzione
+empirica/stimata (<span class="math inline">\(\widehat{p}=235/827=0,284\)</span>).
+<span class="math inline">\(Z=-3.18 \rightarrow\)</span> <span class="math inline">\(p\)</span>-value<span class="math inline">\(=0.0014\)</span>. Poiché il <span class="math inline">\(p\)</span>-value è
+molto piccolo, si rifiuta <span class="math inline">\(H_0\)</span>. C’è abbastanza evidenza
+sperimentale per poter rifiutare l’ipotesi nulla, in altre parole la
+differenza tra laureati e non laureati che non hanno un’opinione
+sull’argomento è statisticamente significativa. I dati indicano
+anche che meno laureati che non laureati hanno risposto “non so”
+(cioè i dati indicano la direzione dopo il rifiuto di <span class="math inline">\(H_0\)</span>).</p></li>
+</ol>
+</div>
+</div>
+<div id="esercizio-4.26" class="section level3 unnumbered hasAnchor">
+<h3>Esercizio 4.26<a href="dati-categorici.html#esercizio-4.26" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<center>
+<em>Trivellazione in mare aperto, II parte </em>
+</center>
+<p><strong>(dal libro di testo <em>OpenIntro Statistics</em> di Diez et al., es. 6.31)</strong><br />
+</p>
+<p>I risultati di un’indagine sulla trivellazione per l’estrazione di
+petrolio e gas naturale al largo della costa della California sono stati
+introdotti nell’Esercizio 4.25.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Qual è la percentuale di laureati e quale la percentuale di non
+laureati in questo campione che è a favore dell’estrazione di
+petrolio e gas naturale al largo delle coste della California?</p></li>
+<li><p>Usare un test d’ipotesi per determinare se vi è una forte evidenza
+empirica per cui la proporzione di laureati che è favorevole è
+diversa dalla proporzione di non laureati.</p></li>
+</ol>
+<div id="soluzione-104" class="section level4 unnumbered sol hasAnchor">
+<h4>Soluzione<a href="dati-categorici.html#soluzione-104" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ol style="list-style-type: lower-alpha">
+<li><p>Laureati: <span class="math inline">\(35,2\%\)</span>. Non laureati: <span class="math inline">\(33,9\%\)</span>.</p></li>
+<li><p>Siano <span class="math inline">\(p_{L}\)</span> e <span class="math inline">\(p_{NL}\)</span>, rispettivamente, la proporzione di
+laureati e la proporzione di non laureati che sono favorevoli.
+<span class="math inline">\(H_0: p_{L}=p_{NL}\)</span> e <span class="math inline">\(H_A: p_{L}\neq p_{NL}\)</span>. Le due condizioni
+(indipendenza e <span class="math inline">\(np \geq 10\)</span> e <span class="math inline">\(n(1 - p) \geq 10\)</span>) sono entrambe
+verificate. Per la seconda si usa la proporzione empirica/stimata
+(<span class="math inline">\(\widehat{p}=286/827=0.346\)</span>). <span class="math inline">\(Z=0.39 \rightarrow\)</span>
+<span class="math inline">\(p\)</span>-value<span class="math inline">\(=0.6966\)</span>. Poiché il <span class="math inline">\(p\)</span>-value è maggiore di <span class="math inline">\(\alpha\)</span>
+(0.05), non si può rifiutare <span class="math inline">\(H_0\)</span>. Non c’è abbastanza evidenza
+sperimentale per poter rifiutare l’ipotesi nulla, in altre parole la
+differenza tra laureati e non laureati che sono favorevoli alla
+trivellazione in California non è statisticamente significativa.</p></li>
+</ol>
+</div>
+</div>
+<div id="esercizio-4.27" class="section level3 unnumbered hasAnchor">
+<h3>Esercizio 4.27<a href="dati-categorici.html#esercizio-4.27" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<center>
+<em>Carenza di sonno dei lavoratori del mondo dei trasporti </em>
+</center>
+<p><strong>(dal libro di testo <em>OpenIntro Statistics</em> di Diez et al., es. 6.33)</strong><br />
+</p>
+<p>La Fondazione del sonno statunitense ha condotto un’indagine sulle
+abitudini di un campione aleatorio di lavoratori dei trasporti e un
+campione controllo di persone che non lavorano nel mondo dei trasporti.
+I risultati dell’indagine sono riportati sotto.</p>
+<div class="center">
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td align="center">Lavoratori dei Trasporti</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td align="center"></td>
+<td></td>
+<td>Operatori</td>
+<td>Autisti</td>
+</tr>
+<tr class="odd">
+<td>Ore di sonno</td>
+<td><em>Controllo</em></td>
+<td align="center">Piloti</td>
+<td>Camionisti</td>
+<td>treno</td>
+<td>bus/taxi/limo</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(&lt;6\)</span></td>
+<td>35</td>
+<td align="center">19</td>
+<td>35</td>
+<td>29</td>
+<td>21</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\([6, 8]\)</span></td>
+<td>193</td>
+<td align="center">132</td>
+<td>117</td>
+<td>119</td>
+<td>131</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(&gt;8\)</span></td>
+<td>64</td>
+<td align="center">51</td>
+<td>51</td>
+<td>32</td>
+<td>58</td>
+</tr>
+<tr class="odd">
+<td>Totale</td>
+<td>292</td>
+<td align="center">202</td>
+<td>203</td>
+<td>180</td>
+<td>210</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Usare un test d’ipotesi per valutare se i dati forniscono una forte
+evidenza sulla significatività della differenza tra la proporzione di
+camionisti e il gruppo controllo che dormono meno di 6 ore al giorno,
+cioè che sono considerati carenti di sonno.</p>
+<div id="soluzione-105" class="section level4 unnumbered sol hasAnchor">
+<h4>Soluzione<a href="dati-categorici.html#soluzione-105" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Indichiamo con <span class="math inline">\(NT\)</span> il gruppo controllo e con <span class="math inline">\(C\)</span> i
+camionisti. <span class="math inline">\(H_0: p_{NT}=p_{C}\)</span> e <span class="math inline">\(H_A: p_{NT}\neq p_{C}\)</span>. Le due
+condizioni (indipendenza e <span class="math inline">\(np \geq 10\)</span> e <span class="math inline">\(n(1 - p) \geq 10\)</span>) sono
+entrambe verificate. Per la seconda si usa la proporzione
+empirica/stimata (<span class="math inline">\(\widehat{p}=70/495=0,141\)</span>). <span class="math inline">\(Z=-1,58 \rightarrow\)</span>
+<span class="math inline">\(p\)</span>-value<span class="math inline">\(=0,1164\)</span>. Poiché il <span class="math inline">\(p\)</span>-value è maggiore di <span class="math inline">\(\alpha\)</span> (0,05),
+non si può rifiutare <span class="math inline">\(H_0\)</span>. Non c’è una forte evidenza sperimentale per
+poter rifiutare l’ipotesi nulla. La differenza tra i tassi di carenza di
+sonno del gruppo controllo e il gruppo dei camionisti non è
+statisticamente significativa.</p>
+</div>
+</div>
+<div id="esercizio-4.28" class="section level3 unnumbered hasAnchor">
+<h3>Esercizio 4.28<a href="dati-categorici.html#esercizio-4.28" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<center>
+<em>HIV in Africa sub-Sahariana </em>
+</center>
+<p><strong>(dal libro di testo <em>OpenIntro Statistics</em> di Diez et al., es. 6.35)</strong><br />
+</p>
+<p>A luglio 2008 gli istituti nazionali statunitensi di sanità hanno
+annunciato che era stato interrotto uno studio clinico a causa di
+risultati inaspettati. La popolazione oggetto di studio era formata da
+donne dell’Africa sub-Sahariana a cui era stata somministrata una
+singola dose di Nevaripine (un trattamento per l’HIV) durante il parto,
+per prevenire la trasmissione dell’HIV al neonato. Con questo studio ci
+si chiedeva se proseguire il trattamento dopo il parto con Nevaripine
+oppure con il trattamento alternativo Lopinavir. Allo studio hanno
+partecipato 240 donne; 120, aleatoriamente scelte, per ogni trattamento.
+Ventiquattro settimane dopo aver iniziato lo studio sul trattamento,
+ogni donna è stata analizzata per vedere se la situazione era peggiorata
+(un risultato chiamato fallimento virologico). Un fallimento virologico
+è stato riscontrato su 26 delle 120 donne trattate con Nevaripine e 10
+delle 120 donne a cui era stato somministrato l’altro trattamento.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Costruire una tabella a due vie in cui vengono riportati i risultati
+dello studio.</p></li>
+<li><p>Definire un appropriato test d’ipotesi per verificare l’indipendenza
+tra trattamento e fallimento virologico.</p></li>
+<li><p>Analizzare i risultati del test d’ipotesi e trarre le conclusioni.
+(N.B: verificare tutte le condizioni necessarie per il test.)</p></li>
+</ol>
+<div id="soluzione-106" class="section level4 unnumbered sol hasAnchor">
+<h4>Soluzione<a href="dati-categorici.html#soluzione-106" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ol style="list-style-type: lower-alpha">
+<li>Sintesi dello studio</li>
+</ol>
+<div class="center">
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="center">Fallimento Virale</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td align="center">Si</td>
+<td>No</td>
+<td>Totale</td>
+</tr>
+<tr class="even">
+<td>Nevaripine</td>
+<td align="center">26</td>
+<td>94</td>
+<td>120</td>
+</tr>
+<tr class="odd">
+<td>Lopinavir</td>
+<td align="center">10</td>
+<td>110</td>
+<td>120</td>
+</tr>
+<tr class="even">
+<td>Totale</td>
+<td align="center">36</td>
+<td>204</td>
+<td>240</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ol start="2" style="list-style-type: lower-alpha">
+<li><p><span class="math inline">\(H_0: p_N=p_L\)</span>. Non c’è differenza tra i tassi di fallimento
+virologico nei due gruppi (Nevaripine e Lopinavir).
+<span class="math inline">\(H_A: p_N \neq p_L\)</span>. C’è differenza tra i tassi di fallimento
+virologico nei due gruppi.</p></li>
+<li><p>È stata usata un’assegnazione aleatoria, quindi, le osservazioni in
+ciascun gruppo sono indipendenti. Se i pazienti in uno studio sono
+rappresentativi di quelli dell’intera popolazione (impossibile da
+verificare con le informazioni a disposizione), allora possiamo
+anche generalizzare i risultati alla popolazione. La condizione
+<span class="math inline">\(np \geq 10\)</span> e <span class="math inline">\(n(1 - p) \geq 10\)</span>, che si verifica usando la
+proporzione campionaria (<span class="math inline">\(\widehat{p}=36/240=0.15\)</span>), è soddisfatta.
+<span class="math inline">\(Z=3.04 \rightarrow\)</span> <span class="math inline">\(p\)</span>-value<span class="math inline">\(=0.0024\)</span>. Poiché il <span class="math inline">\(p\)</span>-value è
+piccolo, si può rifiutare <span class="math inline">\(H_0\)</span>. C’è una forte evidenza sperimentale
+per poter rifiutare l’ipotesi nulla. La differenza tra i tassi di
+fallimento virologico del gruppo Nevaripine e del gruppo Lopinavir è
+statisticamente significativa.</p></li>
+</ol>
+</div>
+</div>
+</div>
+<div id="verifica-della-bontà-di-adattamento" class="section level2 hasAnchor" number="4.4">
+<h2><span class="header-section-number">4.4</span> Verifica della bontà di adattamento<a href="dati-categorici.html#verifica-della-bontà-di-adattamento" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="esercizio-4.29" class="section level3 unnumbered hasAnchor">
+<h3>Esercizio 4.29<a href="dati-categorici.html#esercizio-4.29" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<center>
+<em>Vero o Falso, I Parte</em>
+</center>
+<p><strong>(dal libro di testo <em>OpenIntro Statistics</em> di Diez et al., es. 6.37)</strong><br />
+</p>
+<p>Indicare se le seguenti affermazioni sono vere o false. Per ogni
+affermazione falsa, suggerire un modo alternativo di scriverla per
+renderla vera.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>La distribuzione <span class="math inline">\(\chi^2\)</span>, così come la distribuzione Normale, ha
+due parametri, la media e la deviazione standard.</p></li>
+<li><p>La distribuzione <span class="math inline">\(\chi^2\)</span> è sempre asimmetrica a destra, qualsiasi
+sia il valore del parametro “gradi di libertà”.</p></li>
+<li><p>La statistica Chi quadrato (<span class="math inline">\(X^2\)</span>) è sempre positiva.</p></li>
+<li><p>All’aumentare dei gradi di libertà, la forma della distribuzione
+<span class="math inline">\(\chi^2\)</span> diventa più asimmetrica.</p></li>
+</ol>
+<div id="soluzione-107" class="section level4 unnumbered sol hasAnchor">
+<h4>Soluzione<a href="dati-categorici.html#soluzione-107" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ol style="list-style-type: lower-alpha">
+<li><p>Falso. La distribuzione <span class="math inline">\(\chi^2\)</span> ha un parametro chiamato “gradi di
+libertà”.</p></li>
+<li><p>Vero.</p></li>
+<li><p>Vero.</p></li>
+<li><p>Falso. All’aumentare dei gradi di libertà, la forma della
+distribuzione <span class="math inline">\(\chi^2\)</span> diventa più simmetrica.</p></li>
+</ol>
+</div>
+</div>
+<div id="esercizio-4.30" class="section level3 unnumbered hasAnchor">
+<h3>Esercizio 4.30<a href="dati-categorici.html#esercizio-4.30" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<center>
+<em>Libro di testo open-source</em>
+</center>
+<p><strong>(dal libro di testo <em>OpenIntro Statistics</em> di Diez et al., es. 6.39)</strong><br />
+</p>
+<p>Un professore che usa un libro di introduzione alla statistica
+open-source prevede che il <span class="math inline">\(60\%\)</span> degli studenti comprerà una copia
+cartacea del libro, il <span class="math inline">\(25\%\)</span> stamperà il libro dal web e il <span class="math inline">\(15\%\)</span> lo
+leggerà online. Alla fine del semestre chiede ai suoi studenti di
+rispondere a un questionario dove dovranno indicare qual è il formato
+del libro che hanno usato. Dei <span class="math inline">\(126\)</span> studenti, <span class="math inline">\(71\)</span> hanno detto di aver
+comprato una copia cartacea del libro, <span class="math inline">\(30\)</span> lo hanno stampato dal web e
+<span class="math inline">\(25\)</span> lo hanno letto online.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Definire le ipotesi per verificare se le previsioni del professore
+erano accurate.</p></li>
+<li><p>Quanti studenti il professore si aspettava che comprassero il libro,
+lo stampassero e lo leggessero esclusivamente online?</p></li>
+<li><p>Si tratta di una situazione appropriata per usare un test Chi
+quadrato. Elencare le condizioni richieste per tale test e
+verificare che siano soddisfatte.</p></li>
+<li><p>Calcolare la statistica Chi quadrato, i gradi di libertà associati e
+il <span class="math inline">\(p\)</span>-value.</p></li>
+<li><p>Sulla base del <span class="math inline">\(p\)</span>-value calcolato, cosa possiamo concludere?
+Commentare i risultati ottenuti</p></li>
+</ol>
+<div id="soluzione-108" class="section level4 unnumbered sol hasAnchor">
+<h4>Soluzione<a href="dati-categorici.html#soluzione-108" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ol style="list-style-type: lower-alpha">
+<li><p><span class="math inline">\(H_0:\)</span> La distribuzione del formato del libro usato dagli studenti è
+quella prevista dal professore. <span class="math inline">\(H_A:\)</span> La distribuzione del formato
+del libro usato dagli studenti non è quella prevista dal professore</p></li>
+<li><p><span class="math inline">\(E_{\textit{copia cartacea}}=126 \times 0.60=75.6\)</span>.
+<span class="math inline">\(E_{\textit{stampa}}=126 \times 0.25=31.5\)</span>.
+<span class="math inline">\(E_{\textit{online}}=126 \times 0.15=18.9\)</span></p></li>
+<li><p>Indipendenza: il campione non è aleatorio. Comunque, se il
+professore ritiene che le proporzioni siano stabili da un periodo
+(semestre) al successivo e che le abitudini degli studenti non siano
+influenzate da quelle degli altri, allora l’indipendenza è
+probabilmente ragionevole.</p></li>
+<li><p><span class="math inline">\(X^2=2.32\)</span>, i gradi di libertà sono 2 e il <span class="math inline">\(p\)</span>-value è maggiore di
+<span class="math inline">\(0.3\)</span>.</p></li>
+<li><p>Poiché il <span class="math inline">\(p\)</span>-value è grande, non possiamo rifiutare <span class="math inline">\(H_0\)</span>. I dati
+non forniscono una forte evidenza che indichi che le previsioni del
+professore siano statisticamente non significative.</p></li>
+</ol>
+</div>
+</div>
+</div>
+<div id="test-di-indipendenza" class="section level2 hasAnchor" number="4.5">
+<h2><span class="header-section-number">4.5</span> Test di indipendenza<a href="dati-categorici.html#test-di-indipendenza" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="esercizio-4.31" class="section level3 unnumbered hasAnchor">
+<h3>Esercizio 4.31<a href="dati-categorici.html#esercizio-4.31" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<center>
+<em>Depressione e stato civile, II parte </em>
+</center>
+<p>Torniamo a considerare i dati relativi all’Esercizio 4.1.
+La seguente tabella riporta il livello depressivo osservato rispetto
+allo stato civile:</p>
+<div class="center">
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="center"><strong>stato civile</strong></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>livello depressivo</strong></td>
+<td align="center">sposato</td>
+<td>celibe</td>
+<td>vedovo</td>
+<td>Totale</td>
+</tr>
+<tr class="even">
+<td>grave</td>
+<td align="center">22</td>
+<td>16</td>
+<td>19</td>
+<td>57</td>
+</tr>
+<tr class="odd">
+<td>medio</td>
+<td align="center">33</td>
+<td>29</td>
+<td>14</td>
+<td>76</td>
+</tr>
+<tr class="even">
+<td>leggero</td>
+<td align="center">14</td>
+<td>9</td>
+<td>3</td>
+<td>26</td>
+</tr>
+<tr class="odd">
+<td>Totale</td>
+<td align="center">69</td>
+<td>54</td>
+<td>36</td>
+<td>159</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ol style="list-style-type: decimal">
+<li><p>Determinare la distribuzione marginale e la distribuzione
+condizionata del livello depressivo allo stato civile vedovo e
+confrontarle. Cosa si può dire sull’associazione tra i due
+caratteri?</p></li>
+<li><p>Verificare con un opportuno test l’ipotesi che ci sia associazione
+tra i due caratteri fissando il livello di significatività a 0.05.</p></li>
+</ol>
+<div id="soluzione-109" class="section level4 unnumbered sol hasAnchor">
+<h4>Soluzione<a href="dati-categorici.html#soluzione-109" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ol style="list-style-type: decimal">
+<li>La distribuzione marginale del livello depressivo è la seguente:</li>
+</ol>
+<div class="center">
+<table>
+<tbody>
+<tr class="odd">
+<td align="center"><strong>livello depressivo</strong></td>
+<td align="center">freq. assolute</td>
+<td align="center">freq.percentuali</td>
+</tr>
+<tr class="even">
+<td align="center">grave</td>
+<td align="center">57</td>
+<td align="center"><span class="math inline">\(57/ 159 \cdot 100 = 35.8\%\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center">medio</td>
+<td align="center">76</td>
+<td align="center"><span class="math inline">\(76/159\cdot 100 = 47.8\%\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">leggero</td>
+<td align="center">26</td>
+<td align="center"><span class="math inline">\(26/159\cdot 100 = 16.3\%\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center">Totale</td>
+<td align="center">159</td>
+<td align="center">100</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>La distribuzione condizionata del livello depressivo allo stato
+civile vedovo è riportata nella seguente tabella:</p>
+<div class="center">
+<table>
+<thead>
+<tr class="header">
+<th align="center"><strong>stato civile</strong><span class="math inline">\(=\)</span>vedovo</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><strong>livello depressivo</strong></td>
+<td>freq. assolute</td>
+<td>freq.percentuali</td>
+</tr>
+<tr class="even">
+<td align="center">grave</td>
+<td>19</td>
+<td><span class="math inline">\(19/ 36 \cdot 100 = 52.8\%\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center">medio</td>
+<td>14</td>
+<td><span class="math inline">\(14/36\cdot 100 = 38.9\%\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">leggero</td>
+<td>3</td>
+<td><span class="math inline">\(3/36\cdot 100 = 8.3\%\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center">Totale</td>
+<td>36</td>
+<td>100</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Analizzando la distribuzione condizionata allo stato civile vedovo,
+possiamo notare che la proporzione di vedovi con livello depressivo
+grave è superiore rispetto a quella calcolata sul totale. Dal
+confronto tra distribuzione condizionata e distribuzione marginale
+si può notare che le frequenze percentuali sono diverse, il che
+indica la presenza di un’associazione tra i due caratteri. <strong>Non
+possiamo dire però se questa associazione sia significativa o no.</strong></p>
+<ol start="2" style="list-style-type: decimal">
+<li>Il test Chi quadrato ci consente di verificare il seguente test di
+ipotesi:</li>
+</ol>
+<p><span class="math inline">\(H_0:\)</span> il livello depressivo non è associato allo stato civile</p>
+<p><span class="math inline">\(H_A:\)</span> c’è un’associazione significativa tra livello depressivo e
+stato civile</p>
+<p>La statistica test
+<span class="math display">\[X^2 = \sum_i \sum_j \frac{\left(n_{ij}-\frac{n_{i0} n_{0j}}{n}\right)^2}{\frac{n_{i0} n_{0j}}{n}} = n \left( \sum_i \sum_j \frac{n^2_{ij}}{n_{i0}n_{0j}}-1\right)\]</span>
+si distribuisce, sotto l’ipotesi nulla come una v.a. Chi quadrato
+con <span class="math inline">\((r-1)(c-1) = 4\)</span> gradi di libertà (dove <span class="math inline">\(r\)</span> e <span class="math inline">\(c\)</span> indicano
+rispettivamente il numero di righe e il numero di colonne della
+tabella di contingenza).</p>
+<p>Calcoliamo innanzi tutto il valore osservato della statistica test
+Chi-quadrato che esprime una misura della distanza tra frequenze
+osservate e frequenze teoriche. Si noti che le due formule sono
+equivalenti, ma la seconda ci consente di abbreviare i calcoli,
+ottenendo:</p>
+<p><span class="math display">\[\chi^2 = 159 \left( \frac{22^2}{57 \cdot 69}+\frac{16^2}{57 \cdot 54} +\frac{19^2}{57 \cdot 36}+\frac{33^2}{76 \cdot 69} + \right.\]</span>
+<span class="math display">\[\left.
+    +\frac{29^2}{76 \cdot 54}+\frac{14^2}{76 \cdot 36}+\frac{14^2}{26 \cdot 69}+\frac{9^2}{54 \cdot 26}+\frac{3^2}{36 \cdot 26} -1  \right) = 6.828\]</span></p>
+<p>Possiamo ora calcolare il p-value, ovvero la probabilità di
+osservare un valore della statistica test Chi-quadrato piú estremo
+di quello effettivamente osservato:</p>
+<p><span class="math display">\[P\left(X^2_{(r-1)(c-1)} &gt; \chi^2\right) = P\left(X^2_{4} &gt; 6.828 \right) = 0.14\]</span></p>
+<p>Poiché il p-value è pari a <span class="math inline">\(0.14 &gt; 0.05 = \alpha\)</span>, possiamo
+concludere che non c’è abbastanza evidenza sperimentale per poter
+rifiutare l’ipotesi nulla, in altre parole l’associazione tra
+livello depressivo e stato civile non è statisticamente
+significativa.</p>
+</div>
+</div>
+<div id="esercizio-4.32" class="section level3 unnumbered hasAnchor">
+<h3>Esercizio 4.32<a href="dati-categorici.html#esercizio-4.32" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<center>
+<em>Smettere di fumare </em>
+</center>
+<p><strong>(dal libro di testo <em>OpenIntro Statistics</em> di Diez et al., es. 6.41)</strong><br />
+</p>
+<p>Far parte di un gruppo di sostegno influenza la capacità delle persone
+di smettere di fumare? Il ministero della salute ha coinvolto 400
+fumatori in un esperimento aleatorio. 150 partecipanti hanno usato un
+cerotto alla nicotina e hanno incontrato settimanalmente un gruppo di
+sostegno.; gli altri 150 hanno usato il cerotto ma non hanno incontrato
+il gruppo di sostegno. Alla fine dell’esperimento, 40 partecipanti del
+primo gruppo ha smesso di fumare mentre solo 30 fumatori del secondo
+gruppo ha smesso di fumare.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Creare una tabella a doppia entrata riportando i risultati di questo
+studio.</p></li>
+<li><p>Rispondere a ciascuna delle seguenti domande sotto l’ipotesi nulla
+che essere parte di un gruppo di sostegno non influenza la capacità
+di smettere di fumare, ed indicare se i valori attesi sono più alti
+o più bassi di quelli osservati.</p>
+<ol style="list-style-type: lower-roman">
+<li>Quanti soggetti del primo gruppo ti aspetti che smettano di fumare?</li>
+<li>Quanti soggetti del secondo gruppo ti aspetti che smettano di fumare?</li>
+</ol></li>
+</ol>
+<div id="soluzione-110" class="section level4 unnumbered sol hasAnchor">
+<h4>Soluzione<a href="dati-categorici.html#soluzione-110" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ol style="list-style-type: lower-alpha">
+<li>La tabella a doppia entrata è la seguente</li>
+</ol>
+<div class="center">
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td align="center">Smettere di fumare</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Trattamento</td>
+<td align="center">Si</td>
+<td>No</td>
+<td>Totale</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Cerotto + gruppo di sostegno</td>
+<td align="center">40</td>
+<td>110</td>
+<td>150</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Solo cerotto</td>
+<td align="center">30</td>
+<td>120</td>
+<td>150</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Totale</td>
+<td align="center">70</td>
+<td>230</td>
+<td>300</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>b-i. <span class="math inline">\(E_{\textit{rig1, col1}}=\dfrac{(\textit{totale riga 1}) \times(\textit{totale colonna 1})}{\textit{totale tabella}}=\dfrac{150 \times 70}{300}=35\)</span>. Questo valore è più piccolo di quello osservato.</p>
+<p>b-ii. <span class="math inline">\(E_{\textit{rig2, col2}}=\dfrac{(\textit{totale riga 2}) \times(\textit{totale colonna 2})}{\textit{totale tabella}}=\dfrac{150 \times 230}{300}=115\)</span>. Questo valore è più piccolo di quello osservato.</p>
+</div>
+</div>
+<div id="esercizio-4.33" class="section level3 unnumbered hasAnchor">
+<h3>Esercizio 4.33<a href="dati-categorici.html#esercizio-4.33" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<center>
+<em>Trivellazione in mare aperto, III parte </em>
+</center>
+<p><strong>(dal libro di testo <em>OpenIntro Statistics</em> di Diez et al., es. 6.43)</strong><br />
+</p>
+<p>La tabella sotto sintetizza il dataset analizzato nell’Esercizio 4.25 dove sono
+riportate le risposte di un campione aleatorio di laureati e non
+laureati sul tema della trivellazione. Usare un test Chi quadrato per
+verificare se c’è una differenza statisticamente significativa tra le
+risposte dei laureati e quelle dei non laureati.</p>
+<div class="center">
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="center">Laureati</th>
+<th align="center">Non laureati</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Favorevoli</td>
+<td align="center">154</td>
+<td align="center">132</td>
+</tr>
+<tr class="even">
+<td>Contrari</td>
+<td align="center">180</td>
+<td align="center">126</td>
+</tr>
+<tr class="odd">
+<td>Non sanno</td>
+<td align="center">104</td>
+<td align="center">131</td>
+</tr>
+<tr class="even">
+<td>Totale</td>
+<td align="center">438</td>
+<td align="center">389</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="soluzione-111" class="section level4 unnumbered sol hasAnchor">
+<h4>Soluzione<a href="dati-categorici.html#soluzione-111" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><span class="math inline">\(H_0\)</span>: L’opinione dei laureati e dei non laureati è
+differente sul tema della trivellazione per estrarre petrolio e gas
+naturale al largo delle coste della California. <span class="math inline">\(H_A\)</span>: L’opinione
+riguardante la trivellazione per estrarre petrolio e gas naturale al
+largo delle coste della California ha un’associazione con l’essere
+laureati oppure no.</p>
+<p><span class="math display">\[E_{\textit{rig1, col1}}=151.5 \qquad E_{\textit{rig1, col2}}=134.5\]</span>
+<span class="math display">\[E_{\textit{rig2, col1}}=162.1 \qquad E_{\textit{rig2, col2}}=143.9\]</span>
+<span class="math display">\[E_{\textit{rig3, col1}}=124.5 \qquad E_{\textit{rig3, col2}}=110.5\]</span></p>
+<p>Indipendenza: i campioni sono entrambi aleatori, non collegati ed
+estratti da meno del <span class="math inline">\(10\%\)</span> della popolazione, perciò l’ipotesi di
+indipendenza tra le osservazioni è ragionevole. Campione: tutti le
+frequenze osservate sono almeno pari a 5. Gradi di libertà:
+<span class="math inline">\((R-1) \times (C-1)=(3-1) \times (2-1)=2\)</span>, che è più grande di 1.
+<span class="math inline">\(X^2=11.47\)</span> e <span class="math inline">\(p\)</span>-value compreso tra 0.001 e 0.005. Quindi c’è una forte
+evidenza empirica sull’associazione tra supportare la trivellazione e
+l’essere laureati.</p>
+</div>
+</div>
+<div id="esercizio-4.34" class="section level3 unnumbered hasAnchor">
+<h3>Esercizio 4.34<a href="dati-categorici.html#esercizio-4.34" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<center>
+<em>Privacy su Facebook </em>
+</center>
+<p><strong>(dal libro di testo <em>OpenIntro Statistics</em> di Diez et al., es. 6.45)</strong><br />
+</p>
+<p>In un’indagine del 2011 806 utenti Facebook adulti, scelti
+aleatoriamente, sono stati interrogati sulle loro impostazioni sulla
+privacy di Facebook. Una delle domande era “Sai come cambiare le
+impostazioni riguardanti privacy di Facebook per controllare le persone
+che possono e non possono vederti?”. Le risposte sono riportate nella
+seguente tabella divise per genere.</p>
+<div class="center">
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="center">Genere</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td align="center">Maschile</td>
+<td>Femminile</td>
+<td>Totale</td>
+</tr>
+<tr class="even">
+<td>Si</td>
+<td align="center">288</td>
+<td>378</td>
+<td>666</td>
+</tr>
+<tr class="odd">
+<td>No</td>
+<td align="center">61</td>
+<td>62</td>
+<td>123</td>
+</tr>
+<tr class="even">
+<td>Non so</td>
+<td align="center">10</td>
+<td>7</td>
+<td>17</td>
+</tr>
+<tr class="odd">
+<td>Totale</td>
+<td align="center">359</td>
+<td>447</td>
+<td>806</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ol style="list-style-type: lower-alpha">
+<li><p>Definire un test d’ipotesi per verificare l’indipendenza tra genere
+e la capacità degli utenti di Facebook di modificare le impostazioni
+sulla privacy.</p></li>
+<li><p>Verificare tutte le condizioni necessarie per il test e determinare
+se è possibile utilizzare un test Chi quadrato.</p></li>
+</ol>
+<div id="soluzione-112" class="section level4 unnumbered sol hasAnchor">
+<h4>Soluzione<a href="dati-categorici.html#soluzione-112" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ol style="list-style-type: lower-alpha">
+<li><p><span class="math inline">\(H_0\)</span>: Non c’è relazione tra genere e la capacità degli utenti di
+Facebook di modificare le impostazioni sulla privacy. <span class="math inline">\(H_A\)</span>: C’è una
+relazione tra genere e la capacità degli utenti di Facebook di
+modificare le impostazioni sulla privacy.</p></li>
+<li><p>I valori attesi sono:</p></li>
+</ol>
+<p><span class="math display">\[E_{\textit{rig1, col1}}=296.6 \qquad E_{\textit{rig1, col2}}=369.3\]</span>
+<span class="math display">\[E_{\textit{rig2, col1}}=54.8 \qquad E_{\textit{rig2, col2}}=68.2\]</span>
+<span class="math display">\[E_{\textit{rig3, col1}}=7.6 \qquad E_{\textit{rig3, col2}}=9.4\]</span></p>
+<p>Il campione è aleatorio, tutti i valori attesi sono più grandi di 5
+e i gradi di libertà sono pari a <span class="math inline">\((3-1) \times (2-1)=2 &gt;1\)</span>, quindi è
+possibile effettuare il test.</p>
+
+</div>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="inferenza.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="regressione-lineare.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section",
+"smooth_scroll": true
+},
+"toc_float": true
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

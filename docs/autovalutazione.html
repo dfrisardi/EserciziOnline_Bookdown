@@ -1,0 +1,1911 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>6 Autovalutazione | Esercizi Statistica di Base</title>
+  <meta name="description" content="In questo libro sono presenti gli esercizi di Statistica di Base" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="6 Autovalutazione | Esercizi Statistica di Base" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="In questo libro sono presenti gli esercizi di Statistica di Base" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="6 Autovalutazione | Esercizi Statistica di Base" />
+  
+  <meta name="twitter:description" content="In questo libro sono presenti gli esercizi di Statistica di Base" />
+  
+
+<meta name="author" content="Brunero Liseo" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="regressione-lineare.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Esercitazioni di Statistica di Base</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduzione</a></li>
+<li class="chapter" data-level="1" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html"><i class="fa fa-check"></i><b>1</b> Statistica descrittiva</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#popolazione-campione-e-variabili"><i class="fa fa-check"></i><b>1.1</b> Popolazione, campione e variabili</a>
+<ul>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.1"><i class="fa fa-check"></i>Esercizio 1.1</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.2"><i class="fa fa-check"></i>Esercizio 1.2</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.3"><i class="fa fa-check"></i>Esercizio 1.3</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.4"><i class="fa fa-check"></i>Esercizio 1.4</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.5"><i class="fa fa-check"></i>Esercizio 1.5</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#distribuzioni-di-frequenza"><i class="fa fa-check"></i><b>1.2</b> Distribuzioni di frequenza</a>
+<ul>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.6"><i class="fa fa-check"></i>Esercizio 1.6</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.7"><i class="fa fa-check"></i>Esercizio 1.7</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.8"><i class="fa fa-check"></i>Esercizio 1.8</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#rappresentazioni-grafiche-per-caratteri-qualitativi"><i class="fa fa-check"></i><b>1.3</b> Rappresentazioni grafiche per caratteri qualitativi</a>
+<ul>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.9"><i class="fa fa-check"></i>Esercizio 1.9</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.10"><i class="fa fa-check"></i>Esercizio 1.10</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.11"><i class="fa fa-check"></i>Esercizio 1.11</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#rappresentazioni-grafiche-e-numeriche-per-caratteri-quantitativi"><i class="fa fa-check"></i><b>1.4</b> Rappresentazioni grafiche e numeriche per caratteri quantitativi</a>
+<ul>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.12"><i class="fa fa-check"></i>Esercizio 1.12</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.13"><i class="fa fa-check"></i>Esercizio 1.13</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.14"><i class="fa fa-check"></i>Esercizio 1.14</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.15"><i class="fa fa-check"></i>Esercizio 1.15</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.16"><i class="fa fa-check"></i>Esercizio 1.16</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.17"><i class="fa fa-check"></i>Esercizio 1.17</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.18"><i class="fa fa-check"></i>Esercizio 1.18</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.19"><i class="fa fa-check"></i>Esercizio 1.19</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.20"><i class="fa fa-check"></i>Esercizio 1.20</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.21"><i class="fa fa-check"></i>Esercizio 1.21</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#moda-media-mediana-e-quantili"><i class="fa fa-check"></i><b>1.5</b> Moda, media, mediana e quantili</a>
+<ul>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.22"><i class="fa fa-check"></i>Esercizio 1.22</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.23"><i class="fa fa-check"></i>Esercizio 1.23</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.24"><i class="fa fa-check"></i>Esercizio 1.24</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.25"><i class="fa fa-check"></i>Esercizio 1.25</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.26"><i class="fa fa-check"></i>Esercizio 1.26</a></li>
+</ul></li>
+<li class="chapter" data-level="1.6" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#gli-indici-di-variabilità"><i class="fa fa-check"></i><b>1.6</b> Gli indici di variabilità</a>
+<ul>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.27"><i class="fa fa-check"></i>Esercizio 1.27</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.28"><i class="fa fa-check"></i>Esercizio 1.28</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.29"><i class="fa fa-check"></i>Esercizio 1.29</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.30"><i class="fa fa-check"></i>Esercizio 1.30</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.31"><i class="fa fa-check"></i>Esercizio 1.31</a></li>
+</ul></li>
+<li class="chapter" data-level="1.7" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#proprietà-delle-medie"><i class="fa fa-check"></i><b>1.7</b> Proprietà delle medie</a>
+<ul>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.32"><i class="fa fa-check"></i>Esercizio 1.32</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.33"><i class="fa fa-check"></i>Esercizio 1.33</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.34"><i class="fa fa-check"></i>Esercizio 1.34</a></li>
+</ul></li>
+<li class="chapter" data-level="1.8" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#i-numeri-indice"><i class="fa fa-check"></i><b>1.8</b> I numeri indice</a>
+<ul>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.35"><i class="fa fa-check"></i>Esercizio 1.35</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.36"><i class="fa fa-check"></i>Esercizio 1.36</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.37"><i class="fa fa-check"></i>Esercizio 1.37</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.38"><i class="fa fa-check"></i>Esercizio 1.38</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercitazione-1.1"><i class="fa fa-check"></i>Esercitazione 1.1</a>
+<ul>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.1.1"><i class="fa fa-check"></i>Esercizio 1.1.1</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.1.2"><i class="fa fa-check"></i>Esercizio 1.1.2</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#soluzioni-esercitazione-1.1"><i class="fa fa-check"></i>Soluzioni esercitazione 1.1</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercitazione-1.2"><i class="fa fa-check"></i>Esercitazione 1.2</a>
+<ul>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.2.1"><i class="fa fa-check"></i>Esercizio 1.2.1</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.2.2"><i class="fa fa-check"></i>Esercizio 1.2.2</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.2.3"><i class="fa fa-check"></i>Esercizio 1.2.3</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#soluzioni-esercitazione-1.2"><i class="fa fa-check"></i>Soluzioni esercitazione 1.2</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercitazione-1.3"><i class="fa fa-check"></i>Esercitazione 1.3</a>
+<ul>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.3.1"><i class="fa fa-check"></i>Esercizio 1.3.1</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.3.2"><i class="fa fa-check"></i>Esercizio 1.3.2</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.3.3"><i class="fa fa-check"></i>Esercizio 1.3.3</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.3.4"><i class="fa fa-check"></i>Esercizio 1.3.4</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.3.5"><i class="fa fa-check"></i>Esercizio 1.3.5</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.3.6"><i class="fa fa-check"></i>Esercizio 1.3.6</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.3.7"><i class="fa fa-check"></i>Esercizio 1.3.7</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#soluzioni-esercitazione-1.3"><i class="fa fa-check"></i>Soluzioni esercitazione 1.3</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercitazione-1.4"><i class="fa fa-check"></i>Esercitazione 1.4</a>
+<ul>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.4.1"><i class="fa fa-check"></i>Esercizio 1.4.1</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.4.2"><i class="fa fa-check"></i>Esercizio 1.4.2</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.4.3"><i class="fa fa-check"></i>Esercizio 1.4.3</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.4.4"><i class="fa fa-check"></i>Esercizio 1.4.4</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#soluzioni-esercitazione-1.4"><i class="fa fa-check"></i>Soluzioni esercitazione 1.4</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercitazione-1.5"><i class="fa fa-check"></i>Esercitazione 1.5</a>
+<ul>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.5.1"><i class="fa fa-check"></i>Esercizio 1.5.1</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.5.2"><i class="fa fa-check"></i>Esercizio 1.5.2</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.5.3"><i class="fa fa-check"></i>Esercizio 1.5.3</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.5.4"><i class="fa fa-check"></i>Esercizio 1.5.4</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#soluzioni-esercitazione-1.5"><i class="fa fa-check"></i>Soluzioni esercitazione 1.5</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercitazione-1.6"><i class="fa fa-check"></i>Esercitazione 1.6</a>
+<ul>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.6.1"><i class="fa fa-check"></i>Esercizio 1.6.1</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.6.2"><i class="fa fa-check"></i>Esercizio 1.6.2</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#esercizio-1.6.3"><i class="fa fa-check"></i>Esercizio 1.6.3</a></li>
+<li class="chapter" data-level="" data-path="statistica-descrittiva.html"><a href="statistica-descrittiva.html#soluzioni-esercitazione-1.6"><i class="fa fa-check"></i>Soluzioni esercitazione 1.6</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="probabilita.html"><a href="probabilita.html"><i class="fa fa-check"></i><b>2</b> Probabilità</a>
+<ul>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizi-di-base-di-probabilità"><i class="fa fa-check"></i>Esercizi di base di probabilità</a>
+<ul>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.1"><i class="fa fa-check"></i>Esercizio 2.1</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.2"><i class="fa fa-check"></i>Esercizio 2.2</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.3"><i class="fa fa-check"></i>Esercizio 2.3</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.4"><i class="fa fa-check"></i>Esercizio 2.4</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.5"><i class="fa fa-check"></i>Esercizio 2.5</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.6"><i class="fa fa-check"></i>Esercizio 2.6</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.7"><i class="fa fa-check"></i>Esercizio 2.7</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.8"><i class="fa fa-check"></i>Esercizio 2.8</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.9"><i class="fa fa-check"></i>Esercizio 2.9</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.10"><i class="fa fa-check"></i>Esercizio 2.10</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.11"><i class="fa fa-check"></i>Esercizio 2.11</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.12"><i class="fa fa-check"></i>Esercizio 2.12</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.13"><i class="fa fa-check"></i>Esercizio 2.13</a></li>
+</ul></li>
+<li class="chapter" data-level="2.1" data-path="probabilita.html"><a href="probabilita.html#probabilità-condizionata"><i class="fa fa-check"></i><b>2.1</b> Probabilità condizionata</a>
+<ul>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.14"><i class="fa fa-check"></i>Esercizio 2.14</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.15"><i class="fa fa-check"></i>Esercizio 2.15</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.16"><i class="fa fa-check"></i>Esercizio 2.16</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.17"><i class="fa fa-check"></i>Esercizio 2.17</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.18"><i class="fa fa-check"></i>Esercizio 2.18</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.19"><i class="fa fa-check"></i>Esercizio 2.19</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.20"><i class="fa fa-check"></i>Esercizio 2.20</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.21"><i class="fa fa-check"></i>Esercizio 2.21</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.22"><i class="fa fa-check"></i>Esercizio 2.22</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.23"><i class="fa fa-check"></i>Esercizio 2.23</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.24"><i class="fa fa-check"></i>Esercizio 2.24</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.25"><i class="fa fa-check"></i>Esercizio 2.25</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="probabilita.html"><a href="probabilita.html#estrazioni-da-popolazioni-a-bassa-numerosità"><i class="fa fa-check"></i><b>2.2</b> Estrazioni da popolazioni a bassa numerosità</a>
+<ul>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.26"><i class="fa fa-check"></i>Esercizio 2.26</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.27"><i class="fa fa-check"></i>Esercizio 2.27</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.28"><i class="fa fa-check"></i>Esercizio 2.28</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.29"><i class="fa fa-check"></i>Esercizio 2.29</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.30"><i class="fa fa-check"></i>Esercizio 2.30</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.31"><i class="fa fa-check"></i>Esercizio 2.31</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="probabilita.html"><a href="probabilita.html#variabili-casuali"><i class="fa fa-check"></i><b>2.3</b> Variabili casuali</a>
+<ul>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.32"><i class="fa fa-check"></i>Esercizio 2.32</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.33"><i class="fa fa-check"></i>Esercizio 2.33</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.34"><i class="fa fa-check"></i>Esercizio 2.34</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.35"><i class="fa fa-check"></i>Esercizio 2.35</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.36"><i class="fa fa-check"></i>Esercizio 2.36</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.37"><i class="fa fa-check"></i>Esercizio 2.37</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.38"><i class="fa fa-check"></i>Esercizio 2.38</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.39"><i class="fa fa-check"></i>Esercizio 2.39</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.40"><i class="fa fa-check"></i>Esercizio 2.40</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.41"><i class="fa fa-check"></i>Esercizio 2.41</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.42"><i class="fa fa-check"></i>Esercizio 2.42</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.43"><i class="fa fa-check"></i>Esercizio 2.43</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="probabilita.html"><a href="probabilita.html#distribuzioni-continue"><i class="fa fa-check"></i><b>2.4</b> Distribuzioni continue</a>
+<ul>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.44"><i class="fa fa-check"></i>Esercizio 2.44</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.45"><i class="fa fa-check"></i>Esercizio 2.45</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.46"><i class="fa fa-check"></i>Esercizio 2.46</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.47"><i class="fa fa-check"></i>Esercizio 2.47</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.48"><i class="fa fa-check"></i>Esercizio 2.48</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.49"><i class="fa fa-check"></i>Esercizio 2.49</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.50"><i class="fa fa-check"></i>Esercizio 2.50</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.51"><i class="fa fa-check"></i>Esercizio 2.51</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.52"><i class="fa fa-check"></i>Esercizio 2.52</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.53"><i class="fa fa-check"></i>Esercizio 2.53</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.54"><i class="fa fa-check"></i>Esercizio 2.54</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.55"><i class="fa fa-check"></i>Esercizio 2.55</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.56"><i class="fa fa-check"></i>Esercizio 2.56</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="probabilita.html"><a href="probabilita.html#distribuzione-della-media-campionaria"><i class="fa fa-check"></i><b>2.5</b> Distribuzione della media campionaria</a>
+<ul>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.57"><i class="fa fa-check"></i>Esercizio 2.57</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.58"><i class="fa fa-check"></i>Esercizio 2.58</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.59"><i class="fa fa-check"></i>Esercizio 2.59</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.60"><i class="fa fa-check"></i>Esercizio 2.60</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.61"><i class="fa fa-check"></i>Esercizio 2.61</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.62"><i class="fa fa-check"></i>Esercizio 2.62</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.63"><i class="fa fa-check"></i>Esercizio 2.63</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.64"><i class="fa fa-check"></i>Esercizio 2.64</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.65"><i class="fa fa-check"></i>Esercizio 2.65</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.66"><i class="fa fa-check"></i>Esercizio 2.66</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.67"><i class="fa fa-check"></i>Esercizio 2.67</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.68"><i class="fa fa-check"></i>Esercizio 2.68</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.69"><i class="fa fa-check"></i>Esercizio 2.69</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.70"><i class="fa fa-check"></i>Esercizio 2.70</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.71"><i class="fa fa-check"></i>Esercizio 2.71</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.72"><i class="fa fa-check"></i>Esercizio 2.72</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="probabilita.html"><a href="probabilita.html#distribuzioni-di-variabili-casuali"><i class="fa fa-check"></i><b>2.6</b> Distribuzioni di variabili casuali</a>
+<ul>
+<li class="chapter" data-level="2.6.1" data-path="probabilita.html"><a href="probabilita.html#distribuzione-normale"><i class="fa fa-check"></i><b>2.6.1</b> Distribuzione Normale</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.73"><i class="fa fa-check"></i>Esercizio 2.73</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.74"><i class="fa fa-check"></i>Esercizio 2.74</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.75"><i class="fa fa-check"></i>Esercizio 2.75</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.76"><i class="fa fa-check"></i>Esercizio 2.76</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.77"><i class="fa fa-check"></i>Esercizio 2.77</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.78"><i class="fa fa-check"></i>Esercizio 2.78</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.79"><i class="fa fa-check"></i>Esercizio 2.79</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.80"><i class="fa fa-check"></i>Esercizio 2.80</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.81"><i class="fa fa-check"></i>Esercizio 2.81</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.82"><i class="fa fa-check"></i>Esercizio 2.82</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.83"><i class="fa fa-check"></i>Esercizio 2.83</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.84"><i class="fa fa-check"></i>Esercizio 2.84</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.85"><i class="fa fa-check"></i>Esercizio 2.85</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.86"><i class="fa fa-check"></i>Esercizio 2.86</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.87"><i class="fa fa-check"></i>Esercizio 2.87</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.88"><i class="fa fa-check"></i>Esercizio 2.88</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.89"><i class="fa fa-check"></i>Esercizio 2.89</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.90"><i class="fa fa-check"></i>Esercizio 2.90</a></li>
+<li class="chapter" data-level="2.6.2" data-path="probabilita.html"><a href="probabilita.html#la-distribuzione-geometrica"><i class="fa fa-check"></i><b>2.6.2</b> La distribuzione geometrica</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.91"><i class="fa fa-check"></i>Esercizio 2.91</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.92"><i class="fa fa-check"></i>Esercizio 2.92</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.93"><i class="fa fa-check"></i>Esercizio 2.93</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.94"><i class="fa fa-check"></i>Esercizio 2.94</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.95"><i class="fa fa-check"></i>Esercizio 2.95</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.96"><i class="fa fa-check"></i>Esercizio 2.96</a></li>
+<li class="chapter" data-level="2.6.3" data-path="probabilita.html"><a href="probabilita.html#distribuzione-binomiale"><i class="fa fa-check"></i><b>2.6.3</b> Distribuzione Binomiale</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.97"><i class="fa fa-check"></i>Esercizio 2.97</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.98"><i class="fa fa-check"></i>Esercizio 2.98</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.99"><i class="fa fa-check"></i>Esercizio 2.99</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.100"><i class="fa fa-check"></i>Esercizio 2.100</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.101"><i class="fa fa-check"></i>Esercizio 2.101</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.102"><i class="fa fa-check"></i>Esercizio 2.102</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.103"><i class="fa fa-check"></i>Esercizio 2.103</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.104"><i class="fa fa-check"></i>Esercizio 2.104</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.105"><i class="fa fa-check"></i>Esercizio 2.105</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.106"><i class="fa fa-check"></i>Esercizio 2.106</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.107"><i class="fa fa-check"></i>Esercizio 2.107</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.108"><i class="fa fa-check"></i>Esercizio 2.108</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.109"><i class="fa fa-check"></i>Esercizio 2.109</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.110"><i class="fa fa-check"></i>Esercizio 2.110</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.111"><i class="fa fa-check"></i>Esercizio 2.111</a></li>
+<li class="chapter" data-level="2.6.4" data-path="probabilita.html"><a href="probabilita.html#altre-distribuzioni"><i class="fa fa-check"></i><b>2.6.4</b> Altre distribuzioni</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.112"><i class="fa fa-check"></i>Esercizio 2.112</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.113"><i class="fa fa-check"></i>Esercizio 2.113</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.114"><i class="fa fa-check"></i>Esercizio 2.114</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.115"><i class="fa fa-check"></i>Esercizio 2.115</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.116"><i class="fa fa-check"></i>Esercizio 2.116</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.117"><i class="fa fa-check"></i>Esercizio 2.117</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.118"><i class="fa fa-check"></i>Esercizio 2.118</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.119"><i class="fa fa-check"></i>Esercizio 2.119</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.120"><i class="fa fa-check"></i>Esercizio 2.120</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.121"><i class="fa fa-check"></i>Esercizio 2.121</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercitazione-2.1"><i class="fa fa-check"></i>Esercitazione 2.1</a>
+<ul>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.1.1"><i class="fa fa-check"></i>Esercizio 2.1.1</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.1.2"><i class="fa fa-check"></i>Esercizio 2.1.2</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.1.3"><i class="fa fa-check"></i>Esercizio 2.1.3</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.1.4"><i class="fa fa-check"></i>Esercizio 2.1.4</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.1.5"><i class="fa fa-check"></i>Esercizio 2.1.5</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.1.6"><i class="fa fa-check"></i>Esercizio 2.1.6</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#soluzioni-esercitazione-2.1"><i class="fa fa-check"></i>Soluzioni esercitazione 2.1</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercitazione-2.2"><i class="fa fa-check"></i>Esercitazione 2.2</a>
+<ul>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.2.1"><i class="fa fa-check"></i>Esercizio 2.2.1</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.2.2"><i class="fa fa-check"></i>Esercizio 2.2.2</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.2.3"><i class="fa fa-check"></i>Esercizio 2.2.3</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.2.4"><i class="fa fa-check"></i>Esercizio 2.2.4</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#soluzioni-esercitazione-2.2"><i class="fa fa-check"></i>Soluzioni esercitazione 2.2</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercitazione-2.3"><i class="fa fa-check"></i>Esercitazione 2.3</a>
+<ul>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.3.1"><i class="fa fa-check"></i>Esercizio 2.3.1</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.3.2"><i class="fa fa-check"></i>Esercizio 2.3.2</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.3.3"><i class="fa fa-check"></i>Esercizio 2.3.3</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.3.4"><i class="fa fa-check"></i>Esercizio 2.3.4</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#soluzioni-esercitazione-2.3"><i class="fa fa-check"></i>Soluzioni esercitazione 2.3</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercitazione-2.4"><i class="fa fa-check"></i>Esercitazione 2.4</a>
+<ul>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.4.1"><i class="fa fa-check"></i>Esercizio 2.4.1</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.4.2"><i class="fa fa-check"></i>Esercizio 2.4.2</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.4.3"><i class="fa fa-check"></i>Esercizio 2.4.3</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#esercizio-2.4.4"><i class="fa fa-check"></i>Esercizio 2.4.4</a></li>
+<li class="chapter" data-level="" data-path="probabilita.html"><a href="probabilita.html#soluzioni-esercitazione-2.4"><i class="fa fa-check"></i>Soluzioni esercitazione 2.4</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="inferenza.html"><a href="inferenza.html"><i class="fa fa-check"></i><b>3</b> Inferenza</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="inferenza.html"><a href="inferenza.html#intervalli-di-confidenza-e-test-per-campioni-estratti-da-una-popolazione-normale"><i class="fa fa-check"></i><b>3.1</b> Intervalli di confidenza e test per campioni estratti da una popolazione Normale</a>
+<ul>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.1"><i class="fa fa-check"></i>Esercizio 3.1</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.2"><i class="fa fa-check"></i>Esercizio 3.2</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.3"><i class="fa fa-check"></i>Esercizio 3.3</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.4"><i class="fa fa-check"></i>Esercizio 3.4</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="inferenza.html"><a href="inferenza.html#intervalli-di-confidenza-e-test-per-campioni-estratti-da-popolazioni-normali-con-media-e-varianza-incognite"><i class="fa fa-check"></i><b>3.2</b> Intervalli di confidenza e test per campioni estratti da popolazioni Normali con media e varianza incognite</a>
+<ul>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.5"><i class="fa fa-check"></i>Esercizio 3.5</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.6"><i class="fa fa-check"></i>Esercizio 3.6</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.7"><i class="fa fa-check"></i>Esercizio 3.7</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.8"><i class="fa fa-check"></i>Esercizio 3.8</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="inferenza.html"><a href="inferenza.html#test-t-per-campioni-appaiati"><i class="fa fa-check"></i><b>3.3</b> Test t per campioni appaiati</a>
+<ul>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.9"><i class="fa fa-check"></i>Esercizio 3.9</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.10"><i class="fa fa-check"></i>Esercizio 3.10</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.11"><i class="fa fa-check"></i>Esercizio 3.11</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.12"><i class="fa fa-check"></i>Esercizio 3.12</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.13"><i class="fa fa-check"></i>Esercizio 3.13</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.14"><i class="fa fa-check"></i>Esercizio 3.14</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.15"><i class="fa fa-check"></i>Esercizio 3.15</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.16"><i class="fa fa-check"></i>Esercizio 3.16</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.17"><i class="fa fa-check"></i>Esercizio 3.17</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.18"><i class="fa fa-check"></i>Esercizio 3.18</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.19"><i class="fa fa-check"></i>Esercizio 3.19</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercitazione-3.1"><i class="fa fa-check"></i>Esercitazione 3.1</a>
+<ul>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.1.1"><i class="fa fa-check"></i>Esercizio 3.1.1</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.1.2"><i class="fa fa-check"></i>Esercizio 3.1.2</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.1.3"><i class="fa fa-check"></i>Esercizio 3.1.3</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.1.4"><i class="fa fa-check"></i>Esercizio 3.1.4</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.1.5"><i class="fa fa-check"></i>Esercizio 3.1.5</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.1.6"><i class="fa fa-check"></i>Esercizio 3.1.6</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.1.7"><i class="fa fa-check"></i>Esercizio 3.1.7</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#soluzioni-esercitazione-3.1"><i class="fa fa-check"></i>Soluzioni esercitazione 3.1</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercitazione-3.2"><i class="fa fa-check"></i>Esercitazione 3.2</a>
+<ul>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.2.1"><i class="fa fa-check"></i>Esercizio 3.2.1</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.2.3"><i class="fa fa-check"></i>Esercizio 3.2.3</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.2.4"><i class="fa fa-check"></i>Esercizio 3.2.4</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.2.6"><i class="fa fa-check"></i>Esercizio 3.2.6</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#esercizio-3.2.7"><i class="fa fa-check"></i>Esercizio 3.2.7</a></li>
+<li class="chapter" data-level="" data-path="inferenza.html"><a href="inferenza.html#soluzioni-esercitazione-3.2"><i class="fa fa-check"></i>Soluzioni esercitazione 3.2</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="dati-categorici.html"><a href="dati-categorici.html"><i class="fa fa-check"></i><b>4</b> Dati categorici</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="dati-categorici.html"><a href="dati-categorici.html#tabelle-di-contingenza"><i class="fa fa-check"></i><b>4.1</b> Tabelle di contingenza</a>
+<ul>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.1"><i class="fa fa-check"></i>Esercizio 4.1</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.2"><i class="fa fa-check"></i>Esercizio 4.2</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="dati-categorici.html"><a href="dati-categorici.html#inferenza-su-una-singola-proporzione"><i class="fa fa-check"></i><b>4.2</b> Inferenza su una singola proporzione</a>
+<ul>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.3"><i class="fa fa-check"></i>Esercizio 4.3</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.4"><i class="fa fa-check"></i>Esercizio 4.4</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.5"><i class="fa fa-check"></i>Esercizio 4.5</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.6"><i class="fa fa-check"></i>Esercizio 4.6</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.7"><i class="fa fa-check"></i>Esercizio 4.7</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.8"><i class="fa fa-check"></i>Esercizio 4.8</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.9"><i class="fa fa-check"></i>Esercizio 4.9</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.10"><i class="fa fa-check"></i>Esercizio 4.10</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.11"><i class="fa fa-check"></i>Esercizio 4.11</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.12"><i class="fa fa-check"></i>Esercizio 4.12</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.13"><i class="fa fa-check"></i>Esercizio 4.13</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.14"><i class="fa fa-check"></i>Esercizio 4.14</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.15"><i class="fa fa-check"></i>Esercizio 4.15</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.16"><i class="fa fa-check"></i>Esercizio 4.16</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.17"><i class="fa fa-check"></i>Esercizio 4.17</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.18"><i class="fa fa-check"></i>Esercizio 4.18</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.19"><i class="fa fa-check"></i>Esercizio 4.19</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.20"><i class="fa fa-check"></i>Esercizio 4.20</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="dati-categorici.html"><a href="dati-categorici.html#inferenza-sulla-differenza-tra-due-proporzioni"><i class="fa fa-check"></i><b>4.3</b> Inferenza sulla differenza tra due proporzioni</a>
+<ul>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.21"><i class="fa fa-check"></i>Esercizio 4.21</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.22"><i class="fa fa-check"></i>Esercizio 4.22</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.23"><i class="fa fa-check"></i>Esercizio 4.23</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.24"><i class="fa fa-check"></i>Esercizio 4.24</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.25"><i class="fa fa-check"></i>Esercizio 4.25</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.26"><i class="fa fa-check"></i>Esercizio 4.26</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.27"><i class="fa fa-check"></i>Esercizio 4.27</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.28"><i class="fa fa-check"></i>Esercizio 4.28</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="dati-categorici.html"><a href="dati-categorici.html#verifica-della-bontà-di-adattamento"><i class="fa fa-check"></i><b>4.4</b> Verifica della bontà di adattamento</a>
+<ul>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.29"><i class="fa fa-check"></i>Esercizio 4.29</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.30"><i class="fa fa-check"></i>Esercizio 4.30</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="dati-categorici.html"><a href="dati-categorici.html#test-di-indipendenza"><i class="fa fa-check"></i><b>4.5</b> Test di indipendenza</a>
+<ul>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.31"><i class="fa fa-check"></i>Esercizio 4.31</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.32"><i class="fa fa-check"></i>Esercizio 4.32</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.33"><i class="fa fa-check"></i>Esercizio 4.33</a></li>
+<li class="chapter" data-level="" data-path="dati-categorici.html"><a href="dati-categorici.html#esercizio-4.34"><i class="fa fa-check"></i>Esercizio 4.34</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="regressione-lineare.html"><a href="regressione-lineare.html"><i class="fa fa-check"></i><b>5</b> Regressione lineare</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="regressione-lineare.html"><a href="regressione-lineare.html#regressione-lineare-semplice"><i class="fa fa-check"></i><b>5.1</b> Regressione lineare semplice</a>
+<ul>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.1"><i class="fa fa-check"></i>Esercizio 5.1</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.2"><i class="fa fa-check"></i>Esercizio 5.2</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.3"><i class="fa fa-check"></i>Esercizio 5.3</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.4"><i class="fa fa-check"></i>Esercizio 5.4</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="regressione-lineare.html"><a href="regressione-lineare.html#inferenza-nel-modello-di-regressione-lineare"><i class="fa fa-check"></i><b>5.2</b> Inferenza nel modello di regressione lineare</a>
+<ul>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.5"><i class="fa fa-check"></i>Esercizio 5.5</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="regressione-lineare.html"><a href="regressione-lineare.html#correlazione-e-regressione"><i class="fa fa-check"></i><b>5.3</b> Correlazione e Regressione</a>
+<ul>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.6"><i class="fa fa-check"></i>Esercizio 5.6</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.7"><i class="fa fa-check"></i>Esercizio 5.7</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.8"><i class="fa fa-check"></i>Esercizio 5.8</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.9"><i class="fa fa-check"></i>Esercizio 5.9</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.10"><i class="fa fa-check"></i>Esercizio 5.10</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.11"><i class="fa fa-check"></i>Esercizio 5.11</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="regressione-lineare.html"><a href="regressione-lineare.html#analisi-dei-residui"><i class="fa fa-check"></i><b>5.4</b> Analisi dei residui</a>
+<ul>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.12"><i class="fa fa-check"></i>Esercizio 5.12</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.13"><i class="fa fa-check"></i>Esercizio 5.13</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.14"><i class="fa fa-check"></i>Esercizio 5.14</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.15"><i class="fa fa-check"></i>Esercizio 5.15</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.16"><i class="fa fa-check"></i>Esercizio 5.16</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.17"><i class="fa fa-check"></i>Esercizio 5.17</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.18"><i class="fa fa-check"></i>Esercizio 5.18</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.19"><i class="fa fa-check"></i>Esercizio 5.19</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.20"><i class="fa fa-check"></i>Esercizio 5.20</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.21"><i class="fa fa-check"></i>Esercizio 5.21</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.22"><i class="fa fa-check"></i>Esercizio 5.22</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.23"><i class="fa fa-check"></i>Esercizio 5.23</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.24"><i class="fa fa-check"></i>Esercizio 5.24</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.25"><i class="fa fa-check"></i>Esercizio 5.25</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.26"><i class="fa fa-check"></i>Esercizio 5.26</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.27"><i class="fa fa-check"></i>Esercizio 5.27</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.28"><i class="fa fa-check"></i>Esercizio 5.28</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.29"><i class="fa fa-check"></i>Esercizio 5.29</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.30"><i class="fa fa-check"></i>Esercizio 5.30</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.31"><i class="fa fa-check"></i>Esercizio 5.31</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.32"><i class="fa fa-check"></i>Esercizio 5.32</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.33"><i class="fa fa-check"></i>Esercizio 5.33</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.34"><i class="fa fa-check"></i>Esercizio 5.34</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.35"><i class="fa fa-check"></i>Esercizio 5.35</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.36"><i class="fa fa-check"></i>Esercizio 5.36</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.37"><i class="fa fa-check"></i>Esercizio 5.37</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.38"><i class="fa fa-check"></i>Esercizio 5.38</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.39"><i class="fa fa-check"></i>Esercizio 5.39</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.40"><i class="fa fa-check"></i>Esercizio 5.40</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.41"><i class="fa fa-check"></i>Esercizio 5.41</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.42"><i class="fa fa-check"></i>Esercizio 5.42</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.43"><i class="fa fa-check"></i>Esercizio 5.43</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.44"><i class="fa fa-check"></i>Esercizio 5.44</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.45"><i class="fa fa-check"></i>Esercizio 5.45</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.46"><i class="fa fa-check"></i>Esercizio 5.46</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercitazione-5.1"><i class="fa fa-check"></i>Esercitazione 5.1</a>
+<ul>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.1.1"><i class="fa fa-check"></i>Esercizio 5.1.1</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#esercizio-5.1.2"><i class="fa fa-check"></i>Esercizio 5.1.2</a></li>
+<li class="chapter" data-level="" data-path="regressione-lineare.html"><a href="regressione-lineare.html#soluzioni-esercitazione-5.1"><i class="fa fa-check"></i>Soluzioni esercitazione 5.1</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="autovalutazione.html"><a href="autovalutazione.html"><i class="fa fa-check"></i><b>6</b> Autovalutazione</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-di-ripasso-e-autovalutazione"><i class="fa fa-check"></i><b>6.1</b> Quiz di ripasso e autovalutazione</a>
+<ul>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.1"><i class="fa fa-check"></i>Quiz 6.1</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.2"><i class="fa fa-check"></i>Quiz 6.2</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.3"><i class="fa fa-check"></i>Quiz 6.3</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.4"><i class="fa fa-check"></i>Quiz 6.4</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.5"><i class="fa fa-check"></i>Quiz 6.5</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.6"><i class="fa fa-check"></i>Quiz 6.6</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.7"><i class="fa fa-check"></i>Quiz 6.7</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.8"><i class="fa fa-check"></i>Quiz 6.8</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.9"><i class="fa fa-check"></i>Quiz 6.9</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.10"><i class="fa fa-check"></i>Quiz 6.10</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.11"><i class="fa fa-check"></i>Quiz 6.11</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.12"><i class="fa fa-check"></i>Quiz 6.12</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.13"><i class="fa fa-check"></i>Quiz 6.13</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.14"><i class="fa fa-check"></i>Quiz 6.14</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.15"><i class="fa fa-check"></i>Quiz 6.15</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.16"><i class="fa fa-check"></i>Quiz 6.16</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.17"><i class="fa fa-check"></i>Quiz 6.17</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.18"><i class="fa fa-check"></i>Quiz 6.18</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.19"><i class="fa fa-check"></i>Quiz 6.19</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.20"><i class="fa fa-check"></i>Quiz 6.20</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.21"><i class="fa fa-check"></i>Quiz 6.21</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.22"><i class="fa fa-check"></i>Quiz 6.22</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.23"><i class="fa fa-check"></i>Quiz 6.23</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.24"><i class="fa fa-check"></i>Quiz 6.24</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.25"><i class="fa fa-check"></i>Quiz 6.25</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.26"><i class="fa fa-check"></i>Quiz 6.26</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.27"><i class="fa fa-check"></i>Quiz 6.27</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.28"><i class="fa fa-check"></i>Quiz 6.28</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.29"><i class="fa fa-check"></i>Quiz 6.29</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.30"><i class="fa fa-check"></i>Quiz 6.30</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.31"><i class="fa fa-check"></i>Quiz 6.31</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.32"><i class="fa fa-check"></i>Quiz 6.32</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.33"><i class="fa fa-check"></i>Quiz 6.33</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.34"><i class="fa fa-check"></i>Quiz 6.34</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.35"><i class="fa fa-check"></i>Quiz 6.35</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.36"><i class="fa fa-check"></i>Quiz 6.36</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.37"><i class="fa fa-check"></i>Quiz 6.37</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.38"><i class="fa fa-check"></i>Quiz 6.38</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.39"><i class="fa fa-check"></i>Quiz 6.39</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.40"><i class="fa fa-check"></i>Quiz 6.40</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.41"><i class="fa fa-check"></i>Quiz 6.41</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.42"><i class="fa fa-check"></i>Quiz 6.42</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.43"><i class="fa fa-check"></i>Quiz 6.43</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.44"><i class="fa fa-check"></i>Quiz 6.44</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.45"><i class="fa fa-check"></i>Quiz 6.45</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.46"><i class="fa fa-check"></i>Quiz 6.46</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.47"><i class="fa fa-check"></i>Quiz 6.47</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.48"><i class="fa fa-check"></i>Quiz 6.48</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.49"><i class="fa fa-check"></i>Quiz 6.49</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.50"><i class="fa fa-check"></i>Quiz 6.50</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.51"><i class="fa fa-check"></i>Quiz 6.51</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.52"><i class="fa fa-check"></i>Quiz 6.52</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.53"><i class="fa fa-check"></i>Quiz 6.53</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.54"><i class="fa fa-check"></i>Quiz 6.54</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.55"><i class="fa fa-check"></i>Quiz 6.55</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.56"><i class="fa fa-check"></i>Quiz 6.56</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.57"><i class="fa fa-check"></i>Quiz 6.57</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.58"><i class="fa fa-check"></i>Quiz 6.58</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.59"><i class="fa fa-check"></i>Quiz 6.59</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.60"><i class="fa fa-check"></i>Quiz 6.60</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.61"><i class="fa fa-check"></i>Quiz 6.61</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.62"><i class="fa fa-check"></i>Quiz 6.62</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.63"><i class="fa fa-check"></i>Quiz 6.63</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.64"><i class="fa fa-check"></i>Quiz 6.64</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.65"><i class="fa fa-check"></i>Quiz 6.65</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.66"><i class="fa fa-check"></i>Quiz 6.66</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.67"><i class="fa fa-check"></i>Quiz 6.67</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.68"><i class="fa fa-check"></i>Quiz 6.68</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.69"><i class="fa fa-check"></i>Quiz 6.69</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.70"><i class="fa fa-check"></i>Quiz 6.70</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.71"><i class="fa fa-check"></i>Quiz 6.71</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.72"><i class="fa fa-check"></i>Quiz 6.72</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.73"><i class="fa fa-check"></i>Quiz 6.73</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.74"><i class="fa fa-check"></i>Quiz 6.74</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.75"><i class="fa fa-check"></i>Quiz 6.75</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.76"><i class="fa fa-check"></i>Quiz 6.76</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.77"><i class="fa fa-check"></i>Quiz 6.77</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.78"><i class="fa fa-check"></i>Quiz 6.78</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.79"><i class="fa fa-check"></i>Quiz 6.79</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.80"><i class="fa fa-check"></i>Quiz 6.80</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.81"><i class="fa fa-check"></i>Quiz 6.81</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.82"><i class="fa fa-check"></i>Quiz 6.82</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.83"><i class="fa fa-check"></i>Quiz 6.83</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.84"><i class="fa fa-check"></i>Quiz 6.84</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.85"><i class="fa fa-check"></i>Quiz 6.85</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.86"><i class="fa fa-check"></i>Quiz 6.86</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.87"><i class="fa fa-check"></i>Quiz 6.87</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.88"><i class="fa fa-check"></i>Quiz 6.88</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.89"><i class="fa fa-check"></i>Quiz 6.89</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.90"><i class="fa fa-check"></i>Quiz 6.90</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.91"><i class="fa fa-check"></i>Quiz 6.91</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.92"><i class="fa fa-check"></i>Quiz 6.92</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.93"><i class="fa fa-check"></i>Quiz 6.93</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.94"><i class="fa fa-check"></i>Quiz 6.94</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.95"><i class="fa fa-check"></i>Quiz 6.95</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.96"><i class="fa fa-check"></i>Quiz 6.96</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.97"><i class="fa fa-check"></i>Quiz 6.97</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.98"><i class="fa fa-check"></i>Quiz 6.98</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.99"><i class="fa fa-check"></i>Quiz 6.99</a></li>
+<li class="chapter" data-level="" data-path="autovalutazione.html"><a href="autovalutazione.html#quiz-6.100"><i class="fa fa-check"></i>Quiz 6.100</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="./" target="blank"></a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Esercizi Statistica di Base</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="autovalutazione" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">6</span> Autovalutazione<a href="autovalutazione.html#autovalutazione" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="quiz-di-ripasso-e-autovalutazione" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Quiz di ripasso e autovalutazione<a href="autovalutazione.html#quiz-di-ripasso-e-autovalutazione" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="quiz-6.1" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.1<a href="autovalutazione.html#quiz-6.1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Sia <span class="math inline">\(X\)</span> un carattere quantitativo con deviazione standard <span class="math inline">\(\sigma_X\)</span>. Sia quindi <span class="math inline">\(Y = k + X\)</span>: allora la deviazione standard di <span class="math inline">\(Y\)</span>, <span class="math inline">\(\sigma_Y\)</span>,</p>
+<p>A. è pari a <span class="math inline">\(k + \sigma_X\)</span><br />
+</p>
+<p>B. è uguale a <span class="math inline">\(\sigma_X\)</span><br />
+</p>
+<p>C. è pari a <span class="math inline">\(|k|\sigma_X\)</span><br />
+</p>
+</div>
+<div id="quiz-6.2" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.2<a href="autovalutazione.html#quiz-6.2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Si considerino gli eventi <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span>. Essi sono indipendenti se</p>
+<p>A. <span class="math inline">\(P(A \cup B) = P(A)P(B)\)</span></p>
+<p>B. <span class="math inline">\(P(A \cap B) = P(A)+P(B)\)</span></p>
+<p>C. <span class="math inline">\(P(A|B) = P(A)\)</span></p>
+</div>
+<div id="quiz-6.3" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.3<a href="autovalutazione.html#quiz-6.3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Una squadra di calcio è composta da 18 giocatori. All’inizio della partita entrano sul campo uno alla volta. Considerando l’ordine, in quanti modi diversi possono entrare i primi 5 giocatori?</p>
+<p>A. <span class="math inline">\(\frac{18!}{13!}\)</span></p>
+<p>B. <span class="math inline">\(\binom{18}{13}\)</span></p>
+<p>C. <span class="math inline">\(5!\)</span></p>
+</div>
+<div id="quiz-6.4" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.4<a href="autovalutazione.html#quiz-6.4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Un sistema ha 10 componenti, indipendenti tra loro. Ogni componente ha probabilità di rottura pari a 0.2. Alla fine del lavoro il numero medio di componenti funzionanti è</p>
+<p>A. 2</p>
+<p>B. 4</p>
+<p>C. 8</p>
+</div>
+<div id="quiz-6.5" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.5<a href="autovalutazione.html#quiz-6.5" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Si consideri una variabile Normale di parametri <span class="math inline">\(\mu = 5\)</span> e <span class="math inline">\(\sigma^2 = 9\)</span>, il terzo quartile è pari a</p>
+<p>A. 2.9765</p>
+<p>B. 7.0235</p>
+<p>C. 11.0704</p>
+</div>
+<div id="quiz-6.6" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.6<a href="autovalutazione.html#quiz-6.6" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In un gruppo di amici, rispettivamente di età 21, 19, 25, 24, 26 anni, l’età mediana è</p>
+<p>A. 23</p>
+<p>B. 24</p>
+<p>C. 25</p>
+</div>
+<div id="quiz-6.7" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.7<a href="autovalutazione.html#quiz-6.7" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In una distribuzione media e mediana sono uguali. Allora</p>
+<p>A. la distribuzione è simmetrica</p>
+<p>B. la distribuzione ha una sola moda</p>
+<p>C. nessuna delle precedenti</p>
+</div>
+<div id="quiz-6.8" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.8<a href="autovalutazione.html#quiz-6.8" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Ci sono tre individui A, B e C. Il reddito di A è 1 unità, quello di B è 6 unità e quello di C è pari a 12 unità. B trasferisce 2 unità a A. Dopo il trasferimento la concentrazione</p>
+<p>A. diminuisce</p>
+<p>B. non cambia</p>
+<p>C. aumenta</p>
+</div>
+<div id="quiz-6.9" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.9<a href="autovalutazione.html#quiz-6.9" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Il reddito netto di un’impresa <span class="math inline">\(Y\)</span> si determina come la differenza tra i ricavi <span class="math inline">\(R\)</span> e i costi <span class="math inline">\(C\)</span> sostenuti nello stesso periodo: <span class="math inline">\(Y = R - C\)</span>.</p>
+<p>Si assuma che ci sia concordanza nelle distribuzioni dei ricavi e dei costi, tale che <span class="math inline">\(Cov(R, C) &gt; 0\)</span>.</p>
+<p>Considerando i redditi delle imprese di un certo Stato in un dato periodo</p>
+<p>A. <span class="math inline">\(Var(Y) &lt; Var(R) + Var(C)\)</span></p>
+<p>B. <span class="math inline">\(Var(Y) = Var(R) + Var(C)\)</span></p>
+<p>C. <span class="math inline">\(Var(Y) &gt; Var(R) + Var(C)\)</span></p>
+</div>
+<div id="quiz-6.10" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.10<a href="autovalutazione.html#quiz-6.10" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A Rimini è stato estratto un campione di <span class="math inline">\(n = 300\)</span> individui appassionati di motori. Ad essi viene chiesto se preferiscono la Formula 1 o la MotoGP, <span class="math inline">\(32\)</span> di essi rispondono che preferiscono la Formula 1. A Bologna viene estratto un altro campione di uguale numerosità del quale <span class="math inline">\(139\)</span> individui rispondono che preferiscono la Formula 1. Fissato il livello di confidenza uguale per entrambe le città</p>
+<p>A. è più ampio l’intervallo di confidenza di Rimini</p>
+<p>B. è più ampio l’intervallo di confidenza di Bologna</p>
+<p>C. non è possibile dirlo perché non è noto il valore specifico del livello di confidenza</p>
+</div>
+<div id="quiz-6.11" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.11<a href="autovalutazione.html#quiz-6.11" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Se lanciamo tre dadi regolari, la probabilità di ottenere una somma pari a 4 è</p>
+<p>A. <span class="math inline">\(\frac{1}{72}\)</span></p>
+<p>B. <span class="math inline">\(\frac{1}{216}\)</span></p>
+<p>C. <span class="math inline">\({4 \choose 3}\left (\frac{1}{6} \right)^2\frac{5}{6}\)</span></p>
+</div>
+<div id="quiz-6.12" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.12<a href="autovalutazione.html#quiz-6.12" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Una moneta dà testa (T) con probabilità <span class="math inline">\(0.8\)</span>. Si lancia tante volte finché non esce T per la prima volta. I lanci sono indipendenti.
+La probabilità che ciò accada al quarto lancio è</p>
+<p>A. <span class="math inline">\(0.064\)</span></p>
+<p>B. <span class="math inline">\(0.144\)</span></p>
+<p>C. <span class="math inline">\(0.432\)</span></p>
+</div>
+<div id="quiz-6.13" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.13<a href="autovalutazione.html#quiz-6.13" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>L’evento <span class="math inline">\(A\)</span> contiene l’evento <span class="math inline">\(B\)</span>, cioè <span class="math inline">\(B \subset A\)</span> se</p>
+<p>A. il verificarsi di A implica il verificarsi di B</p>
+<p>B. il verificarsi di B implica il verificarsi di A</p>
+<p>C. il verificarsi di A implica il non verificarsi di B.</p>
+</div>
+<div id="quiz-6.14" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.14<a href="autovalutazione.html#quiz-6.14" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>La tabella seguente, a cui si riferiscono i tre quesiti che seguono, contiene la distribuzione di frequenza in classi del costo in euro dei libri economici stampati in italia nel 2019 (<em>La produzione libraria, Istat</em>):</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">classi di prezzo</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">(in euro)</td>
+<td></td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\((0, \, 2.5]\)</span></td>
+<td>0.026</td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\((2.5, \, 5]\)</span></td>
+<td>0.095</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\((5, \, 10]\)</span></td>
+<td>0.347</td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\((10, \, 20]\)</span></td>
+<td>0.532</td>
+</tr>
+<tr class="even">
+<td align="center">totale</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>Il valore “0.026” nella tabella è</p>
+<p>A. una modalità</p>
+<p>B. una frequenza assoluta</p>
+<p>C. una frequenza relativa</p>
+</div>
+<div id="quiz-6.15" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.15<a href="autovalutazione.html#quiz-6.15" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>La classe modale è</p>
+<p>A. <span class="math inline">\((2.5, \, 5]\)</span></p>
+<p>B. <span class="math inline">\((5, \, 10]\)</span></p>
+<p>C. <span class="math inline">\((10, \, 20]\)</span></p>
+</div>
+<div id="quiz-6.16" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.16<a href="autovalutazione.html#quiz-6.16" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>il costo medio dei libri economici stampati in Italia
+nel 2019 è</p>
+<p>A. <span class="math inline">\(8.74\)</span> euro</p>
+<p>B. <span class="math inline">\(6.25\)</span> euro</p>
+<p>C. <span class="math inline">\(10.97\)</span> euro</p>
+</div>
+<div id="quiz-6.17" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.17<a href="autovalutazione.html#quiz-6.17" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Sia <span class="math inline">\(X\)</span> una variabile aleatoria Binomiale con <span class="math inline">\(n = 500\)</span> e <span class="math inline">\(p = 0.42\)</span>. La probabilità <span class="math inline">\(P(X \leq 230)\)</span> è pari a</p>
+<p>A. <span class="math inline">\(0.9680\)</span></p>
+<p>B. <span class="math inline">\(0.5652\)</span></p>
+<p>C. <span class="math inline">\(0.0070\)</span></p>
+</div>
+<div id="quiz-6.18" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.18<a href="autovalutazione.html#quiz-6.18" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Un Paese è diviso in 3 regioni: <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> e <span class="math inline">\(C\)</span>. Nella regione <span class="math inline">\(A\)</span> c’è il <span class="math inline">\(49\%\)</span> della popolazione totale, nella regione <span class="math inline">\(B\)</span> il <span class="math inline">\(32\%\)</span> mentre nella regione <span class="math inline">\(C\)</span> il restante <span class="math inline">\(19\%\)</span>. E’ noto inoltre che nella regione <span class="math inline">\(A\)</span> il <span class="math inline">\(10\%\)</span> della popolazione è vaccinato per un determinato virus, nella regione <span class="math inline">\(B\)</span> è vaccinato il <span class="math inline">\(23\%\)</span> e nella regione <span class="math inline">\(C\)</span> è vaccinato il <span class="math inline">\(42\%\)</span>. Viene estratto casualmente un abitante del Paese, la probabilità che egli sia vaccinato per il suddetto virus è</p>
+<p>A. <span class="math inline">\(0.0927\)</span></p>
+<p>B. <span class="math inline">\(0.2500\)</span></p>
+<p>C. <span class="math inline">\(0.2024\)</span></p>
+</div>
+<div id="quiz-6.19" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.19<a href="autovalutazione.html#quiz-6.19" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Si considera un campione di <span class="math inline">\(n = 100\)</span> osservazioni sulle quali si rileva se hanno completato il ciclo vaccinale oppure no. Il risultato fornisce <span class="math inline">\(k=65\)</span> persone che hanno completato il ciclo e <span class="math inline">\(n-k=35\)</span> che non lo hanno ancora completato. L’intervallo di confidenza al 95% relativo al parametro <span class="math inline">\(p\)</span> = {percentuale di persone vaccinate nella popolazione} è</p>
+<p>A. <span class="math inline">\((0.63; 0.67)\)</span></p>
+<p>B. <span class="math inline">\((0.25; 0.87)\)</span></p>
+<p>C. <span class="math inline">\((0.55; 0.74)\)</span></p>
+</div>
+<div id="quiz-6.20" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.20<a href="autovalutazione.html#quiz-6.20" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Il carattere <span class="math inline">\(X\)</span>, è rilevato su due campioni A e B.
+Il campione A è formato da 4 osservazioni e fornisce una media pari a 5
+Il campione B è formato da 6 osservazioni e fornisce una media pari a 3
+La media complessiva è</p>
+<p>A. <span class="math inline">\(4\)</span>.</p>
+<p>B. <span class="math inline">\(3.8\)</span></p>
+<p>C. non è possibile fornire una risposta</p>
+</div>
+<div id="quiz-6.21" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.21<a href="autovalutazione.html#quiz-6.21" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Per un carattere quantitativo, la media aritmetica di <span class="math inline">\(n\)</span> rilevazioni:</p>
+<p>A. è tale che la somma degli scarti è nulla</p>
+<p>B. rende minima la somma degli scarti in valore assoluto</p>
+<p>C. assume un valore che è sempre maggiore della mediana</p>
+</div>
+<div id="quiz-6.22" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.22<a href="autovalutazione.html#quiz-6.22" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>3 individui entrano in una stanza con 6 sedie. In quanti modi si possono occupare i posti a sedere?</p>
+<p>A. 20</p>
+<p>B. 120</p>
+<p>C. 720</p>
+</div>
+<div id="quiz-6.23" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.23<a href="autovalutazione.html#quiz-6.23" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Più eventi sono una partizione dello spazio campionario se:</p>
+<p>A. sono indipendenti a coppie e la loro unione corrisponde allo spazio campionario</p>
+<p>B. sono incompatibili a coppie e la loro unione corrisponde allo spazio campionario</p>
+<p>C. sono incompatibili a coppie e la loro intersezione corrisponde allo spazio campionario</p>
+</div>
+<div id="quiz-6.24" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.24<a href="autovalutazione.html#quiz-6.24" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Data le due seguenti distribuzioni per unità A e B:
+<span class="math display">\[ A : 2 \quad  1 \quad  2 \quad  1 \quad  2 \quad  1\quad  2\quad  1\]</span>
+<span class="math display">\[ B : 6 \quad  3 \quad  6 \quad  3 \quad  6 \quad  3 \quad  6\quad  3\]</span>
+la varianze delle due distribuzioni sono</p>
+<p>A. Uguali</p>
+<p>B. La varianza di B è 3 volte quella di A perché ogni valore di B è 3 volte il corrispondente valore di A</p>
+<p>C. La varianza di B è 9 volte quella di A perché ogni valore di B è 3 volte il corrispondente valore di A</p>
+</div>
+<div id="quiz-6.25" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.25<a href="autovalutazione.html#quiz-6.25" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Sia <span class="math inline">\(X\)</span> una variabile casuale Normale con media 2 e varianza 9. La probabilità <span class="math inline">\(P(X &gt; 4)\)</span> è</p>
+<p>A. 0,2524</p>
+<p>B. 0,4121</p>
+<p>C. 0,7475</p>
+</div>
+<div id="quiz-6.26" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.26<a href="autovalutazione.html#quiz-6.26" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>La distribuzione di 100 clienti di un supermercato secondo il carattere “tempo trascorso nel supermercato” è</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Tempo</th>
+<th align="center">Clienti</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">(0; 30]</td>
+<td align="center">45</td>
+</tr>
+<tr class="even">
+<td align="center">(30; 60]</td>
+<td align="center">30</td>
+</tr>
+<tr class="odd">
+<td align="center">(60; 120]</td>
+<td align="center">25</td>
+</tr>
+</tbody>
+</table>
+<p>Il nono decile del carattere è</p>
+<p>A. 60</p>
+<p>B. 90</p>
+<p>C. 96</p>
+</div>
+<div id="quiz-6.27" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.27<a href="autovalutazione.html#quiz-6.27" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Un negozio espone 78 magliette. La seguente tabella riporta le distribuzioni di frequenze congiunte dei caratteri <span class="math inline">\(X\)</span> = “colore” e <span class="math inline">\(Y\)</span> = “taglia”</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><strong>X / Y</strong></th>
+<th align="center">S</th>
+<th align="center">M</th>
+<th align="center">L</th>
+<th align="center">XL</th>
+<th align="center">Totale</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><strong>Rosso</strong></td>
+<td align="center">6</td>
+<td align="center">8</td>
+<td align="center">3</td>
+<td align="center">6</td>
+<td align="center">23</td>
+</tr>
+<tr class="even">
+<td align="center"><strong>Giallo</strong></td>
+<td align="center">3</td>
+<td align="center">4</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">10</td>
+</tr>
+<tr class="odd">
+<td align="center"><strong>Blu</strong></td>
+<td align="center">12</td>
+<td align="center">15</td>
+<td align="center">5</td>
+<td align="center">13</td>
+<td align="center">45</td>
+</tr>
+<tr class="even">
+<td align="center"><strong>Totale</strong></td>
+<td align="center">21</td>
+<td align="center">27</td>
+<td align="center">9</td>
+<td align="center">21</td>
+<td align="center">78</td>
+</tr>
+</tbody>
+</table>
+<p>i due caratteri</p>
+<p>A. sono indipendenti in distribuzione</p>
+<p>B. hanno un indice di dipendenza distributiva <span class="math inline">\(\psi\)</span> pari a 0,1977</p>
+<p>C. hanno un indice di dipendenza distributiva <span class="math inline">\(\psi\)</span> pari a 2,7242</p>
+</div>
+<div id="quiz-6.28" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.28<a href="autovalutazione.html#quiz-6.28" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Da un mazzo di 6 carte numerate da 1 a 6 si estraggono senza reinserimento 3 carte. La probabilità che escano le carte 1, 2, 3 in ordine è</p>
+<p>A. <span class="math inline">\(3! \times \frac{1}{6} \times \frac{1}{5} \times \frac{1}{4}\)</span></p>
+<p>B. <span class="math inline">\(\frac{1}{6} \times \frac{1}{6} \times \frac{1}{6}\)</span></p>
+<p>C. <span class="math inline">\(\frac{1}{6} \times \frac{1}{5} \times \frac{1}{4}\)</span></p>
+</div>
+<div id="quiz-6.29" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.29<a href="autovalutazione.html#quiz-6.29" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Se il coefficiente di correlazione tra due caratteri <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> è pari a -1</p>
+<p>A. i due caratteri sono indipendenti</p>
+<p>B. non è possibile perché il coefficiente di correlazione lineare assume solo valori positivi</p>
+<p>C. c’è una perfetta relazione lineare tra i due caratteri</p>
+</div>
+<div id="quiz-6.30" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.30<a href="autovalutazione.html#quiz-6.30" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Per un carattere quantitativo, se la media aritmetica è uguale alla mediana</p>
+<p>A. non si può concludere nulla circa la simmetria della distribuzione</p>
+<p>B. la distribuzione è simmetrica</p>
+<p>C. la distribuzione è asimmetrica</p>
+</div>
+<div id="quiz-6.31" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.31<a href="autovalutazione.html#quiz-6.31" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Sia <span class="math inline">\(X\)</span> un carattere quantitativo con deviazione standard <span class="math inline">\(\sigma_X\)</span>.
+Sia quindi <span class="math inline">\(Y = X \sqrt{k}\)</span>: allora la varianza di <span class="math inline">\(Y\)</span>, <span class="math inline">\(\sigma^2_Y\)</span>,</p>
+<p>A. è pari a <span class="math inline">\(k\, \sigma^2_X\)</span></p>
+<p>B. è uguale a <span class="math inline">\(\sigma_X\)</span></p>
+<p>C. è pari a <span class="math inline">\(k^2 \sigma_X\)</span></p>
+</div>
+<div id="quiz-6.32" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.32<a href="autovalutazione.html#quiz-6.32" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Di due eventi <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span>, sappiamo che <span class="math inline">\(P(A)=0.7\)</span> e <span class="math inline">\(P(B)=0.6\)</span>.
+Quale delle seguenti affermazioni è sicuramente sbagliata?</p>
+<p>A. <span class="math inline">\(P(A \cap B) = P(A)P(B)\)</span></p>
+<p>B. <span class="math inline">\(B \subset A\)</span></p>
+<p>C. <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> sono incompatibili</p>
+</div>
+<div id="quiz-6.33" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.33<a href="autovalutazione.html#quiz-6.33" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Una classe di studenti di Statistica è formata da 200 persone delle quali 120 sono donne. Ci sono inoltre 60 uomini che provengono da istituti tecnici. Ci sono poi in totale 90 studenti (uomini e donne) che non provengono da istituti tecnici.
+Se scegliamo uno studente a caso, la probabilità di selezionare un uomo è</p>
+<p>A. <span class="math inline">\(0.4\)</span></p>
+<p>B. <span class="math inline">\(0.3\)</span></p>
+<p>C. <span class="math inline">\(\frac{110}{200}\)</span></p>
+</div>
+<div id="quiz-6.34" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.34<a href="autovalutazione.html#quiz-6.34" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Con riferimento all’esercizio precedente, la probabilità di estrarre una donna che proviene da istituti tecnici è pari a</p>
+<p>A. <span class="math inline">\(0.6\)</span></p>
+<p>B. <span class="math inline">\(\frac{110}{200}\)</span></p>
+<p>C. <span class="math inline">\(0.25\)</span></p>
+</div>
+<div id="quiz-6.35" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.35<a href="autovalutazione.html#quiz-6.35" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Si consideri una variabile Normale di parametri <span class="math inline">\(\mu = 100\)</span> e <span class="math inline">\(\sigma^2 = 9\)</span>, il decimo percentile è pari a</p>
+<p>A. 90</p>
+<p>B. 96.16</p>
+<p>C. 88.46</p>
+</div>
+<div id="quiz-6.36" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.36<a href="autovalutazione.html#quiz-6.36" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A 10 studenti universitari viene chiesto il numero di esami superati in un anno.
+La distribuzione unitaria è la seguente:</p>
+<p><span class="math display">\[4\quad 0\quad 7\quad 1\quad 5\quad 5\quad 0\quad 2\quad 0\quad 12\]</span></p>
+<p>La <strong>mediana</strong> vale</p>
+<p>A. 5</p>
+<p>B. qualsiasi numero compreso nell’intervallo <span class="math inline">\((2,4)\)</span></p>
+<p>C. non esiste per <span class="math inline">\(n\)</span> pari</p>
+</div>
+<div id="quiz-6.37" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.37<a href="autovalutazione.html#quiz-6.37" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Con riferimento all’esercizio precedente, se alle informazioni fornite dai 10 studenti si aggiungono quelle di altri 20 studenti, la <strong>media aritmetica</strong> risulta pari a 5. Determinare la media del numero di esami superati dal secondo gruppo di 20 studenti.</p>
+<p>A. <span class="math inline">\(5.7\)</span></p>
+<p>B. <span class="math inline">\(5\)</span></p>
+<p>C. manca un’informazione</p>
+</div>
+<div id="quiz-6.38" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.38<a href="autovalutazione.html#quiz-6.38" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Un medico ha raccolto, su 159 pazienti depressi, la gravità della patologia e lo stato civile:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"></th>
+<th align="center"></th>
+<th align="center">stato civile</th>
+<th align="center"></th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><strong>livello depressivo</strong></td>
+<td align="center">sposato</td>
+<td align="center">celibe</td>
+<td align="center">vedovo</td>
+<td align="center">Totale</td>
+</tr>
+<tr class="even">
+<td align="center"><strong>grave</strong></td>
+<td align="center">22</td>
+<td align="center">16</td>
+<td align="center">19</td>
+<td align="center">57</td>
+</tr>
+<tr class="odd">
+<td align="center"><strong>medio</strong></td>
+<td align="center">33</td>
+<td align="center">29</td>
+<td align="center">14</td>
+<td align="center">76</td>
+</tr>
+<tr class="even">
+<td align="center"><strong>leggero</strong></td>
+<td align="center">14</td>
+<td align="center">9</td>
+<td align="center">3</td>
+<td align="center">26</td>
+</tr>
+<tr class="odd">
+<td align="center"><strong>Totale</strong></td>
+<td align="center">69</td>
+<td align="center">54</td>
+<td align="center">36</td>
+<td align="center">159</td>
+</tr>
+</tbody>
+</table>
+<p>Le seguenti tre domande si riferiscono a tale tabella</p>
+<p>La percentuale, tra i vedovi, di pazienti con livello depressivo grave è</p>
+<p>A. <span class="math inline">\(12\%\)</span></p>
+<p>B. <span class="math inline">\(52.8\%\)</span></p>
+<p>C. <span class="math inline">\(33.3\%\)</span></p>
+</div>
+<div id="quiz-6.39" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.39<a href="autovalutazione.html#quiz-6.39" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Il carattere <em>Livello depressivo</em> è</p>
+<p>A. qualitativo sconnesso</p>
+<p>B. qualitativo ordinato</p>
+<p>C. quantitativo discreto</p>
+</div>
+<div id="quiz-6.40" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.40<a href="autovalutazione.html#quiz-6.40" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>L’indice più opportuno per calcolare una eventuale associazione tra i due caratteri è</p>
+<p>A. il coefficiente di correlazione lineare <span class="math inline">\(r\)</span></p>
+<p>B. Gli indici <span class="math inline">\(\chi^2\)</span> o <span class="math inline">\(\psi\)</span></p>
+<p>C. il rapporto di correlazione <span class="math inline">\(g\)</span> di Gini.</p>
+</div>
+<div id="quiz-6.41" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.41<a href="autovalutazione.html#quiz-6.41" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Per un carattere quantitativo, la media aritmetica di <span class="math inline">\(n\)</span> rilevazioni:</p>
+<p>A. rende minima la somma degli scarti in valore assoluto</p>
+<p>B. è tale che la somma dei quadrati degli scarti è nulla</p>
+<p>C. assume un valore che è sempre compreso tra le modalità minima e massima</p>
+</div>
+<div id="quiz-6.42" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.42<a href="autovalutazione.html#quiz-6.42" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Una moneta dà testa (T) con probabilità <span class="math inline">\(0.4\)</span>. Si lancia tante volte finché non esce T per la prima volta. I lanci sono indipendenti.
+La probabilità che ciò accada al terzo lancio è</p>
+<p>A. <span class="math inline">\(0.064\)</span></p>
+<p>B. <span class="math inline">\(0.144\)</span></p>
+<p>C. <span class="math inline">\(0.432\)</span></p>
+</div>
+<div id="quiz-6.43" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.43<a href="autovalutazione.html#quiz-6.43" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Due eventi si dicono incompatibili se:</p>
+<p>A. il verificarsi di uno implica il non verificarsi dell’altro</p>
+<p>B. il verificarsi di uno implica il verificarsi dell’altro</p>
+<p>C. il verificarsi di uno non fornisce informazioni circa il verificarsi o meno dell’altro.</p>
+</div>
+<div id="quiz-6.44" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.44<a href="autovalutazione.html#quiz-6.44" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Data le due seguenti distribuzioni per unità A e B:
+<span class="math display">\[ A : 2 \quad  0 \quad  2 \quad  0 \quad  2 \quad  0\quad  2\quad  0\]</span>
+<span class="math display">\[ B : 1 \quad  -1 \quad  1 \quad  -1 \quad  1 \quad  -1 \quad  1\quad  -1\]</span>
+la varianze delle due distribuzioni sono</p>
+<p>A. Uguali</p>
+<p>B. La varianza di A è maggiore perché ogni valore di A è maggiore del corrispondente valore di B</p>
+<p>C. La varianza di B è maggiore perché ci sono valori positivi e negativi.</p>
+</div>
+<div id="quiz-6.45" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.45<a href="autovalutazione.html#quiz-6.45" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Sia <span class="math inline">\(X\)</span> una variabile casuale Normale con media 3 e varianza 4. L’87-esimo percentile di <span class="math inline">\(X\)</span> è</p>
+<p>A. 1</p>
+<p>B. 5.25</p>
+<p>C. 7.50</p>
+</div>
+<div id="quiz-6.46" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.46<a href="autovalutazione.html#quiz-6.46" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>La distribuzione di 520 studenti secondo il carattere `` è</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Esami</th>
+<th align="center">Studenti</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">0</td>
+<td align="center">50</td>
+</tr>
+<tr class="even">
+<td align="center">1</td>
+<td align="center">100</td>
+</tr>
+<tr class="odd">
+<td align="center">2</td>
+<td align="center">160</td>
+</tr>
+<tr class="even">
+<td align="center">3</td>
+<td align="center">120</td>
+</tr>
+<tr class="odd">
+<td align="center">4</td>
+<td align="center">80</td>
+</tr>
+<tr class="even">
+<td align="center">5</td>
+<td align="center">10</td>
+</tr>
+</tbody>
+</table>
+<p>La mediana del carattere è</p>
+<p>A. 2</p>
+<p>B. 3</p>
+<p>C. 2.5</p>
+</div>
+<div id="quiz-6.47" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.47<a href="autovalutazione.html#quiz-6.47" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Su 4 famiglie di 2 componenti si misurano il reddito di Febbraio (X) e le relative spese per l’alimentazione (Y).</p>
+<p><span class="math inline">\(X: \quad 1500 \quad 1700 \quad 1400 \quad 1600\)</span></p>
+<p><span class="math inline">\(Y: \quad 200 \quad 350 \quad 150 \quad 300\)</span></p>
+<p>Il coefficiente di correlazione è</p>
+<p>A. -0.978</p>
+<p>B. 8750</p>
+<p>C. 0.989</p>
+</div>
+<div id="quiz-6.48" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.48<a href="autovalutazione.html#quiz-6.48" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Da un’urna con 1 pallina Blu e 9 palline Nere, si estraggono 2 palline senza reinserimento. La probabilità di estrarre due palline Blu è:</p>
+<p>A. 0</p>
+<p>B. <span class="math inline">\(\frac{1}{10} \times \frac{9}{10} + \frac{1}{9} \times \frac{1}{10}\)</span></p>
+<p>C. <span class="math inline">\(\frac{1}{10} \times \frac{1}{9}\)</span>.</p>
+</div>
+<div id="quiz-6.49" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.49<a href="autovalutazione.html#quiz-6.49" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Nel modello di regressione lineare <span class="math inline">\(Y_i= \beta_0 + \beta_1 x_i\)</span>, il coefficiente <span class="math inline">\(\beta_0\)</span> è interpretato come</p>
+<p>A. La differenza tra le medie osservate di <span class="math inline">\(Y\)</span> e di <span class="math inline">\(X\)</span></p>
+<p>B. il valore della variabile risposta quando la variabile esplicativa <span class="math inline">\(X\)</span> assume il valore zero.</p>
+<p>C. il rapporto tra la codevianza tra X e Y e la devianza di X.</p>
+</div>
+<div id="quiz-6.50" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.50<a href="autovalutazione.html#quiz-6.50" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Per un carattere qualitativo sconnesso, la moda di <span class="math inline">\(n\)</span> rilevazioni :</p>
+<p>A. rappresenta la massima frequenza osservata</p>
+<p>B. è tale che la somma dei valori assoluti degli scarti è nulla</p>
+<p>C. rappresenta la modalità che si presenta più frequentemente nel collettivo.</p>
+</div>
+<div id="quiz-6.51" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.51<a href="autovalutazione.html#quiz-6.51" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Le prossime tre domande fanno riferimento ai seguenti dati. Considerato un collettivo di 290 studenti sia <span class="math inline">\(Y\)</span> il voto preso all’esame di statistica e <span class="math inline">\(X\)</span> la modalità con cui è stato sostenuto l’esame. Il carattere <span class="math inline">\(Y\)</span> è espresso in classi <span class="math inline">\(y_1=18-21, y_2=22-26, y_3=27-30\)</span>. Le modalità di <span class="math inline">\(X\)</span> sono <span class="math inline">\(x_1=\)</span> in presenza, <span class="math inline">\(x_2=\)</span> on line. La frequenza relativa degli studenti che hanno sostenuto l’esame on line è pari a 0.483
+Le distribuzioni delle frequenze condizionate relative di <span class="math inline">\(Y\)</span> dato <span class="math inline">\(x_1\)</span> e <span class="math inline">\(x_2\)</span> sono</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(y_i\)</span></th>
+<th align="center"><span class="math inline">\(f_{y_i|x_1}\)</span></th>
+<th align="center"><span class="math inline">\(f_{y_i|x_2}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\(y_1\)</span></td>
+<td align="center">0.600</td>
+<td align="center">0.571</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(y_2\)</span></td>
+<td align="center">0.267</td>
+<td align="center">0.357</td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(y_3\)</span></td>
+<td align="center">0.133</td>
+<td align="center">0.071</td>
+</tr>
+</tbody>
+</table>
+<p>Il numero assoluto di studenti che hanno sostenuto l’esame in presenza e hanno preso un voto tra 27 e 30 è</p>
+<p>A. 30</p>
+<p>B. 20</p>
+<p>C. Non si hanno informazioni sufficienti per calcolarlo</p>
+</div>
+<div id="quiz-6.52" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.52<a href="autovalutazione.html#quiz-6.52" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Il numero di studenti che avrebbero sostenuto l’esame in presenza prendendo un voto tra 27 e 30 nel caso in cui <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> fossero stati indipendenti è</p>
+<p>A. 15.5</p>
+<p>B. 0</p>
+<p>C. 20</p>
+</div>
+<div id="quiz-6.53" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.53<a href="autovalutazione.html#quiz-6.53" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Il valore dell’indice <span class="math inline">\(\chi^2\)</span> è<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a></p>
+<p>A. 0</p>
+<p>B. 0.096</p>
+<p>C. 4.693</p>
+</div>
+<div id="quiz-6.54" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.54<a href="autovalutazione.html#quiz-6.54" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Sia <span class="math inline">\(X\)</span> una variabile casuale normale con media <span class="math inline">\(\mu\)</span> e varianza 4 e <span class="math inline">\(Y\)</span> un’altra variabile casuale con la stessa media <span class="math inline">\(\mu\)</span> e varianza 2. Siano <span class="math inline">\(x_{0.975}\)</span> e <span class="math inline">\(y_{0.975}\)</span> i quantili di livello 0.975 di <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span></p>
+<p>A. <span class="math inline">\(x_{0.975}&gt;y_{0.975}\)</span></p>
+<p>B. <span class="math inline">\(x_{0.975}&lt;y_{0.975}\)</span></p>
+<p>C. Non si può dre quale dei quantili è più grande in quanto non conosciamo <span class="math inline">\(\mu\)</span></p>
+</div>
+<div id="quiz-6.55" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.55<a href="autovalutazione.html#quiz-6.55" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Sia <span class="math inline">\(X\)</span> una variabile casuale Normale con media <span class="math inline">\(\mu\)</span> e varianza <span class="math inline">\(1\)</span>. La probabilità <span class="math inline">\(P(X \leq 4)\)</span></p>
+<p>A. aumenta al all’aumentare di <span class="math inline">\(\mu\)</span></p>
+<p>B. diminuisce all’aumentare di <span class="math inline">\(\mu\)</span></p>
+<p>C. Non cambia al variare di <span class="math inline">\(\mu\)</span></p>
+</div>
+<div id="quiz-6.56" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.56<a href="autovalutazione.html#quiz-6.56" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>La probabilità che un giocatore di basket segni un tiro libero dalla lunetta è 0.8. Assumendo che i tiri liberi siano tra loro indipendenti, la probabilità che su tre tiri almeno uno vada a canestro è</p>
+<p>A. 0.8</p>
+<p>B. 0.992</p>
+<p>C. 0.008</p>
+</div>
+<div id="quiz-6.57" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.57<a href="autovalutazione.html#quiz-6.57" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Si lancia un dado. Se esce uno si pesca una pallina da un’urna con una pallina bianca e una nera altrimenti si pesca una pallina da un`urna con novantanove palline nere e una bianca. Hai pescato una pallina bianca, la probabilità che il dado abbia dato uno è</p>
+<p>A. 1/6</p>
+<p>B. maggiore di un 1/6</p>
+<p>C. minore di 1/6</p>
+</div>
+<div id="quiz-6.58" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.58<a href="autovalutazione.html#quiz-6.58" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Se il coefficiente di correlazione tra le variabili <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> è pari a <span class="math inline">\(0\)</span></p>
+<p>A. le variabili <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> non variano</p>
+<p>B. le variabili <span class="math inline">\(X\)</span> ed <span class="math inline">\(Y\)</span> sono indipendenti</p>
+<p>C. nessuna delle risposte precedenti è corretta</p>
+</div>
+<div id="quiz-6.59" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.59<a href="autovalutazione.html#quiz-6.59" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>La varianza della somma di due variabili</p>
+<p>A. è uguale alla somma delle varianze delle singole variabili</p>
+<p>B. dipende dalla covarianza tra le due variabili</p>
+<p>C. è sempre maggiore della somma delle varianze delle singole variabili</p>
+</div>
+<div id="quiz-6.60" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.60<a href="autovalutazione.html#quiz-6.60" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Se la funzione di densità <span class="math inline">\(f\)</span> della variabile casuale <span class="math inline">\(X\)</span> è stale che <span class="math inline">\(f(x) = f(-x)\)</span> per ogni <span class="math inline">\(x\)</span> del supporto</p>
+<p>A. la distribuzione è simmetrica</p>
+<p>B. la variabile si distribuisce come una Normale</p>
+<p>C. il valore atteso della variabile è maggiore della mediana</p>
+</div>
+<div id="quiz-6.61" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.61<a href="autovalutazione.html#quiz-6.61" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Sia <span class="math inline">\(X\)</span> un carattere quantitativo. La funzione di ripartizione <span class="math inline">\(F(x)\)</span> indica</p>
+<p>A. la densità di frequenza delle osservazioni con modalità minore o uguale a <span class="math inline">\(x\)</span></p>
+<p>B. la frequenza relativa delle osservazioni del collettivo con modalità magiore di <span class="math inline">\(x\)</span></p>
+<p>C. la frequenza relativa delle osservazioni del collettivo con modalità minore o uguale a <span class="math inline">\(x\)</span></p>
+</div>
+<div id="quiz-6.62" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.62<a href="autovalutazione.html#quiz-6.62" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Su un collettivo di 100 studenti iscritti al primo anno, alla fine del primo semestre, è stato rilevato il numero di esami superati. Sappiamo che meno della metà degli studenti ha superato almeno un esame</p>
+<p>A. La mediana è maggiore del primo quartile</p>
+<p>B. La mediana è maggiore della media</p>
+<p>C. La mediana e il primo quartile coincidono</p>
+</div>
+<div id="quiz-6.63" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.63<a href="autovalutazione.html#quiz-6.63" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Hai due mazzi da 40 carte italiane e estrai una carta dal primo mazzo e la metti nel secondo e poi estrai una carta anche dal secondo mazzo. La probabilità che le due carte estratte siano due assi è</p>
+<p>A. <span class="math inline">\(5/410\)</span></p>
+<p>B. <span class="math inline">\(1/100\)</span></p>
+<p>C. <span class="math inline">\(1/10\)</span></p>
+</div>
+<div id="quiz-6.64" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.64<a href="autovalutazione.html#quiz-6.64" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Un’urna contiene 10 palline rosse, 6 palline bianche e 4 palline nere. La probabilità di estrarre una pallina rossa oppure una pallina nera è</p>
+<p>A. <span class="math inline">\(1/2+1/5\)</span></p>
+<p>B. <span class="math inline">\(1/2+1/5-1/10\)</span></p>
+<p>C. <span class="math inline">\(1/10\)</span></p>
+</div>
+<div id="quiz-6.65" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.65<a href="autovalutazione.html#quiz-6.65" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Su un collettivo di 100 famiglie sono state rilevate due variabili <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> ed è stata calcolata la retta di regressione <span class="math inline">\(y=b_0+b_1x\)</span>. La somma dei residui <span class="math inline">\((y_i-\hat{y}_i)\)</span> elevati al quadrato risulta 1250, la varianza di <span class="math inline">\(Y\)</span> risulta 15 e la varianza di <span class="math inline">\(X\)</span> è 20. L’indice <span class="math inline">\(R^2\)</span> risulta</p>
+<p>A. 0.833</p>
+<p>B. 0.167</p>
+<p>C. 0.625</p>
+<p>D. Non si può calcolare</p>
+</div>
+<div id="quiz-6.66" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.66<a href="autovalutazione.html#quiz-6.66" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Si consideri la distribuzione del carattere <span class="math inline">\(X\)</span> = “reddito di una popolazione”.
+Il governo decide di imporre un’imposta ai cittadini con un reddito superiore a 30mila euro al fine di fornire della sussistenza ai cittadini con un reddito inferiore a 5000 euro.
+In tal caso la concentrazione di X:</p>
+<p>A. aumenta</p>
+<p>B. diminuisce</p>
+<p>C. non cambia</p>
+<p>D. Non si può rispondere senza avere i veri valori della distribuzione</p>
+</div>
+<div id="quiz-6.67" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.67<a href="autovalutazione.html#quiz-6.67" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Una distribuzione statistica, per unità, <span class="math inline">\(a_1, a_2, \dots a_n\)</span>, dopo l’operazione di standardizzazione dei valori,</p>
+<p>A. è composta da soli valori positivi</p>
+<p>B. è composta solo da valori nell’intervallo <span class="math inline">\((0,1)\)</span>.</p>
+<p>C. Non si può rispondere senza avere i veri valori della distribuzione</p>
+<p>D. nessuna delle altre risposte è vera</p>
+</div>
+<div id="quiz-6.68" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.68<a href="autovalutazione.html#quiz-6.68" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Un numero indice è il rapporto tra due valori dello stesso fenomeno osservato in due tempi diversi. Pertanto,</p>
+<p>A. il suo valore dipende dall’unità di misura con cui si misura il fenomeno</p>
+<p>C. è sempre maggiore di 1</p>
+<p>D. nessuna delle altre risposte è vera</p>
+</div>
+<div id="quiz-6.69" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.69<a href="autovalutazione.html#quiz-6.69" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Si compra un bene, che costa normalmente 100 euro, in saldo con uno sconto del 20%.
+Dopo una settimana lo si rivende aggiungendo un 20% al prezzo di acquisto.
+Il guadagno netto dell’operazione è</p>
+<p>A. <span class="math inline">\(0\)</span> euro</p>
+<p>B. <span class="math inline">\(-4\)</span> euro</p>
+<p>C. <span class="math inline">\(2\)</span> euro</p>
+</div>
+<div id="quiz-6.70" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.70<a href="autovalutazione.html#quiz-6.70" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Ho cinque libri numerati da 1 a 5.
+I modi di ordinarli su una mensola sono</p>
+<p>A. <span class="math inline">\(120\)</span></p>
+<p>B. <span class="math inline">\(\binom{5}{2}\)</span></p>
+<p>D. <span class="math inline">\(5^2\)</span></p>
+</div>
+<div id="quiz-6.71" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.71<a href="autovalutazione.html#quiz-6.71" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Se l’evento <span class="math inline">\(A\)</span> è implicato dall’evento <span class="math inline">\(B\)</span>, allora</p>
+<p>A. <span class="math inline">\(B \subset A\)</span></p>
+<p>B. <span class="math inline">\(A \subset B\)</span></p>
+<p>C. <span class="math inline">\(A \cup B = B\)</span></p>
+</div>
+<div id="quiz-6.72" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.72<a href="autovalutazione.html#quiz-6.72" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Si hanno due monete. La prima moneta dà testa (T) con probabilità <span class="math inline">\(0.8\)</span>. La seconda moneta dà T con probabilità <span class="math inline">\(0.4\)</span>.
+La probabilità di avere almeno una <span class="math inline">\(T\)</span> lanciando entrambe le monete è</p>
+<p>A. <span class="math inline">\(0.88\)</span></p>
+<p>B. <span class="math inline">\(0.12\)</span></p>
+<p>C. <span class="math inline">\(0.48\)</span></p>
+</div>
+<div id="quiz-6.73" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.73<a href="autovalutazione.html#quiz-6.73" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Il <span class="math inline">\(9\%\)</span> della popolazione italiana è <em>mancina</em>.
+Qual è la probabilità che, scegliendo due persone caso dalla popolazione italiana almeno una delle due sia mancina?</p>
+<p>A. <span class="math inline">\(0.081\)</span></p>
+<p>B. <span class="math inline">\(0.172\)</span></p>
+<p>C. <span class="math inline">\(0.180\)</span></p>
+</div>
+<div id="quiz-6.74" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.74<a href="autovalutazione.html#quiz-6.74" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Il professore di italiano al liceo, quando interroga, sceglie a caso gli studenti da ascoltare. Tu sei
+in una classe di 15 studenti, e oggi il professore ne interroga tre.
+La probabilità di non essere interrogato è</p>
+<p>A. 0.32</p>
+<p>B. 0.20</p>
+<p>C. 0.80</p>
+</div>
+<div id="quiz-6.75" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.75<a href="autovalutazione.html#quiz-6.75" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>I seguenti numeri indicano il valore di un euro espresso in dollari
+all’inizio degli ultimi sei trimestri</p>
+<table>
+<colgroup>
+<col width="16%" />
+<col width="16%" />
+<col width="17%" />
+<col width="17%" />
+<col width="16%" />
+<col width="16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Aprile 20</th>
+<th align="center">Luglio 20</th>
+<th align="center">Ottobre 20</th>
+<th align="center">Gennaio 21</th>
+<th align="center">Aprile 21</th>
+<th align="center">Luglio 21</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1.12</td>
+<td align="center">1.20</td>
+<td align="center">1.13</td>
+<td align="center">1.04</td>
+<td align="center">1.08</td>
+<td align="center">1.16</td>
+</tr>
+</tbody>
+</table>
+<p>La variazione percentuale di valore in un anno, dal luglio 20 al luglio 21 è stata del</p>
+<p>A. 12%</p>
+<p>B. -4%</p>
+<p>C. -3.33%</p>
+</div>
+<div id="quiz-6.76" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.76<a href="autovalutazione.html#quiz-6.76" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Con riferimento ai dati precedenti il numero indice relativo ad aprile 2021 con base luglio 20 è</p>
+<p>A. 0.4</p>
+<p>B. 0.9</p>
+<p>C. 1.11</p>
+</div>
+<div id="quiz-6.77" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.77<a href="autovalutazione.html#quiz-6.77" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>La distribuzione delle altezze degli italiani maschi adulti è Normale con media pari 178 cm e una deviazione standard pari a 8 cm. Francesco si trova al 45-esimo percentile. Quanto è alto Francesco?</p>
+<p>A. <span class="math inline">\(177\)</span></p>
+<p>B. <span class="math inline">\(181.5\)</span></p>
+<p>C. <span class="math inline">\(177.65\)</span></p>
+</div>
+<div id="quiz-6.78" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.78<a href="autovalutazione.html#quiz-6.78" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>La media aritmetica</p>
+<p>A. è il valore che minimizza la somma degli scarti quadratici da un generico valore, cioè rappresenta il centro di ordine 2 di una distribuzione</p>
+<p>B. è il punto equidistante da tutti i valori della distribuzione</p>
+<p>C. è sempre maggiore o uguale della mediana della stessa distribuzione.</p>
+</div>
+<div id="quiz-6.79" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.79<a href="autovalutazione.html#quiz-6.79" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Se nel calcolo dei coefficienti della retta di regressione di Y su X, risulta che il coefficiente angolare <span class="math inline">\(\beta_1\)</span> è pari a zero, questo implica</p>
+<p>A. che il coefficiente di correlazione lineare è pari a zero</p>
+<p>B. le due variabili X e Y sono indipendenti</p>
+<p>C. le precedenti risposte sono entrambe sbagliate: dipende infatti dal valore dell’intercetta di <span class="math inline">\(\beta_0\)</span></p>
+</div>
+<div id="quiz-6.80" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.80<a href="autovalutazione.html#quiz-6.80" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Il carattere <span class="math inline">\(X\)</span>, è rilevato su due collettivi A e B.
+Il campione A è formato da 5 osservazioni e fornisce una media pari a 2
+Il campione B è formato da 10 osservazioni e fornisce una media pari a 1.
+La media complessiva è</p>
+<p>A. <span class="math inline">\(1.5\)</span>.</p>
+<p>B. <span class="math inline">\(1.33\)</span></p>
+<p>C. <span class="math inline">\(1.8\)</span></p>
+</div>
+<div id="quiz-6.81" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.81<a href="autovalutazione.html#quiz-6.81" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Per un carattere quantitativo, la media aritmetica di <span class="math inline">\(n\)</span> rilevazioni:</p>
+<p>A. è tale che la somma degli scarti in valore assoluto è nulla</p>
+<p>B. se è uguale alla mediana allora la distribuzione del carattere è simmetrica</p>
+<p>C. rende minima la somma degli scarti al quadrato</p>
+</div>
+<div id="quiz-6.82" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.82<a href="autovalutazione.html#quiz-6.82" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Due eventi si dicono indipendenti se:</p>
+<p>A. il verificarsi di uno implica il verificarsi dell’altro</p>
+<p>B. il verificarsi di uno non fornisce informazioni circa la probabilità sul verificarsi o meno dell’altro</p>
+<p>C. il verificarsi di uno implica il non verificarsi dell’altro</p>
+</div>
+<div id="quiz-6.83" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.83<a href="autovalutazione.html#quiz-6.83" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Nel modello di regressione lineare <span class="math inline">\(Y_i= \beta_0 + \beta_1 x_i\)</span>, il coefficiente <span class="math inline">\(\beta_1\)</span> è interpretato come</p>
+<p>A. la variazione media di <span class="math inline">\(Y\)</span> all’incremento unitario di <span class="math inline">\(X\)</span> %</p>
+<p>B. il valore della variabile risposta quando la variabile esplicativa <span class="math inline">\(X\)</span> assume il valore zero</p>
+<p>C. la differenza tra le medie osservate di <span class="math inline">\(Y\)</span> e di <span class="math inline">\(X\)</span></p>
+</div>
+<div id="quiz-6.84" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.84<a href="autovalutazione.html#quiz-6.84" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Data le due seguenti distribuzioni per unità A e B:
+<span class="math display">\[ A : 2 \quad  1 \quad  2 \quad  1 \quad  2 \quad  1\quad  2\quad  1\]</span>
+<span class="math display">\[ B : 6 \quad  5 \quad  6 \quad  5 \quad  6 \quad  5 \quad  6\quad  5\]</span></p>
+<p>A. la deviazione standard di B è 4 volte quella di A perché ogni valore di B è 4 volte superiore il corrispondente valore di A</p>
+<p>B. la deviazione standard di B è 16 volte quella di A perché ogni valore di B è 4 volte superiore il corrispondente valore di A</p>
+<p>C. le deviazioni standard delle due distribuzioni sono uguali</p>
+</div>
+<div id="quiz-6.85" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.85<a href="autovalutazione.html#quiz-6.85" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Per un carattere quantitativo in una distribuzione di valori, la mediana di <span class="math inline">\(n\)</span> rilevazioni:</p>
+<p>A. se <span class="math inline">\(n\)</span> è dispari è il valore centrale della graduatoria dei valori ordinati %</p>
+<p>B. rappresenta la modalità che si presenta più frequentemente nel collettivo</p>
+<p>C. rappresenta la massima frequenza osservata</p>
+</div>
+<div id="quiz-6.86" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.86<a href="autovalutazione.html#quiz-6.86" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Sia <span class="math inline">\(X\)</span> una variabile casuale Normale con media 6 e deviazione standard 2. La probabilità <span class="math inline">\(P(X \leq 4)\)</span> è</p>
+<p>A. 0,1587</p>
+<p>B. 0,3085</p>
+<p>C. 0,8413</p>
+</div>
+<div id="quiz-6.87" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.87<a href="autovalutazione.html#quiz-6.87" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Il tasso di natalità (nati nell’anno diviso popolazione residente nello stesso anno) è un rapporto di</p>
+<p>A. composizione</p>
+<p>B. derivazione</p>
+<p>C. densità</p>
+</div>
+<div id="quiz-6.88" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.88<a href="autovalutazione.html#quiz-6.88" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Si lanciano insieme un D4 (dado regolare a 4 facce numerate da 1 a 4) e un D20 (dado regolare a 20 facce numerate da 1 a 20). La probabilità che esca la coppia di valori 3 e 12 è</p>
+<p>A. <span class="math inline">\(2 \times \frac{1}{4} \times \frac{1}{20}\)</span></p>
+<p>B. <span class="math inline">\(\frac{1}{4} \times \frac{1}{20}\)</span></p>
+<p>C. <span class="math inline">\(\frac{1}{4} \times \frac{1}{20} + \frac{1}{4}\)</span></p>
+</div>
+<div id="quiz-6.89" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.89<a href="autovalutazione.html#quiz-6.89" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Siano <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> due caratteri quantitativi, la seguente tabella riporta la distribuzione congiunta di frequenze</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><strong>X / Y</strong></th>
+<th align="center"><strong>10</strong></th>
+<th align="center"><strong>20</strong></th>
+<th align="center"><strong>30</strong></th>
+<th align="center"><strong>40</strong></th>
+<th align="center"><strong>Totale</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><strong>1</strong></td>
+<td align="center">2</td>
+<td align="center">6</td>
+<td align="center">4</td>
+<td align="center">10</td>
+<td align="center">22</td>
+</tr>
+<tr class="even">
+<td align="center"><strong>2</strong></td>
+<td align="center">5</td>
+<td align="center">15</td>
+<td align="center">10</td>
+<td align="center">25</td>
+<td align="center">55</td>
+</tr>
+<tr class="odd">
+<td align="center"><strong>3</strong></td>
+<td align="center">10</td>
+<td align="center">30</td>
+<td align="center">20</td>
+<td align="center">50</td>
+<td align="center">110</td>
+</tr>
+<tr class="even">
+<td align="center"><strong>Totale</strong></td>
+<td align="center">17</td>
+<td align="center">51</td>
+<td align="center">34</td>
+<td align="center">85</td>
+<td align="center">187</td>
+</tr>
+</tbody>
+</table>
+<p>il coefficiente di correlazione tra i due caratteri è</p>
+<p>A. -1,3</p>
+<p>B. 0</p>
+<p>C. 0,76</p>
+</div>
+<div id="quiz-6.90" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.90<a href="autovalutazione.html#quiz-6.90" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Se l’indice di concentrazione di Gini è pari a 1</p>
+<p>A. tutte le osservazioni assumono lo stesso valore</p>
+<p>B. c’è una perfetta relazione lineare tra i due caratteri</p>
+<p>C. tutte le osservazioni sono pari a <span class="math inline">\(0\)</span> ad eccezione di una che è pari a <span class="math inline">\(T&gt;0\)</span></p>
+</div>
+<div id="quiz-6.91" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.91<a href="autovalutazione.html#quiz-6.91" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Si considerino le seguenti 8 osservazioni del carattere <span class="math inline">\(X\)</span>: <span class="math display">\[2,\quad 3,\quad 3,\quad 4,\quad 5,\quad 5,\quad 5,\quad 7\]</span>.</p>
+<p>La moda di <span class="math inline">\(X\)</span> è</p>
+<p>A. <span class="math inline">\(3\)</span></p>
+<p>B. <span class="math inline">\(5\)</span></p>
+<p>C. <span class="math inline">\(7\)</span></p>
+</div>
+<div id="quiz-6.92" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.92<a href="autovalutazione.html#quiz-6.92" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>L’indice di Gini del reddito <span class="math inline">\(Y\)</span> di una popolazione è pari a <span class="math inline">\(0.34\)</span>. Viene imposta una tassa del <span class="math inline">\(20\%\)</span> al reddito di ogni individuo della popolazione, il nuovo indice di Gini è pari a</p>
+<p>A. <span class="math inline">\(0.14\)</span></p>
+<p>B. <span class="math inline">\(0.34\)</span></p>
+<p>C. non è possibile calcolarlo se non sono note le singole osservazioni.</p>
+</div>
+<div id="quiz-6.93" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.93<a href="autovalutazione.html#quiz-6.93" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Si considerino le seguenti <span class="math inline">\(5\)</span> osservazioni dei caratteri <span class="math inline">\(X\)</span> ed <span class="math inline">\(Y\)</span></p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><strong><span class="math inline">\(i\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(x_i\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(y_i\)</span></strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\(1\)</span></td>
+<td align="center"><span class="math inline">\(0.64\)</span></td>
+<td align="center"><span class="math inline">\(11.43\)</span></td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(2\)</span></td>
+<td align="center"><span class="math inline">\(3.49\)</span></td>
+<td align="center"><span class="math inline">\(14.68\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(3\)</span></td>
+<td align="center"><span class="math inline">\(5.14\)</span></td>
+<td align="center"><span class="math inline">\(19.35\)</span></td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(4\)</span></td>
+<td align="center"><span class="math inline">\(5.16\)</span></td>
+<td align="center"><span class="math inline">\(20.08\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(5\)</span></td>
+<td align="center"><span class="math inline">\(7.35\)</span></td>
+<td align="center"><span class="math inline">\(25.72\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Dato il modello lineare <span class="math inline">\(Y = \beta_0 + \beta_1 X\)</span>, le stime dei due parametri incogniti sono</p>
+<p>A. <span class="math inline">\(b_0 = 2.14,\; b_1 = 9.54\)</span></p>
+<p>B. <span class="math inline">\(b_0 = -9.54,\; b_1 = 2.14\)</span></p>
+<p>C. <span class="math inline">\(b_0 = 9.54,\; b_1 = 2.14\)</span></p>
+</div>
+<div id="quiz-6.94" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.94<a href="autovalutazione.html#quiz-6.94" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Con riferimento alla domanda precedente, il coefficiente di correlazione vale</p>
+<p>A. 0.95</p>
+<p>B. 0.98</p>
+<p>C. 11</p>
+</div>
+<div id="quiz-6.95" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.95<a href="autovalutazione.html#quiz-6.95" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Siano <span class="math inline">\(A\)</span> e <span class="math inline">\(B\)</span> due eventi. Allora</p>
+<p>A. <span class="math inline">\(P(\overline{A \cap B}) = P(\overline{A}) \cdot P(\overline{B}) - P(\overline{A}\cap \overline{B})\)</span></p>
+<p>B. <span class="math inline">\(P(\overline{A \cap B}) = P(\overline{A}) + P(\overline{B}) - P(\overline{A}\cap \overline{B})\)</span></p>
+<p>C. <span class="math inline">\(P(\overline{A \cap B}) = P(\overline{A}) + P(\overline{B}) - P(\overline{A}) \cdot P(\overline{B})\)</span></p>
+</div>
+<div id="quiz-6.96" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.96<a href="autovalutazione.html#quiz-6.96" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Si considerino le seguenti 5 osservazioni del carattere <span class="math inline">\(X\)</span>: <span class="math display">\[1,\quad 4,\quad 6,\quad 8,\quad 9\]</span>.</p>
+<p>Senza fare alcun calcolo, la distribuzione del carattere <span class="math inline">\(X\)</span> è</p>
+<p>A. asimmetrica negativa</p>
+<p>B. simmetrica</p>
+<p>C. asimmetrica positiva</p>
+</div>
+<div id="quiz-6.97" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.97<a href="autovalutazione.html#quiz-6.97" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Sapendo che il coefficiente di correlazione tra le due variabili <span class="math inline">\(X\)</span> ed <span class="math inline">\(Y\)</span> è pari a <span class="math inline">\(r_{XY} = -0.78\)</span> si definisce la variabile <span class="math inline">\(W = -2X\)</span>. allora il coefficiente di correlazione <span class="math inline">\(r_{XW}\)</span> è pari a</p>
+<p>A. <span class="math inline">\(-0.78\)</span></p>
+<p>B. <span class="math inline">\(0.78\)</span></p>
+<p>C. <span class="math inline">\(1.56\)</span></p>
+</div>
+<div id="quiz-6.98" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.98<a href="autovalutazione.html#quiz-6.98" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Sia <span class="math inline">\(X\sim \text{Norm}(\mu = 5, \sigma^2 = 9)\)</span> allora la probabilità che <span class="math inline">\(X\)</span> sia compresa tra <span class="math inline">\(4\)</span> e <span class="math inline">\(7\)</span> è</p>
+<p>A. 0.38</p>
+<p>B. 0.57</p>
+<p>C. 0.63</p>
+</div>
+<div id="quiz-6.99" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.99<a href="autovalutazione.html#quiz-6.99" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Un mazzo di carte è composto da <span class="math inline">\(48\)</span> carte, <span class="math inline">\(12\)</span> per ogni seme (Cuori, Quadri, Fiori, Picche). Ogni seme ha <span class="math inline">\(9\)</span> carte numerate e <span class="math inline">\(3\)</span> figure. Si estraggono <span class="math inline">\(4\)</span> carte in blocco, la probabilità che siano tutte figure è</p>
+<p>A. <span class="math inline">\(0.0025\)</span></p>
+<p>B. <span class="math inline">\(0.0611\)</span></p>
+<p>C. <span class="math inline">\(0.0938\)</span></p>
+</div>
+<div id="quiz-6.100" class="section level3 unnumbered hasAnchor">
+<h3>Quiz 6.100<a href="autovalutazione.html#quiz-6.100" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Sia <span class="math inline">\(I\)</span> il rapporto tra due valori dello stesso fenomeno osservato in due tempi diversi. Allora,</p>
+<p>A. se tutti i valori del fenomeno vengono traslati di una costante il valore di <span class="math inline">\(I\)</span> non cambia</p>
+<p>B. il valore di <span class="math inline">\(I\)</span> è sempre minore di <span class="math inline">\(1\)</span></p>
+<p>C. nessuna delle altre risposte è vera</p>
+
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="footnotes">
+<hr />
+<ol start="4">
+<li id="fn4"><p>nota per gli studenti del canale Serale a cui è stato presentato un indice diverso per il quale vale la seguente relazione <span class="math inline">\(\chi^2=\left(N\cdot\psi\right)^2\)</span><a href="autovalutazione.html#fnref4" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="regressione-lineare.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section",
+"smooth_scroll": true
+},
+"toc_float": true
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

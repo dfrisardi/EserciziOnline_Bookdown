@@ -1,0 +1,1149 @@
+# Autovalutazione
+
+## Quiz di ripasso e autovalutazione
+
+### Quiz 6.1 {-}
+
+Sia $X$ un carattere quantitativo con deviazione standard $\sigma_X$. Sia quindi $Y = k + X$: allora la deviazione standard di $Y$, $\sigma_Y$,
+
+A. è pari a $k + \sigma_X$\
+
+B. è uguale a $\sigma_X$\
+
+C. è pari a $|k|\sigma_X$\
+
+
+### Quiz 6.2 {-}
+
+Si considerino gli eventi $A$ e $B$. Essi sono indipendenti se
+
+A. $P(A \cup B) = P(A)P(B)$
+
+B. $P(A \cap B) = P(A)+P(B)$
+
+C. $P(A|B) = P(A)$
+
+### Quiz 6.3 {-}
+
+Una squadra di calcio è composta da 18 giocatori. All'inizio della partita entrano sul campo uno alla volta. Considerando l'ordine, in quanti modi diversi possono entrare i primi 5 giocatori?
+
+A. $\frac{18!}{13!}$ 
+
+B. $\binom{18}{13}$ 
+
+C. $5!$
+
+### Quiz 6.4 {-}
+
+Un sistema ha 10 componenti, indipendenti tra loro. Ogni componente ha probabilità di rottura pari a 0.2. Alla fine del lavoro il numero medio di componenti funzionanti è
+
+A. 2
+
+B. 4
+
+C. 8
+
+### Quiz 6.5 {-}
+
+Si consideri una variabile Normale di parametri $\mu = 5$ e $\sigma^2 = 9$, il terzo quartile è pari a
+
+A. 2.9765
+
+B. 7.0235
+
+C. 11.0704
+
+### Quiz 6.6 {-}
+
+In un gruppo di amici, rispettivamente di età 21, 19, 25, 24, 26 anni, l'età mediana è
+
+A. 23
+  
+B. 24
+
+C. 25
+
+### Quiz 6.7 {-}
+
+In una distribuzione media e mediana sono uguali. Allora
+
+A. la distribuzione è simmetrica
+
+B. la distribuzione ha una sola moda
+  
+C. nessuna delle precedenti
+
+### Quiz 6.8 {-}
+
+Ci sono tre individui A, B e C. Il reddito di A è 1 unità, quello di B è 6 unità e quello di C è pari a 12 unità. B trasferisce 2 unità a A. Dopo il trasferimento la concentrazione
+
+A. diminuisce
+
+B. non cambia
+
+C. aumenta
+
+### Quiz 6.9 {-}
+
+Il reddito netto di un'impresa $Y$ si determina come la differenza tra i ricavi $R$ e i costi $C$ sostenuti nello stesso periodo: $Y = R - C$.
+
+Si assuma che ci sia concordanza nelle distribuzioni dei ricavi e dei costi, tale che $Cov(R, C) > 0$.
+
+Considerando i redditi delle imprese di un certo Stato in un dato periodo
+
+A. $Var(Y) < Var(R) + Var(C)$ 
+
+B. $Var(Y) = Var(R) + Var(C)$
+
+C. $Var(Y) > Var(R) + Var(C)$
+
+### Quiz 6.10 {-}
+
+A Rimini è stato estratto un campione di $n = 300$ individui appassionati di motori. Ad essi viene chiesto se preferiscono la Formula 1 o la MotoGP, $32$ di essi rispondono che preferiscono la Formula 1. A Bologna viene estratto un altro campione di uguale numerosità del quale $139$ individui rispondono che preferiscono la Formula 1. Fissato il livello di confidenza uguale per entrambe le città
+
+A. è più ampio l'intervallo di confidenza di Rimini
+
+B. è più ampio l'intervallo di confidenza di Bologna
+  
+C. non è possibile dirlo perché non è noto il valore specifico del livello di confidenza
+
+### Quiz 6.11 {-}
+
+Se lanciamo tre dadi regolari, la probabilità di ottenere una somma pari a 4 è
+
+A. $\frac{1}{72}$ 
+
+B. $\frac{1}{216}$
+
+C. ${4 \choose 3}\left (\frac{1}{6} \right)^2\frac{5}{6}$
+
+### Quiz 6.12 {-}
+
+Una moneta dà testa (T) con probabilità $0.8$. Si lancia tante volte finché non esce T per la prima volta.  I lanci sono indipendenti.
+La probabilità che ciò accada al quarto lancio è
+
+A. $0.064$
+
+B. $0.144$ 
+
+C. $0.432$ 
+
+### Quiz 6.13 {-}
+
+L'evento $A$ contiene l'evento $B$, cioè $B \subset A$ se
+
+A. il verificarsi di A implica il verificarsi di B
+
+B. il verificarsi di B implica il verificarsi di A
+
+C. il verificarsi di A implica il non  verificarsi di B.
+
+### Quiz 6.14 {-}
+
+La tabella seguente, a cui si riferiscono i tre quesiti che seguono, contiene la distribuzione di frequenza in classi del costo in euro dei libri economici stampati in italia nel 2019 (*La produzione libraria, Istat*):
+
+| classi di prezzo |       |
+|:----------------:|-------|
+| (in euro)        |       |
+| $(0, \, 2.5]$    | 0.026 |
+| $(2.5, \, 5]$    | 0.095 |
+| $(5, \, 10]$     | 0.347 |
+| $(10, \, 20]$    | 0.532 |
+| totale           | 1     |
+
+Il valore "0.026" nella tabella è
+
+A. una modalità
+
+B. una frequenza assoluta
+
+C. una frequenza relativa
+
+### Quiz 6.15 {-}
+
+La classe modale è 
+
+A. $(2.5, \, 5]$
+
+B. $(5, \, 10]$
+
+C. $(10, \, 20]$ 
+
+### Quiz 6.16 {-}
+
+il costo medio dei libri economici stampati in Italia
+nel 2019 è 
+
+A. $8.74$ euro
+
+B. $6.25$ euro 
+
+C. $10.97$ euro 
+
+### Quiz 6.17 {-}
+
+Sia $X$ una variabile aleatoria Binomiale con $n = 500$ e $p = 0.42$. La probabilità $P(X \leq 230)$ è pari a
+
+A. $0.9680$ 
+
+B. $0.5652$ 
+
+C. $0.0070$ 
+
+### Quiz 6.18 {-}
+
+Un Paese è diviso in 3 regioni: $A$, $B$ e $C$. Nella regione $A$ c'è il $49\%$ della popolazione totale, nella regione $B$ il $32\%$ mentre nella regione $C$ il restante $19\%$. E' noto inoltre che nella regione $A$ il $10\%$ della popolazione è vaccinato per un determinato virus, nella regione $B$ è vaccinato il $23\%$ e nella regione $C$ è vaccinato il $42\%$. Viene estratto casualmente un abitante del Paese, la probabilità che egli sia vaccinato per il suddetto virus è
+
+A. $0.0927$ 
+
+B. $0.2500$
+
+C. $0.2024$
+
+### Quiz 6.19 {-}
+
+Si considera un campione di $n = 100$ osservazioni  sulle quali si rileva se hanno completato il ciclo vaccinale oppure no. Il risultato fornisce $k=65$ persone che hanno completato il ciclo e $n-k=35$ che non lo hanno ancora completato. L'intervallo di confidenza al 95\%  relativo al parametro $p$ = {percentuale di persone vaccinate nella popolazione} è
+
+A. $(0.63; 0.67)$
+
+B. $(0.25; 0.87)$
+
+C. $(0.55; 0.74)$
+
+### Quiz 6.20 {-}
+
+Il carattere $X$, è rilevato su due campioni A e B.
+Il campione A è formato da  4 osservazioni e fornisce una media pari a 5
+Il campione B è formato da 6 osservazioni e fornisce  una media pari a 3 
+La media complessiva è 
+
+A. $4$.
+
+B. $3.8$ 
+
+C. non è possibile fornire una risposta  
+
+### Quiz 6.21 {-}
+
+Per un carattere quantitativo, la media aritmetica di $n$ rilevazioni:
+
+A. è tale che la somma degli scarti è nulla 
+
+B. rende minima la somma degli scarti in valore assoluto
+
+C. assume un valore che è sempre maggiore della mediana
+
+### Quiz 6.22 {-}
+
+3 individui entrano in una stanza con 6 sedie. In quanti modi si possono occupare i posti a sedere?
+
+A. 20 
+
+B. 120 
+
+C. 720 
+
+### Quiz 6.23 {-}
+
+Più eventi sono una partizione dello spazio campionario se:
+
+A. sono indipendenti a coppie e la loro unione corrisponde allo spazio campionario
+
+B. sono incompatibili a coppie e la loro unione corrisponde allo spazio campionario
+
+C. sono incompatibili a coppie e la loro intersezione corrisponde allo spazio campionario
+
+### Quiz 6.24 {-}
+
+Data le due seguenti distribuzioni per unità A e B:
+$$ A : 2 \quad  1 \quad  2 \quad  1 \quad  2 \quad  1\quad  2\quad  1$$
+$$ B : 6 \quad  3 \quad  6 \quad  3 \quad  6 \quad  3 \quad  6\quad  3$$
+la varianze delle due distribuzioni sono
+
+A. Uguali
+
+B. La varianza di B è 3 volte quella di A perché ogni valore di B è 3 volte il corrispondente valore di A
+
+C. La varianza di B è 9 volte quella di A perché ogni valore di B è 3 volte il corrispondente valore di A 
+
+### Quiz 6.25 {-}
+
+Sia $X$  una variabile casuale Normale con media 2 e varianza 9. La probabilità $P(X > 4)$ è 
+
+A. 0,2524
+
+B. 0,4121
+
+C. 0,7475
+
+### Quiz 6.26 {-}
+
+La distribuzione di 100 clienti di un supermercato secondo il carattere  "tempo trascorso nel supermercato" è
+
+| Tempo     | Clienti |
+|:---------:|:-------:|
+| (0; 30]   | 45      |
+| (30; 60]  | 30      |
+| (60; 120] | 25      |
+
+Il nono decile del carattere è 
+
+A. 60
+
+B. 90 
+
+C. 96 
+
+### Quiz 6.27 {-}
+
+Un negozio espone 78 magliette. La seguente tabella riporta le distribuzioni di frequenze congiunte dei caratteri $X$ = "colore" e $Y$ = "taglia"
+
+| **X / Y**  | S  | M  | L | XL | Totale |
+|:----------:|:---:|:---:|:---:|:---:|:------:|
+| **Rosso**  | 6  | 8  | 3 | 6  | 23     |
+| **Giallo** | 3  | 4  | 1 | 2  | 10     |
+| **Blu**    | 12 | 15 | 5 | 13 | 45     |
+| **Totale** | 21 | 27 | 9 | 21 | 78     |
+
+i due caratteri
+
+
+A. sono indipendenti in distribuzione
+
+B. hanno un indice di dipendenza distributiva $\psi$ pari a 0,1977 
+
+C. hanno un indice di dipendenza distributiva $\psi$ pari a 2,7242
+
+### Quiz 6.28 {-}
+
+Da un mazzo di 6 carte numerate da 1 a 6 si estraggono senza reinserimento 3 carte. La probabilità che escano le carte 1, 2, 3 in ordine è
+
+A. $3! \times \frac{1}{6} \times \frac{1}{5} \times \frac{1}{4}$
+
+B. $\frac{1}{6} \times \frac{1}{6} \times \frac{1}{6}$
+
+C. $\frac{1}{6} \times \frac{1}{5} \times \frac{1}{4}$
+
+### Quiz 6.29 {-}
+
+Se il coefficiente di correlazione tra due caratteri $X$ e $Y$ è pari a -1
+
+A. i due caratteri sono indipendenti
+
+B. non è possibile perché il coefficiente di correlazione lineare assume solo valori positivi
+
+C. c'è una perfetta relazione lineare tra i due caratteri
+
+### Quiz 6.30 {-}
+
+Per un carattere quantitativo, se la media aritmetica è uguale alla mediana
+
+A. non si può concludere nulla circa la simmetria della distribuzione 
+
+B. la distribuzione è simmetrica
+
+C. la distribuzione è asimmetrica
+
+### Quiz 6.31 {-}
+
+Sia $X$ un carattere quantitativo con deviazione standard $\sigma_X$. 
+Sia quindi $Y = X \sqrt{k}$: allora la varianza di $Y$, $\sigma^2_Y$,
+
+A. è pari a  $k\, \sigma^2_X$
+
+B. è uguale a $\sigma_X$ 
+  
+C. è pari a $k^2 \sigma_X$
+
+### Quiz 6.32 {-}
+
+Di due eventi  $A$ e $B$, sappiamo che $P(A)=0.7$ e $P(B)=0.6$.
+Quale delle seguenti affermazioni è sicuramente sbagliata?   
+
+A. $P(A \cap B) = P(A)P(B)$
+
+B. $B \subset A$
+  
+C. $A$ e $B$ sono incompatibili
+
+### Quiz 6.33 {-}
+
+Una classe di studenti di Statistica è formata da 200 persone delle quali 120 sono donne. Ci sono inoltre 60 uomini che provengono da istituti tecnici.  Ci sono poi in totale 90 studenti (uomini  e donne) che non provengono da istituti tecnici.
+Se scegliamo uno studente a caso, la probabilità di selezionare un uomo è 
+
+A. $0.4$ 
+
+B. $0.3$ 
+  
+C. $\frac{110}{200}$
+
+### Quiz 6.34 {-}
+
+Con riferimento all'esercizio precedente,  la probabilità di estrarre una donna che proviene da istituti tecnici è pari a 
+
+A. $0.6$
+
+B. $\frac{110}{200}$
+
+C. $0.25$
+
+### Quiz 6.35 {-}
+
+Si consideri una variabile Normale di parametri $\mu = 100$ e $\sigma^2 = 9$,  il decimo percentile è pari a
+
+A. 90
+  
+B. 96.16
+
+C. 88.46
+
+### Quiz 6.36 {-}
+
+A 10 studenti universitari viene chiesto il numero di esami superati in un anno.
+La distribuzione unitaria è la seguente:
+
+$$4\quad 0\quad 7\quad 1\quad 5\quad 5\quad 0\quad 2\quad 0\quad 12$$
+
+La **mediana** vale 
+
+A. 5
+  
+B. qualsiasi numero compreso nell'intervallo $(2,4)$
+  
+C. non esiste per $n$ pari
+
+### Quiz 6.37 {-}
+
+Con riferimento all'esercizio precedente, se alle informazioni fornite dai 10 studenti si aggiungono quelle di altri 20 studenti, la **media aritmetica** risulta pari a 5. Determinare la media del numero di esami superati dal secondo gruppo di 20 studenti. 
+
+A. $5.7$ 
+  
+B. $5$ 
+
+C. manca un'informazione 
+
+### Quiz 6.38 {-}
+
+Un medico ha raccolto,  su 159 pazienti depressi,  la gravità della patologia e lo stato civile:
+
+|                        |         | stato civile |        |        |
+|:----------------------:|:-------:|:------------:|:------:|:------:|
+| **livello depressivo** | sposato | celibe       | vedovo | Totale |
+| **grave**              | 22      | 16           | 19     | 57     |
+| **medio**              | 33      | 29           | 14     | 76     |
+| **leggero**            | 14      | 9            | 3      | 26     |
+| **Totale**             | 69      | 54           | 36     | 159    |
+
+Le seguenti tre domande si riferiscono a tale tabella
+
+
+La percentuale,  tra i vedovi, di pazienti con livello depressivo grave è
+
+A. $12\%$
+  
+B. $52.8\%$
+  
+C. $33.3\%$
+
+### Quiz 6.39 {-}
+
+Il carattere *Livello depressivo* è
+
+A. qualitativo sconnesso
+  
+B. qualitativo ordinato 
+  
+C. quantitativo discreto
+
+### Quiz 6.40 {-}
+
+L'indice più opportuno per calcolare una eventuale associazione tra i due caratteri è
+
+A. il coefficiente di correlazione lineare $r$ 
+  
+B. Gli indici $\chi^2$ o $\psi$ 
+  
+C. il rapporto di correlazione $g$ di Gini.
+
+### Quiz 6.41 {-}
+
+Per un carattere quantitativo, la media aritmetica di $n$ rilevazioni:
+
+A. rende minima la somma degli scarti in valore assoluto
+
+B. è tale che la somma dei quadrati degli scarti è nulla
+
+C. assume un valore che è sempre compreso tra le modalità minima e massima
+
+### Quiz 6.42 {-}
+
+Una moneta dà testa (T) con probabilità $0.4$. Si lancia tante volte finché non esce T per la prima volta.  I lanci sono indipendenti.
+La probabilità che ciò accada al terzo lancio è
+
+A. $0.064$ 
+
+B. $0.144$ 
+
+C. $0.432$ 
+
+### Quiz 6.43 {-}
+
+Due eventi si dicono incompatibili se:
+
+A. il verificarsi di uno implica il non verificarsi dell'altro 
+
+B. il verificarsi di uno implica il verificarsi dell'altro
+
+C. il verificarsi di uno non fornisce informazioni circa il verificarsi o meno dell'altro.
+
+### Quiz 6.44 {-}
+
+Data le due seguenti distribuzioni per unità A e B:
+$$ A : 2 \quad  0 \quad  2 \quad  0 \quad  2 \quad  0\quad  2\quad  0$$
+$$ B : 1 \quad  -1 \quad  1 \quad  -1 \quad  1 \quad  -1 \quad  1\quad  -1$$
+la varianze delle due distribuzioni sono
+
+A. Uguali 
+
+B. La varianza di A è maggiore perché ogni valore di A è maggiore del corrispondente valore di B
+
+C. La varianza di B è maggiore perché ci sono valori positivi e negativi.
+
+### Quiz 6.45 {-}
+
+Sia $X$  una variabile casuale Normale con media 3 e varianza 4. L'87-esimo percentile di $X$ è 
+
+A. 1
+
+B. 5.25
+
+C. 7.50
+
+### Quiz 6.46 {-}
+
+La distribuzione di 520 studenti secondo il carattere  ``\textit{numero di esami superati} è
+
+| Esami | Studenti |
+|:-----:|:--------:|
+| 0     | 50       |
+| 1     | 100      |
+| 2     | 160      |
+| 3     | 120      |
+| 4     | 80       |
+| 5     | 10       |
+
+La mediana del carattere è 
+
+A. 2 
+ 
+B. 3  
+
+C. 2.5
+
+### Quiz 6.47 {-}
+
+Su 4 famiglie di 2 componenti si misurano il reddito di Febbraio (X) e le relative spese per l'alimentazione (Y).
+
+$X: \quad 1500 \quad 1700 \quad 1400 \quad 1600$
+
+$Y: \quad 200 \quad 350 \quad 150 \quad 300$
+
+Il coefficiente di correlazione è
+
+A. -0.978
+
+B. 8750
+
+C. 0.989
+
+### Quiz 6.48 {-}
+
+Da un'urna con 1 pallina Blu e 9 palline Nere, si estraggono 2 palline senza reinserimento. La probabilità di estrarre due palline Blu è:
+
+A. 0 
+
+B. $\frac{1}{10} \times \frac{9}{10} + \frac{1}{9} \times \frac{1}{10}$ 
+
+C. $\frac{1}{10} \times \frac{1}{9}$.
+
+### Quiz 6.49 {-}
+
+Nel modello di regressione lineare $Y_i= \beta_0 + \beta_1 x_i$, il coefficiente $\beta_0$ è interpretato come
+
+A. La differenza tra le medie osservate di $Y$ e di $X$ 
+
+B. il valore della variabile risposta quando la variabile esplicativa $X$ assume il valore zero. 
+
+C. il rapporto tra la codevianza tra X e Y e la devianza di X.
+
+### Quiz 6.50 {-}
+
+Per un carattere qualitativo sconnesso, la moda di $n$ rilevazioni :
+
+A. rappresenta la massima frequenza osservata
+
+B. è tale che la somma dei valori assoluti degli scarti è nulla  
+
+C. rappresenta la modalità che si presenta più frequentemente nel collettivo.
+
+### Quiz 6.51 {-}
+
+Le prossime tre domande fanno riferimento ai seguenti dati.  Considerato un collettivo di 290 studenti sia $Y$ il voto preso  all'esame di statistica  e $X$ la modalità con cui  è stato sostenuto l'esame. Il carattere $Y$ è espresso in classi $y_1=18-21, y_2=22-26, y_3=27-30$. Le modalità di $X$ sono $x_1=$ in presenza, $x_2=$ on line.  La frequenza relativa degli studenti che hanno sostenuto l'esame on line è pari a 0.483
+Le distribuzioni delle frequenze condizionate relative di $Y$ dato $x_1$ e $x_2$ sono   
+
+| $y_i$ | $f_{y_i|x_1}$ | $f_{y_i|x_2}$ |
+|:-----:|:-------------:|:-------------:|
+| $y_1$ | 0.600         | 0.571         |
+| $y_2$ | 0.267         | 0.357         |
+| $y_3$ | 0.133         | 0.071         |
+ 
+ 
+
+Il numero assoluto di studenti che hanno sostenuto l'esame in presenza e hanno preso un voto tra 27 e 30 è 
+
+A. 30
+
+B. 20
+
+C. Non si hanno informazioni sufficienti  per calcolarlo 
+
+### Quiz 6.52 {-}
+
+Il numero di studenti che avrebbero sostenuto  l'esame in presenza prendendo  un voto tra 27 e 30 nel caso in cui $X$ e $Y$ fossero stati indipendenti è 
+
+A. 15.5
+
+B. 0 
+
+C. 20 
+
+### Quiz 6.53 {-}
+
+Il valore dell'indice $\chi^2$ è^[nota per gli studenti del canale Serale a cui è stato presentato un indice diverso per il quale vale la seguente relazione $\chi^2=\left(N\cdot\psi\right)^2$]
+
+A. 0 
+
+B. 0.096
+
+C. 4.693
+
+### Quiz 6.54 {-}
+
+Sia $X$ una variabile casuale normale con media $\mu$ e varianza 4 e $Y$ un'altra variabile casuale con la stessa media $\mu$ e varianza 2. Siano $x_{0.975}$ e $y_{0.975}$ i quantili di livello 0.975 di $X$ e $Y$ 
+
+A. $x_{0.975}>y_{0.975}$ 
+
+B. $x_{0.975}<y_{0.975}$ 
+
+C. Non si può dre quale dei quantili è più grande in quanto non conosciamo $\mu$
+
+### Quiz 6.55 {-}
+
+Sia $X$  una variabile casuale Normale con media $\mu$ e varianza $1$. La probabilità $P(X \leq  4)$ 
+
+A. aumenta al all'aumentare di $\mu$
+
+B. diminuisce all'aumentare di $\mu$
+
+C. Non cambia al variare di $\mu$
+
+### Quiz 6.56 {-}
+
+La probabilità che un giocatore di basket segni un tiro libero dalla lunetta è 0.8. Assumendo che i tiri liberi siano tra loro indipendenti, la probabilità che su tre tiri almeno uno vada a canestro è 
+
+A. 0.8
+
+B. 0.992
+
+C. 0.008
+
+### Quiz 6.57 {-}
+
+Si lancia un dado. Se esce uno si pesca una pallina da un'urna con una pallina bianca e una nera altrimenti si  pesca una pallina da un`urna con novantanove  palline nere e una bianca. Hai pescato una pallina bianca, la probabilità che il dado abbia dato uno  è 
+
+A. 1/6
+
+B. maggiore di un 1/6
+
+C. minore di 1/6
+
+### Quiz 6.58 {-}
+
+Se il coefficiente di correlazione tra le variabili $X$ e $Y$ è pari a $0$
+
+A. le variabili $X$ e $Y$ non variano
+
+B. le variabili $X$ ed $Y$ sono indipendenti
+
+C. nessuna delle risposte precedenti è corretta
+
+### Quiz 6.59 {-}
+
+La varianza della somma di due variabili
+
+A. è uguale alla somma delle varianze delle singole variabili
+
+B. dipende dalla covarianza tra le due variabili
+  
+C. è sempre maggiore della somma delle varianze delle singole variabili
+
+### Quiz 6.60 {-}
+
+Se la funzione di densità $f$ della variabile casuale $X$ è stale che $f(x) = f(-x)$ per ogni $x$ del supporto
+
+A. la distribuzione è simmetrica
+  
+B. la variabile si distribuisce come una Normale
+  
+C. il valore atteso della variabile è maggiore della mediana
+
+### Quiz 6.61 {-}
+
+Sia $X$ un carattere quantitativo.  La funzione di ripartizione  $F(x)$ indica
+
+A. la densità di frequenza delle osservazioni con modalità minore o uguale a $x$
+
+B. la frequenza relativa delle osservazioni del collettivo con modalità magiore di  $x$
+
+C. la frequenza relativa delle osservazioni del collettivo con modalità minore o uguale a $x$
+
+### Quiz 6.62 {-}
+
+Su un collettivo di 100 studenti iscritti al primo anno, alla fine del primo semestre, è stato rilevato il numero di esami superati.  Sappiamo che meno della  metà degli studenti ha superato almeno un esame
+
+A. La mediana è  maggiore del primo quartile
+
+B. La mediana è maggiore della media 
+
+C. La mediana e il primo quartile coincidono
+
+### Quiz 6.63 {-}
+
+Hai due mazzi da 40 carte italiane e estrai una carta dal primo mazzo e la metti nel secondo e poi estrai una carta anche dal secondo mazzo. La probabilità che le due carte estratte siano due assi è 
+
+A. $5/410$
+
+B. $1/100$
+
+C. $1/10$
+
+### Quiz 6.64 {-}
+
+Un’urna contiene 10 palline rosse, 6 palline bianche e 4 palline nere. La probabilità di estrarre una pallina rossa oppure una pallina nera è
+
+A. $1/2+1/5$
+
+B. $1/2+1/5-1/10$
+
+C. $1/10$
+
+### Quiz 6.65 {-}
+
+Su un collettivo di 100 famiglie sono state rilevate due  variabili $X$  e $Y$ ed è stata calcolata la retta di regressione $y=b_0+b_1x$. La somma dei residui $(y_i-\hat{y}_i)$ elevati al quadrato risulta 1250,  la varianza di $Y$ risulta 15 e la varianza di $X$ è 20. L'indice $R^2$ risulta 
+
+A. 0.833 
+
+B. 0.167 
+
+C. 0.625
+
+D. Non si può calcolare
+
+### Quiz 6.66 {-}
+
+Si consideri la distribuzione del carattere $X$ = "reddito di una popolazione". 
+Il governo decide di imporre un'imposta ai cittadini con un reddito superiore a 30mila euro al fine di fornire della sussistenza ai cittadini con un reddito inferiore a 5000 euro.
+In tal caso la concentrazione di X:
+
+A. aumenta
+
+B. diminuisce 
+
+C. non cambia
+
+D. Non si può rispondere senza avere i veri valori della distribuzione
+
+### Quiz 6.67 {-}
+
+Una distribuzione statistica, per unità, $a_1, a_2, \dots a_n$,  dopo l'operazione di standardizzazione dei valori, 
+
+A. è composta da soli valori positivi 
+
+B. è composta solo da valori nell'intervallo $(0,1)$.
+
+C. Non si può rispondere senza avere i veri valori della distribuzione
+
+D. nessuna delle altre risposte è vera
+
+### Quiz 6.68 {-}
+
+Un numero indice è il rapporto tra due valori dello stesso fenomeno osservato in due tempi diversi.  Pertanto, 
+
+A. il suo valore dipende dall'unità di misura con cui si misura il fenomeno
+
+C. è sempre maggiore di 1
+
+D. nessuna delle altre risposte è vera
+
+### Quiz 6.69 {-}
+
+Si compra un bene,  che costa normalmente 100 euro, in saldo con uno sconto del 20\%.
+Dopo una settimana lo si rivende aggiungendo un 20\% al prezzo di acquisto.
+Il guadagno netto dell'operazione è 
+
+A. $0$ euro 
+
+B. $-4$ euro
+
+C. $2$ euro
+
+### Quiz 6.70 {-}
+
+Ho cinque libri numerati da 1 a 5. 
+I modi di ordinarli su una mensola sono 
+
+A. $120$
+
+B. $\binom{5}{2}$
+
+D. $5^2$
+
+### Quiz 6.71 {-}
+
+Se l'evento $A$ è implicato dall'evento $B$, allora
+
+A. $B \subset A$
+
+B. $A \subset B$
+
+C. $A \cup B = B$
+
+### Quiz 6.72 {-}
+
+Si hanno due monete. La prima moneta dà testa (T) con probabilità $0.8$. La seconda moneta dà T con probabilità $0.4$.
+La probabilità di avere almeno una $T$ lanciando entrambe le monete è 
+
+A. $0.88$
+
+B. $0.12$ 
+
+C. $0.48$ 
+
+### Quiz 6.73 {-}
+
+Il $9\%$ della popolazione italiana è *mancina*. 
+Qual è la probabilità che, scegliendo due persone caso dalla popolazione italiana almeno una delle due sia mancina?
+
+A. $0.081$  
+
+B. $0.172$
+
+C. $0.180$ 
+
+### Quiz 6.74 {-}
+
+Il professore di italiano al liceo, quando interroga, sceglie a caso gli studenti da ascoltare. Tu sei
+in una classe di 15 studenti, e oggi il professore ne interroga tre.
+La probabilità di non essere interrogato è
+
+A. 0.32
+
+B. 0.20
+
+C. 0.80
+
+### Quiz 6.75 {-}
+
+I seguenti numeri indicano il valore di un euro espresso in dollari 
+all'inizio degli ultimi sei trimestri 
+
+| Aprile 20 | Luglio 20 | Ottobre 20 | Gennaio 21 | Aprile 21 | Luglio 21 |
+|:---------:|:---------:|:----------:|:----------:|:---------:|:---------:|
+| 1.12      | 1.20      | 1.13       | 1.04       | 1.08      | 1.16      |
+
+
+La variazione percentuale di valore in un anno, dal luglio 20 al luglio 21 è stata del  
+
+A. 12\%
+
+B. -4\%
+
+C. -3.33\%
+
+### Quiz 6.76 {-}
+
+Con riferimento ai dati precedenti il numero indice relativo ad aprile 2021 con base luglio 20 è
+
+A. 0.4 
+
+B. 0.9 
+
+C. 1.11 
+
+### Quiz 6.77 {-}
+
+La distribuzione delle altezze degli italiani maschi adulti è Normale con media pari 178 cm e una deviazione standard pari a 8 cm. Francesco si trova al 45-esimo percentile. Quanto è alto Francesco?
+
+A. $177$
+
+B. $181.5$
+
+C. $177.65$
+
+### Quiz 6.78 {-}
+
+La media aritmetica 
+
+A. è il valore che minimizza la somma degli scarti quadratici da un generico valore, cioè rappresenta il centro di ordine 2 di una distribuzione 
+
+B. è il punto equidistante da tutti i valori della distribuzione
+
+C. è sempre maggiore o uguale della mediana della stessa distribuzione.
+
+### Quiz 6.79 {-}
+
+Se nel calcolo dei coefficienti della retta di regressione di Y su X,  risulta che il coefficiente angolare $\beta_1$ è pari a zero, questo implica 
+
+A. che il coefficiente di correlazione lineare è pari a zero
+
+B. le due variabili X e Y sono indipendenti 
+
+C. le precedenti risposte sono entrambe sbagliate:  dipende infatti dal valore dell'intercetta di $\beta_0$
+
+### Quiz 6.80 {-}
+
+Il carattere $X$, è rilevato su due collettivi A e B.
+Il campione A è formato da  5 osservazioni e fornisce una media pari a 2
+Il campione B è formato da 10 osservazioni e fornisce  una media pari a 1.
+La media complessiva è 
+
+A. $1.5$.
+
+B. $1.33$
+ 
+C. $1.8$
+
+### Quiz 6.81 {-}
+
+Per un carattere quantitativo, la media aritmetica di $n$ rilevazioni:
+
+A. è tale che la somma degli scarti in valore assoluto è nulla
+
+B. se è uguale alla mediana allora la distribuzione del carattere è simmetrica
+
+C. rende minima la somma degli scarti al quadrato
+
+### Quiz 6.82 {-}
+
+Due eventi si dicono indipendenti se:
+
+A. il verificarsi di uno implica il verificarsi dell'altro
+
+B. il verificarsi di uno non fornisce informazioni circa la probabilità sul verificarsi o meno dell'altro 
+
+C. il verificarsi di uno implica il non verificarsi dell'altro
+
+### Quiz 6.83 {-}
+
+Nel modello di regressione lineare $Y_i= \beta_0 + \beta_1 x_i$, il coefficiente $\beta_1$ è interpretato come
+
+A. la variazione media di $Y$ all'incremento unitario di $X$ %
+
+B. il valore della variabile risposta quando la variabile esplicativa $X$ assume il valore zero
+
+C. la differenza tra le medie osservate di $Y$ e di $X$
+
+### Quiz 6.84 {-}
+
+Data le due seguenti distribuzioni per unità A e B:
+$$ A : 2 \quad  1 \quad  2 \quad  1 \quad  2 \quad  1\quad  2\quad  1$$
+$$ B : 6 \quad  5 \quad  6 \quad  5 \quad  6 \quad  5 \quad  6\quad  5$$
+
+A. la deviazione standard di B è 4 volte quella di A perché ogni valore di B è 4 volte superiore il corrispondente valore di A
+
+B. la deviazione standard di B è 16 volte quella di A perché ogni valore di B è 4 volte superiore il corrispondente valore di A
+
+C. le deviazioni standard delle due distribuzioni sono uguali
+
+### Quiz 6.85 {-}
+
+Per un carattere quantitativo in una distribuzione di valori, la mediana di $n$ rilevazioni:
+
+A. se $n$ è dispari è il valore centrale della graduatoria dei valori ordinati %
+
+B. rappresenta la modalità che si presenta più frequentemente nel collettivo
+
+C. rappresenta la massima frequenza osservata
+
+### Quiz 6.86 {-}
+
+Sia $X$  una variabile casuale Normale con media 6 e deviazione standard 2. La probabilità $P(X \leq 4)$ è 
+
+A. 0,1587 
+
+B. 0,3085
+
+C. 0,8413
+
+### Quiz 6.87 {-}
+
+Il tasso di natalità (nati nell'anno diviso popolazione residente nello stesso anno) è un rapporto di
+
+A. composizione
+
+B. derivazione 
+
+C. densità
+
+### Quiz 6.88 {-}
+
+Si lanciano insieme un D4 (dado regolare a 4 facce numerate da 1 a 4) e un D20 (dado regolare a 20 facce numerate da 1 a 20). La probabilità che esca la coppia di valori 3 e 12 è
+
+A. $2 \times \frac{1}{4} \times \frac{1}{20}$
+
+B. $\frac{1}{4} \times \frac{1}{20}$ 
+
+C. $\frac{1}{4} \times \frac{1}{20} + \frac{1}{4}$
+
+### Quiz 6.89 {-}
+
+Siano $X$ e $Y$ due caratteri quantitativi, la seguente tabella riporta la distribuzione congiunta di frequenze
+
+| **X / Y**  | **10** | **20** | **30** | **40** | **Totale** |
+|:----------:|:------:|:------:|:------:|:------:|:----------:|
+| **1**      | 2      | 6      | 4      | 10     | 22         |
+| **2**      | 5      | 15     | 10     | 25     | 55         |
+| **3**      | 10     | 30     | 20     | 50     | 110        |
+| **Totale** | 17     | 51     | 34     | 85     | 187        |
+
+il coefficiente di correlazione tra i due caratteri è
+
+A. -1,3
+
+B. 0
+ 
+C. 0,76
+
+### Quiz 6.90 {-}
+
+Se l'indice di concentrazione di Gini è pari a 1
+
+A. tutte le osservazioni assumono lo stesso valore
+
+B. c'è una perfetta relazione lineare tra i due caratteri
+
+C. tutte le osservazioni sono pari a $0$ ad eccezione di una che è pari a $T>0$
+
+### Quiz 6.91 {-}
+
+Si considerino le seguenti 8 osservazioni del carattere $X$: $$2,\quad 3,\quad 3,\quad 4,\quad 5,\quad 5,\quad 5,\quad 7$$.
+
+La moda di $X$ è
+
+A. $3$
+
+B. $5$
+  
+C. $7$
+
+### Quiz 6.92 {-}
+
+L'indice di Gini del reddito $Y$ di una popolazione è pari a $0.34$. Viene imposta una tassa del $20\%$ al reddito di ogni individuo della popolazione, il nuovo indice di Gini è pari a
+
+A. $0.14$
+
+B. $0.34$
+
+C. non è possibile calcolarlo se non sono note le singole osservazioni.
+
+### Quiz 6.93 {-}
+
+Si considerino le seguenti $5$ osservazioni dei caratteri $X$ ed $Y$
+
+| **$i$** | **$x_i$** | **$y_i$** |
+|:-------:|:---------:|:---------:|
+| $1$     | $0.64$    | $11.43$   |
+| $2$     | $3.49$    | $14.68$   |
+| $3$     | $5.14$    | $19.35$   |
+| $4$     | $5.16$    | $20.08$   |
+| $5$     | $7.35$    | $25.72$   |
+
+Dato il modello lineare $Y = \beta_0 + \beta_1 X$, le stime dei due parametri incogniti sono
+
+A. $b_0 = 2.14,\; b_1 = 9.54$
+  
+B. $b_0 = -9.54,\; b_1 = 2.14$
+  
+C. $b_0 = 9.54,\; b_1 = 2.14$
+
+### Quiz 6.94 {-}
+
+Con riferimento alla domanda precedente, il coefficiente di correlazione vale
+
+A. 0.95
+  
+B. 0.98
+
+C. 11
+
+### Quiz 6.95 {-}
+
+Siano $A$ e $B$ due eventi. Allora
+
+A. $P(\overline{A \cap B}) = P(\overline{A}) \cdot P(\overline{B}) - P(\overline{A}\cap \overline{B})$
+  
+B. $P(\overline{A \cap B}) = P(\overline{A}) + P(\overline{B}) - P(\overline{A}\cap \overline{B})$\cbl
+
+C. $P(\overline{A \cap B}) = P(\overline{A}) + P(\overline{B}) - P(\overline{A}) \cdot P(\overline{B})$
+
+### Quiz 6.96 {-}
+
+Si considerino le seguenti 5 osservazioni del carattere $X$:  $$1,\quad 4,\quad 6,\quad 8,\quad 9$$.
+
+Senza fare alcun calcolo, la distribuzione del carattere $X$ è  
+
+A. asimmetrica negativa
+
+B. simmetrica
+  
+C. asimmetrica positiva
+
+### Quiz 6.97 {-}
+
+Sapendo che il coefficiente di correlazione tra le due variabili $X$ ed $Y$ è pari a $r_{XY} = -0.78$ si definisce la variabile $W = -2X$. allora il coefficiente di correlazione $r_{XW}$ è pari a
+
+A. $-0.78$
+  
+B. $0.78$
+  
+C. $1.56$
+
+### Quiz 6.98 {-}
+
+Sia $X\sim \text{Norm}(\mu = 5, \sigma^2 = 9)$ allora la probabilità che $X$ sia compresa tra $4$ e $7$ è
+
+A. 0.38
+
+B. 0.57
+
+C. 0.63
+
+### Quiz 6.99 {-}
+
+Un mazzo di carte è composto da $48$ carte, $12$ per ogni seme (Cuori, Quadri, Fiori, Picche). Ogni seme ha $9$ carte numerate e $3$ figure. Si estraggono $4$ carte in blocco, la probabilità che siano tutte figure è
+
+A. $0.0025$
+
+B. $0.0611$
+
+C. $0.0938$
+
+### Quiz 6.100 {-}
+
+Sia $I$ il rapporto tra due valori dello stesso fenomeno osservato in due tempi diversi. Allora,
+
+A. se tutti i valori del fenomeno vengono traslati di una costante il valore di $I$ non cambia
+  
+B. il valore di $I$ è sempre minore di $1$
+
+C. nessuna delle altre risposte è vera
